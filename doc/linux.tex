@@ -90,7 +90,7 @@
 
     \subsection{Operating System}\label{subsec:os}
 
-    \begin{frame}{Operating System}{Définition de l'OS\footnote{\label{os}C’est quoi un OS (O.S) ?, \url{https://culture-informatique.net/cest-quoi-un-os/}}}
+    \begin{frame}{Operating System}{Définition de l'OS\footnote{\label{os}C’est quoi un OS (O.S)~?, \url{https://culture-informatique.net/cest-quoi-un-os/}}}
         Un système d'exploitation (OS) est un ensemble de programmes qui gèrent les ressources matérielles et logicielles d'un ordinateur.
         Il permet également une interaction entre l'utilisateur et l'ordinateur.
         \begin{itemize}
@@ -107,7 +107,7 @@
         Les logiciels ne communiquent pas directement avec le matériel (ou très rarement autorisés par certains OS et sous certaines conditions), mais passent par l'OS~.
         \begin{itemize}
             \item Les logiciels sont installés sur l'OS~.
-            \item Les logiciels sont compilés pour un OS spécifique (par exemple, un logiciel pour Windows ne fonctionnera pas sur IOS).
+            \item Les logiciels sont compilés pour un OS spécifique (par exemple, un logiciel pour Windows ne fonctionnera pas sur iOS).
         \end{itemize}
     \end{frame}
 
@@ -124,7 +124,7 @@
         Historiquement, les premiers OS avaient une interface textuelle ou en ligne de commande, sans interface graphique.
         Quelques exemples d'OS historiques incluent :
         \begin{itemize}
-            \item OS/360 d'IBM~.
+            \item IBM System/360 Operating System d'IBM~.
             \item Unix.
             \item MSDOS.
             \item L'évolution vers des interfaces graphiques avec MacOS et Windows.
@@ -141,7 +141,156 @@
         \includegraphics[width=7cm]{image/os.drawio}
     \end{frame}
 
-    \subsection{Historique}\label{subsec:historique}
+    \subsection{L'interface utilisateur}\label{subsec:hmi}
+
+    \begin{frame}{L'interface utilisateur}{les principales}
+        Les interfaces A.K.A. IHM ou \textit{HMI} en anglais ont évolués avec les technologies et les besoins des utilisateurs.
+        \begin{itemize}
+            \item Les premières interfaces étaient textuelles, comme les terminaux des mainframes IBM et leur IBM System/360 Operating System apparu en 1964\footnote{The IBM System/360, \url{https://www.ibm.com/history/system-360}} et le TSO\footnote{IBM System/360 Operating System: Time Sharing Option Guide, \url{http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/360/os/R20.1_Mar71/GC28-6698-3_TSO_Option_Guide_Rel_20.1_Jun71.pdf}}.
+            Cette interface existe toujours dans les dernières version de ces environnements de type mainframe, aujourd'hui appelé maintenant Z/OS~.
+            Il y a plus \textit{user friendly} mais la productivité est là.
+            \begin{columns}
+                \column{0.7\textwidth}
+                \item À Palo Alto CA, à Xerox Parc, en 1977, l'Alto de Xerox a des fenêtres avec icônes et une souris~!
+                Il ouvre la voie à l'Apple Lisa et Windows.
+                \column{0.2\textwidth}
+                \begin{center}
+                    \includegraphics[width=2cm]{image/alto-windows}
+                \end{center}
+            \end{columns}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[fragile]{L'interface utilisateur}{les principales}
+        \begin{scriptsize}
+            \begin{itemize}
+                \item Les terminaux en ligne de commandes sont toujours utilisés aujourd'hui, notamment dans les environnements Unix et Linux.
+                Ils ont commencé sous Unix, avec K. Thompson et Dennis Ritchie chez Bell Labs (AT\&T) en 1977.
+                Cette technologie est portée sous Linux dès son origine et est toujours l'interface de choix pour la connection à une machine Unix/Linux distante comme un serveur\footnote{\label{ibmunix}UNIX shells since 1977, \url{https://developer.ibm.com/tutorials/l-linux-shells/}}.
+                \begin{lstlisting}[language=bash]
+$ uname -a
+Linux chrichri-HKD-WXX 6.8.0-41-generic #41-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug  2 20:41:06 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+chrichri@chrichri-HKD-WXX:~/Documents/Digicomp/Linux$ whoami
+chrichri
+                \end{lstlisting}
+                \item Des protocoles de communication comme RDP, VNC permettent de garder l'approche \textit{user friendly} des fenêtres tout en se connectant de manière sécurisé à une machine distante.
+                \item Les interfaces tactiles où la souris est remplacée par un écran tactiles.
+                Ces interfaces sont principalement portées par les OS destinés aux smartphones et tablettes comme Android, basé sur Linux et iOS, basé sur BSD Unix\footnote{Android adn iOS, \url{https://home.ubalt.edu/abento/315/android-ios/index.html}}.
+            \end{itemize}
+        \end{scriptsize}
+    \end{frame}
+
+    \subsection{Les origines de Unix}\label{subsec:unix-derivatives}
+    \begin{frame}{les origines de Unix}{Son histoire\footnote{Brève histoire d'Unix, \url{https://tuteurs.ens.fr/unix/histoire.html}}}
+        Le plus proche parent de Linux est Unix.
+        Les principaux Unix sont~:
+        \begin{itemize}
+            \item System V~: Développé par AT\&T en 1983.
+            Ils donnent~:
+            \begin{itemize}
+                \item AIX~: développé par IBM~.
+                \item Solaris~: de Sun Microsystems.
+            \end{itemize}
+            \item BSD~: Développé par l'Université de Berkeley en 1992.
+            Un \textit{rewrite} complet de l'Unix d'AT\&T~.
+            Ils donnent~:
+            \begin{itemize}
+                \item FreeBSD~: développé à partir 1993.
+                \item Toutes les BSD, NetBSD, OpenBSD, \textit{etc}
+                \item Mac OS X~: Basé sur Darwin, développé par Apple en 2001.
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{les origines de Unix}{Son histoire}
+        Les premières version d'Unix ne sont pas écrites en C mais leur concepteurs vont par la suite développé le langage C et réécrire Unix dans ce langage\cref{ibmunix}.
+        \begin{center}
+            \includegraphics[width=8cm]{image/thompson-rithcie-bell} \\ Ken Thompson et Dennis Ritchie\footnote{Discovering Dennis Ritchie’s Lost Dissertation, \url{https://computerhistory.org/blog/discovering-dennis-ritchies-lost-dissertation/}} \\
+        \end{center}
+    \end{frame}
+
+    \subsection{Pourquoi Linux~?}\label{subsec:why}
+
+    \begin{frame}{Pourquoi Linux~?}{Les principales raisons}
+        \begin{footnotesize}
+            \begin{itemize}
+                \item Linux est open source, donc peut être gratuit.
+                \item Linux est open source, donc son code peut être audité pour vérifier sa sécurité.
+                \item Linux est open source et a donc une communauté qui le maintient, le débug et l'améliore constamment.
+                \item Linux est une technologie mature qui a un écosystème pouvant répondre à virtuellement tous les besoins~:
+                \begin{itemize}
+                    \begin{footnotesize}
+                        \item Réseau, FortiOS de Fortinet est basé sur Linux\footnote{\url{https://community.fortinet.com/t5/FortiGate/Technical-Tip-How-to-check-Kernel-version-of-FortiGate/ta-p/323390}}.
+                        \item Yocto pour l'embarqué et l'IoT~.
+                        \item Les noyaux \textit{RT} pour les systèmes temps réel (automobile, avionique, \textit{etc}).
+                        \item Informatique de bureau avec les distributions \textit{user friendly} comme Ubuntu.
+                        \item Jeux-vidéo avec Steam OS~.
+                        \item 72~806 packages Debian en date du 26 aout 2024\footnote{Debian package management, \url{https://www.debian.org/doc/manuals/debian-reference/ch02.en.html}}.
+                        \item \textit{many more}
+                    \end{footnotesize}
+                \end{itemize}
+            \end{itemize}
+        \end{footnotesize}
+    \end{frame}
+
+    \begin{frame}{Pourquoi Linux~?}{La sécurité}
+        \centering
+        \includegraphics[width=6.5cm]{image/vendors-vuln} \\ Exploited vulnerabilities by vendor\footnote{Analysis of Time-to-Exploit Trends: 2021-2022, \url{https://cloud.google.com/blog/topics/threat-intelligence/time-to-exploit-trends-2021-2022/?hl=en}} \\
+    \end{frame}
+
+    \begin{frame}{Pourquoi Linux~?}{L'espionnage}
+        Solaris à espionner ses clients, particulièrement les industriels et financiers de Suisse Romande.
+        Le développeur Sun Microsystem à disparu\ldots
+        \bigbreak
+        \begin{columns}
+            \centering
+            \column{0.2\textwidth}
+            \includegraphics[width=3cm]{image/digicomp-video}
+            \column{0.8\textwidth}
+            \includegraphics[width=6cm]{image/Solaris-Logo-2005-500x313} \\ \url{https://www.rts.ch/play/tv/-/video/-?urn=urn:rts:video:12020250} \\
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}{Pourquoi Linux~?}{Performances\footnote{These Windows 10 Vs Pop OS Benchmarks Reveal A Surprising Truth About Linux Gaming Performance, \url{https://www.forbes.com/sites/jasonevangelho/2019/07/17/these-windows-10-vs-pop-os-benchmarks-reveal-a-surprising-truth-about-linux-gaming-performance/}}}
+        Performances proche de celles de Windows, parfois supérieurs~!
+        \begin{center}
+            \includegraphics[width=8cm]{image/linux-vs-windows}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Pourquoi Linux~?}{Les architectures supportées\footnote{Statistics per Debian architectures, \url{https://popcon.debian.org/}}}
+        \begin{center}
+            \includegraphics[width=10cm]{image/submission-by-architecture}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Pourquoi Linux~?}{Adoption et impact économique}
+        \begin{itemize}
+            \item \emoji{flag-switzerland} La Chancellerie fédérale Suisse promeut les avantages de l'open source dans un un guide stratégique adréssé à l'administration\footnote{Administration fédérale et logiciels ouverts, \url{https://www.bk.admin.ch/dam/bk/fr/dokumente/dti/ikt-vorgaben/strategien/oss/Em002_1-0_GENEHMIGT_f.pdf.download.pdf/Em002_1-0_GENEHMIGT_f.pdf}}.
+            \item \emoji{flag-france} En France, un marché de 5 milliards par an avec une croissance 7~\%\footnote{Les logiciels libres et open source en France : où en sommes-nous~?, \url{https://labo.societenumerique.gouv.fr/fr/articles/dossier-les-logiciels-libres-et-open-source-en-france-o\%C3\%B9-en-sommes-nous/}}.
+            \item \emoji{flag-european-union} Promotion de l'open source dans l'administration publique en EU\footnote{L'Europe publie un guide sur l'Open Source dans l'administration publique, \url{https://code.gouv.fr/fr/blog/guide-osor-sur-open-source-dans-administration-publique/}}.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Pourquoi Linux~?}{Adoption}
+        \footnotetext{Why Linux runs 90 percent of the public cloud workload, \url{https://www.cbtnuggets.com/blog/certifications/open-source/why-linux-runs-90-percent-of-the-public-cloud-workload}}
+        \footnotetext{\label{cbt}When everything is in the cloud, does the OS matter?, \url{https://www.redhat.com/en/blog/when-everything-cloud-does-os-matter}}
+        \footnotetext{20 great years of Linux and supercomputer, \url{https://www.zdnet.com/article/20-great-years-of-linux-and-supercomputers/?ref=itsfoss.com}}
+        \begin{columns}
+            \column{0.5\textwidth}
+            \begin{itemize}
+                \item 2018, 90 \% des serveurs du cloud tournent sous Linux\footnotemark.
+                \item 2018, 70 \% des serveurs sont déployés dans le cloud\footnotemark.
+                \item 2018, 62 \% de l'embarqué\cref{cbt}.
+                \item 2012, 95 \% des supercalculateurs\footnotemark.
+            \end{itemize}
+            \column{0.5\textwidth}
+            \centering
+            \includegraphics[width=6cm]{image/linux-supercomputer-growth}
+        \end{columns}
+    \end{frame}
+
+    \subsection{Historique de Linux}\label{subsec:historique}
 
     \begin{frame}{Historique de Linux}{Linux, quelques caractéristiques de la première version\footnote{The early days of Linux, Lars Wirzenius, \url{https://lwn.net/Articles/928581/}}}
         \begin{footnotesize}
@@ -174,24 +323,6 @@
         C'est Windows® Server qui est multi user.
         \bigbreak
         Cette différence est cruciale, car elle a fait de cet OS un candidat idéal pour les serveurs (Web, BDD, \textit{etc}).
-    \end{frame}
-
-    \begin{frame}{Historique de Linux}{Adoption}
-        \footnotetext{Why Linux runs 90 percent of the public cloud workload, \url{https://www.cbtnuggets.com/blog/certifications/open-source/why-linux-runs-90-percent-of-the-public-cloud-workload}}
-        \footnotetext{\label{cbt}When everything is in the cloud, does the OS matter?, \url{https://www.redhat.com/en/blog/when-everything-cloud-does-os-matter}}
-        \footnotetext{20 great years of Linux and supercomputer, \url{https://www.zdnet.com/article/20-great-years-of-linux-and-supercomputers/?ref=itsfoss.com}}
-        \begin{columns}
-            \column{0.5\textwidth}
-            \begin{itemize}
-                \item 2018, 90 \% des serveurs du cloud tournent sous Linux\footnotemark.
-                \item 2018, 70 \% des serveurs sont déployés dans le cloud\footnotemark.
-                \item 2018, 62 \% de l'embarqué\cref{cbt}.
-                \item 2012, 95 \% des supercalculateurs\footnotemark.
-            \end{itemize}
-            \column{0.5\textwidth}
-            \centering
-            \includegraphics[width=6cm]{image/linux-supercomputer-growth}
-        \end{columns}
     \end{frame}
 
     \subsection{Kernel et distribution}\label{subsec:kernel-et-distribution}
@@ -328,6 +459,131 @@
         \end{columns}
         \bigbreak
         À vous de trouver la meilleure combinaison pour vos besoins.
+    \end{frame}
+
+    \subsection{Quel avenir pour Linux ?}\label{subsec:future-of-linux}
+
+    \begin{frame}{Quel avenir pour Linux ?}
+        \begin{columns}
+            \column{0.7\textwidth}
+            \begin{itemize}
+                \item Pas de concurrent dans le Cloud et ce dernier se porte très bien.
+                \item Un challenger sur le marché Desktop, grâce à son environnement de plus en plus convivial.
+                \item Plus d'instabilité géopolitique et de guerres économiques favorise les solutions ouvertes.
+                Car on ne sait pas si la propriété intellectuel peut poser des soucis de production.
+                Thalès passe des appels d'offres sur les plateforme ouvertes comme RISC-V~.
+                \item 1 seul concurrent sur le mobile.
+                \item De plus en plus de Rust pour améliorer la sécurité et les performances.
+                \item Windows intègre Linux avec les WSL~.
+            \end{itemize}
+            \column{0.3\textwidth}
+            \centering
+            \includegraphics[width=4cm]{image/pinguin-fortune-teller}
+        \end{columns}
+        \bigbreak
+        Pas de raison de s'inquiéter~!
+    \end{frame}
+
+
+    \section{Premiers pas}\label{sec:first-step}
+
+    \subsection{Login et Logout}\label{subsec:login-logout}
+
+    \begin{frame}{Login et Logout}
+        Lors de l'installation, on définit un l'identifiant d'un utilisateur avec les droits administrateurs aussi appelé superutilisateur.
+        Souvent cette utilisateur est appelé \lstinline{root} et ne peut être changé.
+        \bigbreak
+        Ce superutilisateur pourra par la suite créer d'autres utilisateurs.
+        \bigbreak
+        En fonction de la distribution utilisée, les paramétrages initiaux se font dans une interface graphique ou dans une interface textuelle.
+
+        Si c'est une distribution pour les serveurs/ le cloud, elle favorise la performance et la légèreté avec simple interface textuelle.
+
+        Des interfaces d'installation plus conviviales existent pour le desktop.
+    \end{frame}
+
+    \begin{frame}{Login et Logout}
+        \centering
+        \includegraphics[width=10cm]{image/Ubuntu-login-screen} \\ Connexion sur un Ubuntu Desktop ou Remote Desktop \\
+    \end{frame}
+
+    \subsection{Gérer des fichiers et des répertoires avec la souris}\label{subsec:manage-files-and-directories-with-mouse}
+
+    \begin{frame}{Gestionnaires de fichiers\footnote{Gestionnaires de fichiers, \url{https://doc.ubuntu-fr.org/gestionnaire_de_fichiers}}}
+        Il existe de nombreux gestionnaires de fichiers sous Linux.
+
+        \begin{itemize}
+            \item  \href{https://doc.ubuntu-fr.org/dolphin}{Dolphin} : le gestionnaire de fichiers par défaut de Kubuntu (KDE4)
+            \item  \href{https://doc.ubuntu-fr.org/konqueror}{Konqueror} : gestionnaire de fichiers KDE très complet
+            \item  \href{https://doc.ubuntu-fr.org/nautilus}{Nautilus} : le gestionnaire de fichiers par défaut d'Ubuntu (Gnome)
+            \item  \href{https://doc.ubuntu-fr.org/nemo}{Nemo} : fork de Nautilus et gestionnaire de fichiers par défaut du bureau Cinnamon (depuis la version 1.6)
+            \item  \href{https://doc.ubuntu-fr.org/pcmanfm}{PCMan File Manager} : gestionnaire de fichiers léger
+            \item  \href{https://doc.ubuntu-fr.org/spacefm}{SpaceFM} : fork de PCMan File Manager
+            \item  \href{https://doc.ubuntu-fr.org/thunar}{Thunar} : le gestionnaire de fichiers par défaut de Xubuntu
+            \item  \href{https://doc.ubuntu-fr.org/caja}{Caja} : le gestionnaire de fichiers de \href{https://doc.ubuntu-fr.org/mate}{Ubuntu MATE}
+            \item  \href{https://doc.ubuntu-fr.org/peony}{Peony} : le gestionnaire de fichiers de \href{https://doc.ubuntu-fr.org/ukui}{UKUI}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Gestionnaires de fichiers}
+        Vérifions que Ubuntu utilise bien Nautilus comme gestionnaire de fichiers.
+        \bigbreak
+        \begin{columns}
+            \centering
+            \column{0.5\textwidth}
+            \includegraphics[width=5cm]{image/nautilus-gui} \\ Nautilus est bien trouver par le launcher \\
+            \column{0.5\textwidth}
+            \includegraphics[width=5cm]{image/nautilus-cli} \\ Le gestionnaire se lance quand on lance la commande nautilus \\
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}[fragile]{Gestionnaires de fichiers}
+        Il n'existe pas sous une version serveur~:
+        % bash listing
+        \begin{lstlisting}[language=bash]
+@ubuntu:~$ nautilus
+
+La commande « nautilus » n'a pas été trouvée, mais peut être installée avec :
+
+sudo apt install nautilus
+        \end{lstlisting}
+        Il faut naviguer avec les commandes du du terminal A.K.A. le Shell.
+        \begin{itemize}
+            \item \lstinline{ls}~: Liste les fichiers et répertoires.
+            \item \lstinline{cd}~: Change de répertoire.
+            \item \lstinline{pwd}~: Affiche le répertoire courant.
+            \item \lstinline{cp}~: Copie des fichiers et des répertoires.
+            \item \lstinline{mv}~: Déplace des fichiers et des répertoires.
+            \item \lstinline{rm}~: Supprime des fichiers et des répertoires.
+        \end{itemize}
+        Pas de commande de renommage par défaut il faut l'installer.
+    \end{frame}
+
+    \begin{frame}[fragile]{La commande \lstinline{ls}}
+        La commande \lstinline{ls} permet de lister les fichiers et répertoires.
+        Sous forme de liste avec l'option \lstinline{l}, tous les fichiers y compris les cachés avec l'option \lstinline{a} et de manière \textit{human readable} avec l'option \lstinline{h}.
+        \begin{scriptsize}
+            \begin{verbatim}
+$ ls -lha /
+total 92K
+drwxr-xr-x  23 root     root     4,0K août  17 15:20 .
+drwxr-xr-x  23 root     root     4,0K août  17 15:20 ..
+drwxr-xr-x   4 root     root     4,0K août  24 00:10 boot
+drwxr-xr-x  20 root     root     5,9K août  26 22:11 dev
+drwxr-xr-x 198 root     root      12K août  23 15:16 etc
+drwxr-xr-x   5 root     root     4,0K août  16 14:35 home
+drwxr-xr-x   4 root     root     4,0K août  17 15:44 mnt
+drwxr-xr-x  10 root     root     4,0K mai   23 10:34 opt
+dr-xr-xr-x 459 root     root        0 août  26 10:03 proc
+drwx------  21 root     root     4,0K août  18 23:08 root
+drwxr-xr-x  49 root     root     1,5K août  26 22:29 run
+drwxr-xr-x   2 root     root     4,0K août  19  2021 srv
+dr-xr-xr-x  13 root     root        0 août  26 10:03 sys
+drwxrwxrwt  25 root     root      680 août  26 23:54 tmp
+drwxr-xr-x  14 root     root     4,0K mai   25 01:29 usr
+drwxr-xr-x  15 root     root     4,0K août   4 23:49 var
+            \end{verbatim}
+        \end{scriptsize}
     \end{frame}
 
 
@@ -499,7 +755,7 @@ $ useradd -s /bin/bash -m -d $/home/digiformateur digicomp
                     \hline
                     Ctrl+b puis~:             & Entrer dans la ligne de commande pour taper des commandes (avec autocomplétion) \\
                     \hline
-                    Ctrl+b puis ?             & Voir tous les raccourcis clavier (appuyer sur Q pour quitter)                   \\
+                    Ctrl+b puis~?             & Voir tous les raccourcis clavier (appuyer sur Q pour quitter)                   \\
                     \hline
                     Ctrl+b puis W             & Ouvrir un panneau pour naviguer entre les fenêtres de plusieurs sessions        \\
                     \hline
@@ -534,8 +790,8 @@ ts-test
         \end{lstlisting}
     \end{frame}
 
-    \begin{frame}[fragile]{Shell}{Les allias}
-        Les allias sont des raccourcis pour des commandes.
+    \begin{frame}[fragile]{Shell}{Les alias}
+        Les alias sont des raccourcis pour des commandes.
         ils sont donc intéressant à paramétrer pour les commandes longues et récurrente.
         \bigbreak
         Par exemple, pour la commande \lstinline{ls -l}~:
@@ -548,7 +804,7 @@ total 3484
 ...
         \end{lstlisting}
         \bigbreak
-        Pour rendre l'allias permanent, il faut l'ajouter dans le fichier \lstinline{.bashrc} ou \lstinline{.bash\_profile}~:
+        Pour rendre l'alias permanent, il faut l'ajouter dans le fichier \lstinline{.bashrc} ou \lstinline{.bash\_profile}~:
         \begin{lstlisting}[language=bash]
 $ echo "alias ll='ls -l'" >> ~/.bashrc
         \end{lstlisting}
