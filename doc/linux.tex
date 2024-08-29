@@ -10,7 +10,7 @@
 
 \titlegraphic{
     \bigbreak
-    \includegraphics{image/digicomp-logo}
+    \includegraphics[width=5cm]{image/digicomp-logo}
     \bigbreak
     Digital competence. Made of People.
     \bigbreak
@@ -26,7 +26,11 @@
     \section{Table des matières}\label{sec:toc}
 
     \begin{frame}{Table des matières}
-        \tableofcontents
+        \begin{tiny}
+            \begin{multicols}{2}
+                \tableofcontents
+            \end{multicols}
+        \end{tiny}
     \end{frame}
 
 
@@ -144,7 +148,7 @@
     \subsection{L'interface utilisateur}\label{subsec:hmi}
 
     \begin{frame}{L'interface utilisateur}{les principales}
-        Les interfaces A.K.A. IHM ou \textit{HMI} en anglais ont évolués avec les technologies et les besoins des utilisateurs.
+        Les interfaces A.K.A.\ IHM ou \textit{HMI} en anglais ont évolués avec les technologies et les besoins des utilisateurs.
         \begin{itemize}
             \item Les premières interfaces étaient textuelles, comme les terminaux des mainframes IBM et leur IBM System/360 Operating System apparu en 1964\footnote{The IBM System/360, \url{https://www.ibm.com/history/system-360}} et le TSO\footnote{IBM System/360 Operating System: Time Sharing Option Guide, \url{http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/360/os/R20.1_Mar71/GC28-6698-3_TSO_Option_Guide_Rel_20.1_Jun71.pdf}}.
             Cette interface existe toujours dans les dernières version de ces environnements de type mainframe, aujourd'hui appelé maintenant Z/OS~.
@@ -334,7 +338,7 @@ chrichri
             Les applications font des appels système via le noyau pour demander des ressources et interagir avec le matériel.
             \item \textbf{Distribution}~: Désigne une version de GNU/Linux ou d'un autre système d'exploitation open source, bien que certaines personnes soutiennent que le terme devrait inclure les différents systèmes d'exploitation Windows® et Apple.
             Ubuntu est la version la plus populaire, mais il en existe de nombreuses autres, telles que RedHat, qui est bien connue pour les serveurs.
-            La plupart des autres distros sont conçues pour un type particulier d'architecture, comme les téléphones, les netbooks, les routeurs, les serveurs, \textit{etc}.
+            La plupart des autres distributions sont conçues pour un type particulier d'architecture, comme les téléphones, les netbooks, les routeurs, les serveurs, \textit{etc}.
         \end{itemize}
     \end{frame}
 
@@ -349,7 +353,7 @@ chrichri
         \end{itemize}
     \end{frame}
 
-    \begin{frame}{Les distributions}{La timeline de toutes les distributions\footnote{FabioLolix, \url{https://github.com/FabioLolix/linuxtimeline}}\footnotestep\footnote{Put the fun back into computing. Use Linux, BSD., \url{https://distrowatch.com/}}}
+    \begin{frame}{Les distributions}{La timeline de toutes les distributions\footnote{FabioLolix, \url{https://github.com/FabioLolix/linuxtimeline}}\footnotestep\footnote{Put the fun back into computing. Use Linux, BSD., \url{https://distributionwatch.com/}}}
         \begin{columns}
             \column{0.8\textwidth}
             Insights~:
@@ -368,24 +372,24 @@ chrichri
 
     \begin{frame}{Les distributions}{La timeline de toutes les distributions}
         Red-Hat, filiale d'IBM, fait l'opposition entre les distributions \textit{entreprise} et les \textit{community}.
-        En mettant en avant leur support de 10 ans contre 2 ans pour Fedora, une distribution communautaire de la même branche\footnote{What's the best Linux distro for you?, \url{https://www.redhat.com/en/topics/linux/whats-the-best-linux-distro-for-you}}.
+        En mettant en avant leur support de 10 ans contre 2 ans pour Fedora, une distribution communautaire de la même branche\footnote{What's the best Linux distribution for you?, \url{https://www.redhat.com/en/topics/linux/whats-the-best-linux-distribution-for-you}}.
         \bigbreak
         Ubuntu a un business model légèrement différent, ils proposent 5 ans de support pour les versions LTS et une extension de 10 ans dans la version payant appelée \textquote{Ubuntu Pro}\footnote{The Ubuntu lifecycle and release cadence, \url{https://ubuntu.com/about/release-cycle}}.
         \bigbreak
-        Mais peut-être que l'exemple de Red-Hat n'est pas le bon, Debian, une distro communautaire également, communique un support des versions LTS de 5 ans minimum\footnote{Debian Long Term Support, \url{https://wiki.debian.org/LTS}}\ldots
+        Mais peut-être que l'exemple de Red-Hat n'est pas le bon, Debian, une distribution communautaire également, communique un support des versions LTS de 5 ans minimum\footnote{Debian Long Term Support, \url{https://wiki.debian.org/LTS}}\ldots
     \end{frame}
 
-    \begin{frame}{Les distributions}{La timeline des principales distributions\footnote{\label{main-distro}Philipp Leclercq, \url{https://github.com/PhilLecl/SanitizedLinuxTimeline}}}
+    \begin{frame}{Les distributions}{La timeline des principales distributions\footnote{\label{main-distribution}Philipp Leclercq, \url{https://github.com/PhilLecl/SanitizedLinuxTimeline}}}
         \centering
         \includegraphics[width=12cm]{image/linux-main-distro-timeline}
     \end{frame}
 
-    \begin{frame}{Les distributions}{Les licences des principales distributions\cref{main-distro}}
+    \begin{frame}{Les distributions}{Les licences des principales distributions\cref{main-distribution}}
         \centering
         \includegraphics[width=12cm]{image/main-distro-license.drawio}
     \end{frame}
 
-    \begin{frame}{Les distributions}{Les packages managers des principales distributions\cref{main-distro}}
+    \begin{frame}{Les distributions}{Les packages managers des principales distributions\cref{main-distribution}}
         \centering
         \includegraphics[width=12cm]{image/main-distro-package-manager.drawio}
     \end{frame}
@@ -417,7 +421,7 @@ chrichri
         Y-a-t-il des critères pertinents qui pourraient manquer~?
         \bigbreak
         \centering
-        \includegraphics[width=6cm]{image/question-mark}
+        \includegraphics[width=3cm]{image/question-mark}
     \end{frame}
 
     \begin{frame}{Les distributions}{Des critères manquants~?}
@@ -497,14 +501,47 @@ chrichri
         \bigbreak
         En fonction de la distribution utilisée, les paramétrages initiaux se font dans une interface graphique ou dans une interface textuelle.
 
-        Si c'est une distribution pour les serveurs/ le cloud, elle favorise la performance et la légèreté avec simple interface textuelle.
+        Si c'est une distribution pour les serveurs/le cloud, elle favorise la performance et la légèreté avec simple interface textuelle.
 
         Des interfaces d'installation plus conviviales existent pour le desktop.
     \end{frame}
 
-    \begin{frame}{Login et Logout}
+    \begin{frame}{Login et Logout}{Les fenêtres}
         \centering
         \includegraphics[width=10cm]{image/Ubuntu-login-screen} \\ Connexion sur un Ubuntu Desktop ou Remote Desktop \\
+    \end{frame}
+
+    \begin{frame}{Login et Logout}{Les fenêtres}
+        \centering
+        \includegraphics[width=5cm]{image/Ubuntu-logout-screen} \\ Options de déconnexion Ubuntu Desktop ou Remote Desktop \\
+    \end{frame}
+
+    \begin{frame}[fragile]{Login et Logout}{Le terminal}
+        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+$ shutdown --help
+shutdown [OPTIONS...] [TIME] [WALL...]
+
+Shut down the system.
+
+Options:
+     --help      Show this help
+  -H --halt      Halt the machine
+  -P --poweroff  Power-off the machine
+  -r --reboot    Reboot the machine
+  -h             Equivalent to --poweroff, overridden by --halt
+  -k             Don't halt/power-off/reboot, just send warnings
+     --no-wall   Don't send wall message before halt/power-off/reboot
+  -c             Cancel a pending shutdown
+     --show      Show pending shutdown
+
+This is a compatibility interface, please use the more powerful 'systemctl reboot',
+'systemctl poweroff', 'systemctl reboot' commands instead.
+
+See the shutdown(8) man page for details.
+$ shutdown -h
+Shutdown scheduled for Wed 2024-08-28 14:49:23 CEST, use 'shutdown -c' to cancel.
+$ shutdown -c
+        \end{lstlisting}
     \end{frame}
 
     \subsection{Gérer des fichiers et des répertoires avec la souris}\label{subsec:manage-files-and-directories-with-mouse}
@@ -548,7 +585,7 @@ La commande « nautilus » n'a pas été trouvée, mais peut être installée av
 
 sudo apt install nautilus
         \end{lstlisting}
-        Il faut naviguer avec les commandes du du terminal A.K.A. le Shell.
+        Il faut naviguer avec les commandes du du terminal A.K.A.\ le Shell.
         \begin{itemize}
             \item \lstinline{ls}~: Liste les fichiers et répertoires.
             \item \lstinline{cd}~: Change de répertoire.
@@ -700,7 +737,7 @@ $ pwd
         \end{itemize}
     \end{frame}
 
-    \subsubsection{\lstinline{nano}}\label{subsubsec:nano}
+    \subsubsection{nano}\label{subsubsec:nano}
     \begin{frame}{Editer des données sans \lstinline{vi}}{Présentation de \lstinline{nano}\footnote{\label{nano}GNU nano, \url{https://www.nano-editor.org/}}}
         \begin{itemize}
             \item \lstinline{nano} est un éditeur de texte simple et facile à utiliser.
@@ -721,7 +758,7 @@ $ pwd
         \includegraphics[width=9cm]{image/nano-screen.drawio} \\ Interface de \lstinline{nano}, les commandes sont bas et il y en a 16 seulement! \\
     \end{frame}
 
-    \subsubsection{\lstinline{ed}}\label{subsubsec:ed}
+    \subsubsection{ed}\label{subsubsec:ed}
     \begin{frame}{Editer des données sans \lstinline{vi}}{Présentation de \lstinline{ed}\footnote{\label{redhated}How to get started with the ed text editor, \url{https://www.redhat.com/sysadmin/introduction-ed-editor}}}
         \begin{itemize}
             \item \lstinline{ed} est l'un des premiers éditeurs de texte Unix.
@@ -807,7 +844,7 @@ s/True/False/
 
     \subsection{Editer des données avec \lstinline{vi}}\label{subsec:edit-whith-vi}
 
-    \subsubsection{\lstinline{vi}}\label{subsubsec:vi}
+    \subsubsection{vi}\label{subsubsec:vi}
     \begin{frame}{Editer des données avec \lstinline{vi}}{Démarrer VI\footnote{\label{marquette-vi}Basic VI Editor Commands, \url{https://www.marquette.edu/mathematical-and-statistical-sciences/basic-vi-editor-commands.php}}}
         \begin{itemize}
             \item Commande~: \lstinline{vi <nom du fichier existant ou non>}
@@ -1077,18 +1114,18 @@ Dockerfile       README.pdf         UML-Sequence.drawio       celia.ipynb
 
         Ici par exemple avec la suite de Fibonacci~:
         \begin{lstlisting}[language=bash]
-$ time bash fibo_cached.sh 20
+$ time bash fibo_cached.bash 20
 6765
 
 real	0m7,150s
 user	0m5,484s
 sys	0m2,201s
-$ time sh fibo_cached.sh 20
+$ time sh fibo.sh 20
 6765
 
-real    0m5,048s
-user    0m4,401s
-sys     0m1,051s
+real    0m3,568s
+user    0m3,127s
+sys     0m0,713s
 $ time ksh fibo_cached.ksh 20
 6765
 
@@ -1107,11 +1144,11 @@ sys	0m0,003s
                     \hline
                     \textbf{Korn Shell}                                                                                            & \textbf{Bash Shell}                                                                                                \\
                     \hline
-                    L'extension du Korn shell est \texttt{.ksh}.                                                                   & L'extension du Bash shell est \texttt{.sh}.                                                                        \\
+                    L'extension du Korn shell est \lstinline{.ksh}.                                                                & L'extension du Bash shell est \lstinline{.sh}.                                                                     \\
                     \hline
-                    Dans le Korn shell, nous utilisons la commande \texttt{print} pour afficher une sortie. & Dans le Bash shell, nous utilisons la commande \texttt{echo} pour afficher une sortie. \\
+                    Dans le Korn shell, nous utilisons la commande \lstinline{print} pour afficher une sortie. & Dans le Bash shell, nous utilisons la commande \lstinline{echo} pour afficher une sortie. \\
                     \hline
-                    Le Korn shell se trouve dans \texttt{/bin/ksh}.                                                                & Nous pouvons trouver le Bash shell dans \texttt{/bin/bash}.                                                        \\
+                    Le Korn shell se trouve dans \lstinline{/bin/ksh}.                                                             & Nous pouvons trouver le Bash shell dans \lstinline{/bin/bash}.                                                     \\
                     \hline
                     En termes d'exécution de commandes et de scripts, le Korn shell est bien meilleur. & En termes d'exécution de commandes et de scripts, les performances ne sont pas comparables à celles du Korn shell. \\
                     \hline
@@ -1159,7 +1196,7 @@ sys	0m0,003s
         Pourquoi pas \lstinline{sh}~?
         \bigbreak
         \centering
-        \includegraphics[width=6cm]{image/question-mark}
+        \includegraphics[width=3cm]{image/question-mark}
     \end{frame}
 
     \begin{frame}[fragile]{Shell}{Pourquoi a-t-on un Shell ou l'autre~?}
@@ -1458,7 +1495,7 @@ c148c36111463e962f490742af787c1f8e49776f09d89e19f71c6cdcf220240d  employee.csv
         \end{itemize}
         À quoi ces opérateurs peuvent-ils servir~?
         \begin{center}
-            \includegraphics[width=2.5cm]{image/question-mark}
+            \includegraphics[width=3cm]{image/question-mark}
         \end{center}
     \end{frame}
 
@@ -1529,105 +1566,7 @@ c148c36111463e962f490742af787c1f8e49776f09d89e19f71c6cdcf220240d  employee.csv
         \end{itemize}
     \end{frame}
 
-    \subsection{Gérer les processus avec le Shell}\label{subsec:process-management}
-
-    \begin{frame}{Gestion des processus}{Définition\footnote{\label{process}Les processus sous Linux, \url{https://www.cyberciti.biz/faq/how-to-check-running-process-in-ubuntu-linux-using-command-line/}}}
-        Un processus est un programme en cours d'exécution.
-        Il est identifié par un PID, le \textquote{Process IDentifier}.
-        \bigbreak
-        Il peut être en cours d'exécution, en attente, en pause, en zombie, dormant ou en terminaison, \textit{etc}.
-        Il est possible de voir les processus avec la commande \lstinline{ps} ou \lstinline{top}.
-        \bigbreak
-        \begin{columns}
-            \column{0.7\textwidth}
-            \lstinline{ps} affiche les informations de manière statique alors que est dynamique, interactif et temps réel.
-            \lstinline{ps} peut donc être utilisé également dans des scripts Shell.
-
-            Les processus peuvent être tués avec la commande \lstinline{kill}.
-
-            Les données les concernant sont stockées dans le dossier \lstinline{/proc}.
-            \column{0.3\textwidth}
-            \centering
-            \includegraphics[width=4cm]{image/proc-hamster}
-        \end{columns}
-    \end{frame}
-
-    \begin{frame}[fragile]{Gérer les processus avec le Shell}{Les commandes \lstinline{ps}}
-        L'option \lstinline{-f} affiche plus d'informations sur les processus.
-        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
-$ ps
-    PID TTY          TIME CMD
- 276321 pts/5    00:00:00 bash
- 338450 pts/5    00:00:00 ps
-$ ps -f
-UID          PID    PPID  C STIME TTY          TIME CMD
-chrichri  276321  265707  0 13:17 pts/5    00:00:00 /usr/bin/bash --rcfile /home/chrichri/pycharm-professional-2024.1.4/pycharm-2024.1.4/plugins/terminal/shell-integrations/bash/bash-integration.bash -i
-chrichri  338508  276321 99 14:12 pts/5    00:00:00 ps -f
-        \end{lstlisting}
-        Une commande par nom de processus et avec la ligne de commande complète~:
-        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
-$ ps -fC java
-UID          PID    PPID  C STIME TTY          TIME CMD
-chrichri  265707    8404 80 13:08 ?        00:42:46 /home/chrichri/pycharm...
-        \end{lstlisting}
-        \bigbreak
-        Les processus de l'utilisateur courant~:
-        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
-$ ps -u chrichri
-    PID TTY          TIME CMD
-   8059 ?        00:00:06 systemd
-   8068 ?        00:00:00 (sd-pam)
-   8090 ?        00:00:02 pipewire
-...
-        \end{lstlisting}
-        \bigbreak
-        Les processus de l'utilisateur courant et de tous les autres utilisateurs, \textit{i.e.}, tous les processus~:
-        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
-$ ps -ef
-UID          PID    PPID  C STIME TTY          TIME CMD
-root           1       0  0 09:23 ?        00:00:05 /sbin/init splash
-root           2       0  0 09:23 ?        00:00:00 [kthreadd]
-...
-        \end{lstlisting}
-    \end{frame}
-
-    \begin{frame}{Gestion des processus}{L'interface \lstinline{top}}
-        Top et \textquote{c} pour afficher la ligne de commande~:
-        \bigbreak
-        \centering
-        \includegraphics[width=10cm]{image/top-interface}
-    \end{frame}
-
-    \begin{frame}[fragile]{Gestion des processus}{La commande \lstinline{kill}}
-        La commande \lstinline{top} permet de terminer un processus dans l'interface avec \textbf{k}.
-        En fonction de son PID, qu'on aurait auparavant dans cette même interface.
-        ou avec la commande \lstinline{ps}, on peut le tuer avec la commande \lstinline{kill}.
-        \bigbreak
-        Mais il existe une commande spécifique, c'est \lstinline{kill}.
-        Elle permet de terminer un processus dont aurait trouvé le PID avec \lstinline{ps} ou \lstinline{top}.
-        \begin{lstlisting}[language=bash]
-$ kill -9 <PID>
-        \end{lstlisting}
-        \bigbreak
-        La commande \lstinline{pkill} permet de tuer un processus par son nom, celui qui s'affiche dans \lstinline{ps} ou \lstinline{top}.
-        \begin{lstlisting}[language=bash]
-$ pkill -9 <nom>
-        \end{lstlisting}
-    \end{frame}
-
-    \begin{frame}{Système de fichier}{Exercices \execcounterdispinc{}}
-        \begin{itemize}
-            \item Lancer en arrière plan le script Shell \lstinline{endless-loop.sh}.
-            \item Arrêter le processus correspondant au script dans \lstinline{top}.
-            \item Lancer à nouveau en arrière plan le script Shell \lstinline{endless-loop.sh}.
-            \item Arrêter le processus correspondant au script à l'aide de  \lstinline{ps} et \lstinline{kill}.
-        \end{itemize}
-        \bigbreak
-        \centering
-        \includegraphics[width=3cm]{image/guy-in-front-of-desktop}
-    \end{frame}
-
-    \subsection{Arguments et extension des noms de fichiers}\label{subsec:arguments-extension}
+    \subsection{Arguments et extensions des noms de fichiers}\label{subsec:arguments-extension}
 
 
     \begin{frame}{Syntaxe Shell}{Variables et Arguments\footnote{\label{devhint-bash}Bash scripting cheatsheet, \url{https://devhints.io/bash}}}
@@ -1658,7 +1597,7 @@ $ pkill -9 <nom>
 $ ls -lha | grep fibo_cached\..*sh
 -rw-rw-r-- 1 chrichri chrichri  449 août  27 23:48 fibo_cached.bash
 -rw-rw-r-- 1 chrichri chrichri  461 août  27 23:44 fibo_cached.ksh
--rw-rw-r-- 1 chrichri chrichri  554 août  28 12:15 fibo_cached.sh
+-rw-rw-r-- 1 chrichri chrichri  554 août  28 12:15 fibo.sh
         \end{lstlisting}
     \end{frame}
 
@@ -1667,7 +1606,7 @@ $ ls -lha | grep fibo_cached\..*sh
         \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
 $ bash fibo_cached.bash 10
 55
-$ bash fibo_cached.sh 10
+$ bash fibo.sh 10
 55
 $ bash fibo_cached.ksh 10
 55
@@ -1677,7 +1616,7 @@ fibo_cached.bash[26]: fibo_cached[6]: local: not found
 
 $ ksh fibo_cached.ksh 10
 55
-$ ksh fibo_cached.sh 10
+$ ksh fibo.sh 10
 55
 $ sh fibo_cached.bash 10
 fibo_cached.bash: 3: declare: not found
@@ -1688,7 +1627,7 @@ fibo_cached.ksh: 3: typeset: not found
 fibo_cached.ksh: 6: typeset: not found
 fibo_cached.ksh: 7: cannot open 2: No such file
 fibo_cached.ksh: 12: Bad substitution
-$ sh fibo_cached.sh 10
+$ sh fibo.sh 10
 55
         \end{lstlisting}
     \end{frame}
@@ -1833,10 +1772,1100 @@ Qui suis-je: chrichri
     \end{frame}
 
 
+    \section{Aide}\label{sec:aide}
+
+    \subsection{Où et quoi chercher~?}\label{subsec:aide-ou-quand}
+
+    \begin{frame}{Où et quoi chercher~?}{En ligne}
+        \begin{footnotesize}
+            Les ressources~:
+            \begin{itemize}
+                \item \href{https://doc.ubuntu-fr.org/}{Aide à l'utilisation du forum Ubuntu‑FR}, un wiki.
+                \item \href{https://www.cyberciti.biz/}{nixCraft} des articles sur les technologies de l'écosystème Unix et Linux.
+                \item \href{https://www.redhat.com/}{RedHat} des articles sur les technologies de l'écosystème Linux de RedHat, une des principales distributions de type \textquote{entreprise}.
+                Mais le contenu s'applique souvent à tous les Linux.
+            \end{itemize}
+            Les medias~:
+            \begin{itemize}
+                \item \href{http://www.youtube.com/@Computerphile}{Computerphile}, interview d'académiques de Nottingham Uni et d'experts du monde entier.
+                \item \href{http://www.youtube.com/@IBMTechnology}{Chaine YouTube d'IBM, IBM Technology} format court par les experts d'IBM~.
+            \end{itemize}
+            Les forums~:
+            \begin{itemize}
+                \item \href{https://askubuntu.com/}{Ask Ubuntu} blog de la galaxy Stack Exchange Inc, Stack Overflow, \textit{etc}.
+                \item \href{https://ubuntuforums.org}{Ubuntu forums} forum et ressource très populaire en anglais.
+            \end{itemize}
+        \end{footnotesize}
+    \end{frame}
+
+    \begin{frame}[fragile]{Où et quoi chercher~?}{Dans le terminal}
+        Comme vue précédemment la principale aide ligne de commande est le \textquote{help} de la commande \lstinline{-h} ou \lstinline{--help}.
+
+        Si ce dernier ne suffit pas \lstinline{man <commande à découvrir>} renvoie vers la documentation du package ou du logiciel qui est encore plus complète.
+        \bigbreak
+        Exercice \execcounterdispinc~:
+        Enregistrer le code C suivant dans le fichier \lstinline{hello.c}~:
+        \begin{lstlisting}[language=C]
+#include<stdio.h>
+int main()
+{
+  printf("\nHello world!");
+  return 0;
+}
+        \end{lstlisting}
+        Compiler le code avec \lstinline{gcc} de manière à produire un exécutable nommé \lstinline{hello}.
+        \bigbreak
+    \end{frame}
+
+    \begin{frame}[fragile]{Où et quoi chercher~?}{Dans le terminal}
+        Exercice \execcounterdispinc~:
+        Lister les \textit{optimizations} possibles du compilateur \lstinline{gcc}.
+        Et trouver celle permettant d'optimiser pour la place.
+        \bigbreak
+        \centering
+        \includegraphics[width=3cm]{image/guy-in-front-of-desktop}
+        \pause
+        \begin{lstlisting}[language=bash]
+$ gcc --help=optimizers
+The following options control optimizations:
+  -O<number>                  Set optimization level to <number>.
+  -Ofast                      Optimize for speed disregarding exact standards compliance.
+  -Og                         Optimize for debugging experience rather than speed or size.
+...
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}[fragile]{Où et quoi chercher~?}{Dans le terminal}
+        La commande \lstinline{apropos} équivalent à \lstinline{man -k} permet de chercher une commande avec la syntaxe \lstinline{apropos <pattern chaine ou RegExp>}~:
+        \begin{lstlisting}[language=bash]
+$ apropos ^gcc- # Exemple d'une RegExp
+gcc-10 (1)           - GNU project C and C++ compiler
+gcc-11 (1)           - GNU project C and C++ compiler
+...
+$ apropos riscv64-linux-gnu-gcc # Exemple d'une Chaine de caractère
+riscv64-linux-gnu-gcc (1) - GNU project C and C++ compiler
+riscv64-linux-gnu-gcc-13 (1) - GNU project C and C++ compiler
+riscv64-linux-gnu-gcc-ar (1) - a wrapper around ar adding the --plugin option
+riscv64-linux-gnu-gcc-ar-13 (1) - a wrapper around ar adding the --plugin option
+riscv64-linux-gnu-gcc-nm (1) - a wrapper around nm adding the --plugin option
+riscv64-linux-gnu-gcc-nm-13 (1) - a wrapper around nm adding the --plugin option
+riscv64-linux-gnu-gcc-ranlib (1) - a wrapper around ranlib adding the --plugin option
+riscv64-linux-gnu-gcc-ranlib-13 (1) - a wrapper around ranlib adding the --plugin option
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}{Où et quoi chercher~?}{Dans les livres}
+        \centering
+        \includegraphics[width=6cm]{image/lpi-book}
+    \end{frame}
+
+    \begin{frame}{Où et quoi chercher~?}{Dans les livres}
+        Un \href{https://github.com/bobbyiliev/101-linux-commands-ebook?tab=readme-ov-file}{ebook gratuit sur GitHub} qui couvre les commandes Linux courantes.
+        \bigbreak
+        \centering
+        \includegraphics[width=6cm]{image/wise-tux}
+    \end{frame}
+
+    \begin{frame}{Où et quoi chercher~?}{Le GUI d'aide}
+        \centering
+        \includegraphics[width=10cm]{image/aide}
+    \end{frame}
+
+
+    \section{Éditeurs}\label{sec:editor}
+
+    \subsection{VS Code de Microsoft}\label{subsec:vscode}
+
+    \begin{frame}{Editeurs}{VS Code de Microsoft}
+        L'objectif de cette section est d'éditer un script Shell dans un environment dédié au développement.
+        Un environment qui contient tous les outils nécessaires pour trouver rapidement les erreurs de syntaxe et tester sont script.
+        \bigbreak
+        Pour le lancer taper code dans la barre de recherche de Linux ou \lstinline{code .} dans un terminal pour le lancer dans le répertoire courant.
+        \begin{itemize}
+            \item Ouvrir VS Code.
+            \item Ouvrir ou créer le fichier contenant le code Shell.
+            \item Trouver un plugin dédié au développement Shell dans la \textit{marketplace}.
+            Ici \textquote{ShellCheck} pour la vérification de la syntaxe.
+            En lisant la doc on comprend que c'est une intégration de ShellCheck qui vient sans ce dernier sur certaines plateforme.
+            Il faut installer ShellCheck.
+            \item Installer le plugin.
+            \item Tester le plugin en écrivant sciemment un code erroné.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Editeurs}{VS Code de Microsoft}
+        \centering
+        \includegraphics[width=11cm]{image/shellcheck-install}
+    \end{frame}
+
+    \begin{frame}[fragile]{Editeurs}{VS Code de Microsoft}
+        Les erreurs/warning qui sont en ligne apparaissent dans l'IDE VS Code.
+        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+$ shellcheck fibo.ksh
+
+In fibo.ksh line 7:
+        echo $n
+             ^-- SC2086 (info): Double quote to prevent globbing and word splitting.
+
+Did you mean:
+        echo "$n"
+
+
+In fibo.ksh line 11:
+    typeset val1=$(fibo $((n - 1)))
+            ^--^ SC2034 (warning): val1 appears unused. Verify use (or export if used externally).
+            ^--^ SC2155 (warning): Declare and assign separately to avoid masking return values.
+
+
+In fibo.ksh line 12:
+    typeset val2=$(fibo $((n - 2)))
+            ^--^ SC2034 (warning): val2 appears unused. Verify use (or export if used externally).
+            ^--^ SC2155 (warning): Declare and assign separately to avoid masking return values.
+
+
+In fibo.ksh line 14:
+    typeset val=$((valeur1 + valeur2))
+                   ^-----^ SC2154 (warning): valeur1 is referenced but not assigned.
+                             ^-----^ SC2154 (warning): valeur2 is referenced but not assigned.
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}{Editeurs}{VS Code de Microsoft}
+        \centering
+        \includegraphics[width=12cm]{image/shellcheck-warning}
+    \end{frame}
+
+    \begin{frame}{Editeurs}{Exercice \execcounterdispinc}
+        Cette exercice à pour but d'illustrer que les éditeurs fournissent une aide pour tout type de langage.
+        \begin{itemize}
+            \item Installer VS Code.
+            \item Installer le plugin ShellCheck.
+            \item Ouvrir un fichier le fichier \lstinline{fibo.sh} dans VS Code.
+            \item Essayer de le lancer avec \lstinline{sh}.
+            \item Corriger les erreurs et même les warning de mise en évidence par ShellCheck.
+            \item Relancer le script pour vérifier qu'il fonctionne.
+        \end{itemize}
+        \bigbreak
+        \centering
+        \includegraphics[width=3cm]{image/question-mark}
+    \end{frame}
+
+    \begin{frame}{Editeurs}{Exercice \execcounterdispinc}
+        De la même manière, cet IDE permet de modifier de configuration.
+        Comme par les services configurés au format parfois appelé \textquote{Unit file}.
+        \begin{itemize}
+            \item Copier une configuration de service de \lstinline{/etc/systemd/system} dans le répertoire courant.
+            \item Vérifier qu'il n'y pas de \textit{syntaxe highlighting}.
+            \item Trouver un plugin pour le format \textquote{Unit file}.
+            \item Installer le plugin.
+            \item Vérifier que le formatage du fichier de configuration est bien pris en charge par le plugin installé.
+        \end{itemize}
+        \bigbreak
+        \centering
+        \includegraphics[width=3cm]{image/question-mark}
+    \end{frame}
+
+
+    \section{Files et Directories}\label{sec:files-directories}
+
+    \begin{frame}[fragile]{Files et Directories}{Quel type de fichier~?}
+        La liste des fichiers est trop longue pour qu'un registre soit tenu.
+        Chacun peut créer son extension.
+        Mais la commande \lstinline{file <chemin du fichier ou dossier>}, en examinant le contenu, nous indique le type de fichier/dossier.
+        \begin{lstlisting}[language=bash]
+        $ file fibo.sh
+fibo.sh: POSIX shell script, ASCII text executable
+$ file out/linux.pdf
+out/linux.pdf: PDF document, version 1.5
+$ file venv/bin/python3
+venv/bin/python3: symbolic link to python
+$ file venv/bin/python
+venv/bin/python: symbolic link to /usr/bin/python3.12
+$ file /usr/bin/python3.12
+/usr/bin/python3.12: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=ccd329aaf9256b96135a9e3f97cbf4c3829377e1, for GNU/Linux 3.2.0, stripped
+$ file fibo_cached.py
+fibo_cached.py: Python script, ASCII text executable
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}[fragile]{Files et Directories}{Quel type de doonées}
+        On peut stocker les données sous deux familles de fichiers~:
+        \begin{itemize}
+            \item Les fichiers textes comme par exemple~:
+            \begin{itemize}
+                \item Les CSV~.
+                \item Les fichiers texte ou Markdown.
+                \item les fichiers du web comme XML, HTML, JSON~.
+                \item Certains fichiers de log.
+            \end{itemize}
+            \item Les fichiers binaires~:
+            \begin{itemize}
+                \item Les fichiers de données des BBD SQL, noSQL~.
+                \item Les tableurs de type Excel.
+                \item Certains fichiers de log.
+                \item Le dump du traffic d'une interface réseau.
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Files et Directories}{Quel type de doonées}
+        Toutes les commandes \lstinline{awk}, \lstinline{grep}, \lstinline{sed}, \lstinline{sort}, \textit{etc}, ne traitent que des fichiers textes.
+        \bigbreak
+        Quel est l'intérêt de traiter des fichiers binaires~?
+        \bigbreak
+        \centering
+        \includegraphics[width=3cm]{image/question-mark}
+    \end{frame}
+
+    \begin{frame}[fragile]{Commandes de traitement de données}{Variantes de ces outils}
+        Dans les exemples précédents, nous n'avons manipulé que des données issues de fichier texte.
+        Les données numériques prennent moins de place en binaire.
+        \begin{lstlisting}[language=python]
+from sys import getsizeof
+from struct import pack
+print("lentgh of the string:", getsizeof("65535"))
+print("lentgh of the struct:", getsizeof(pack(">H", 0xffff)))
+lentgh of the string: 46
+lentgh of the struct: 35
+        \end{lstlisting}
+        La valeur d'un octet est comprise entre 0 et 255, mais pour obtenir du texte, on passe par une table de correspondance, un encodage, qui donnera un seul caractère.
+        La valeur numérique la plus élevée pour ce même octet en texteb donc 9.
+        \bigbreak
+        Pour des soucis de performance, de coût (du cloud), il n'est pas rare que les formats de données soit binaires.
+    \end{frame}
+
+    \begin{frame}{Commandes de traitement de données}{Arborescence Linux\footnote{\label{arborescence-linux}Arborescence des répertoires d’Ubuntu, \url{https://doc.ubuntu-fr.org/arborescence}}}
+        \begin{tiny}
+            \begin{table}[h!]
+                \centering
+                \begin{tabular}{|l|p{3cm}|p{6cm}|}
+                    \hline
+                    \textbf{Répertoire} & \textbf{Signification}               & \textbf{Contenu}                                                                                                               \\
+                    \hline
+                    \lstinline{/}       & Racine du système                    & Hiérarchie primaire                                                                                                            \\
+                    \hline
+                    \lstinline{/bin}    & binaires, utilitaires binaires       & Exécutables des commandes essentielles disponibles pour tous les utilisateurs (ex: cd, cat, ls…)                               \\
+                    \hline
+                    \lstinline{boot}    & initialisation                       & Fichiers statiques du chargeur d’amorçage (noyaux, images ramdisk, fichiers de configuration du chargeur d'amorçage…)          \\
+                    \hline
+                    \lstinline{/dev}    & périphérique                         & Fichiers spéciaux des périphériques                                                                                            \\
+                    \hline
+                    \lstinline{/etc}    & configuration éditable en mode texte & Fichiers de configuration au format textuel de plusieurs programmes et services du système                                     \\
+                    \hline
+                    \lstinline{/home}   & maison                               & Répertoires personnels des utilisateurs                                                                                        \\
+                    \hline
+                    \lstinline{/lib}    & bibliothèques                        & Bibliothèques partagées essentielles et modules du noyau                                                                       \\
+                    \hline
+                    \lstinline{/media}  &                                      & Contient les points de montages pour les médias amovibles                                                                      \\
+                    \hline
+                    \lstinline{/mnt}    & montage                              & Point de montage pour monter temporairement un système de fichiers                                                             \\
+                    \hline
+                    \lstinline{/opt}    & optionnel                            & Emplacement pour des applications installées hors gestionnaire de paquets (logiciels optionnels)                               \\
+                    \hline
+                    \lstinline{/proc}   & processus                            & Répertoire virtuel pour les informations système (états du noyau et des processus système)                                     \\
+                    \hline
+                    \lstinline{/root}   & racine                               & Répertoire personnel du super-utilisateur                                                                                      \\
+                    \hline
+                    \lstinline{/run}    & exécution système                    & Informations relatives au système depuis son dernier démarrage (ex : utilisateurs actifs, services en cours d'exécution, etc.) \\
+                    \hline
+                    \lstinline{/sbin}   & binaires système                     & Exécutables système essentiels                                                                                                 \\
+                    \hline
+                \end{tabular}
+            \end{table}
+        \end{tiny}
+    \end{frame}
+
+
+    \begin{frame}{Commandes de traitement de données}{Arborescence Linux\cref{arborescence-linux}}
+        \begin{tiny}
+            \begin{table}[h!]
+                \centering
+                \begin{tabular}{|l|p{3cm}|p{6cm}|}
+                    \hline
+                    \textbf{Répertoire}    & \textbf{Signification}  & \textbf{Contenu}                                                                                                                                                                     \\
+                    \hline
+                    \lstinline{/srv}       & services                & Données pour les services du système                                                                                                                                                 \\
+                    \hline
+                    \lstinline{/tmp}       & temporaire              & Fichiers temporaires des applications                                                                                                                                                \\
+                    \hline
+                    \lstinline{/usr}       & ressources système Unix & Hiérarchie secondaire, pour des données en lecture seule par les utilisateurs. Ce répertoire contient la vaste majorité des applications usuelles des utilisateurs et leurs fichiers \\
+                    \hline
+                    \lstinline{/usr/bin}   &                         & Exécutables des programmes additionnels disponibles pour tous les utilisateurs (ex : le gestionnaire de fichiers, le lecteur de musique, le navigateur Web…)                         \\
+                    \hline
+                    \lstinline{/usr/lib}   &                         & Bibliothèques partagées par les applications additionnelles de /usr/bin et /usr/sbin                                                                                                 \\
+                    \hline
+                    \lstinline{/usr/local} &                         & Hiérarchie tertiaire. Emplacement où les utilisateurs doivent installer les applications qu'ils compilent.                                                                           \\
+                    \hline
+                    \lstinline{/usr/share} &                         & Fichiers non reliés à l'architecture partagés par les applications de /usr/bin et /usr/sbin (ex : les icônes, les thèmes, la documentation…)                                         \\
+                    \hline
+                    \lstinline{/var}       & variable                & Données variables et diverses                                                                                                                                                        \\
+                    \hline
+                \end{tabular}
+            \end{table}
+        \end{tiny}
+    \end{frame}
+
+
+    \section{Processus}\label{sec:processus}
+
+    \subsection{Gestion des processus}\label{subsec:process-management}
+
+    \begin{frame}{Gestion des processus}{Définition\footnote{\label{process}Les processus sous Linux, \url{https://www.cyberciti.biz/faq/how-to-check-running-process-in-ubuntu-linux-using-command-line/}}}
+        Un processus est un programme en cours d'exécution.
+        Il est identifié par un PID, le \textquote{Process IDentifier}.
+        \bigbreak
+        Il peut être en cours d'exécution, en attente, en pause, en zombie, dormant ou en terminaison, \textit{etc}.
+        Il est possible de voir les processus avec la commande \lstinline{ps} ou \lstinline{top}.
+        \bigbreak
+        \begin{columns}
+            \column{0.7\textwidth}
+            \lstinline{ps} affiche les informations de manière statique alors que est dynamique, interactif et temps réel.
+            \lstinline{ps} peut donc être utilisé également dans des scripts Shell.
+
+            Les processus peuvent être tués avec la commande \lstinline{kill}.
+
+            Les données les concernant sont stockées dans le dossier \lstinline{/proc}.
+            \column{0.3\textwidth}
+            \centering
+            \includegraphics[width=4cm]{image/proc-hamster}
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}[fragile]{Gestion des processus}{Les commandes \lstinline{ps}}
+        L'option \lstinline{-f} affiche plus d'informations sur les processus.
+        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+$ ps
+    PID TTY          TIME CMD
+ 276321 pts/5    00:00:00 bash
+ 338450 pts/5    00:00:00 ps
+$ ps -f
+UID          PID    PPID  C STIME TTY          TIME CMD
+chrichri  276321  265707  0 13:17 pts/5    00:00:00 /usr/bin/bash --rcfile /home/chrichri/pycharm-professional-2024.1.4/pycharm-2024.1.4/plugins/terminal/shell-integrations/bash/bash-integration.bash -i
+chrichri  338508  276321 99 14:12 pts/5    00:00:00 ps -f
+        \end{lstlisting}
+        Une commande par nom de processus et avec la ligne de commande complète~:
+        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+$ ps -fC java
+UID          PID    PPID  C STIME TTY          TIME CMD
+chrichri  265707    8404 80 13:08 ?        00:42:46 /home/chrichri/pycharm...
+        \end{lstlisting}
+        \bigbreak
+        Les processus de l'utilisateur courant~:
+        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+$ ps -u chrichri
+    PID TTY          TIME CMD
+   8059 ?        00:00:06 systemd
+   8068 ?        00:00:00 (sd-pam)
+   8090 ?        00:00:02 pipewire
+...
+        \end{lstlisting}
+        \bigbreak
+        Les processus de l'utilisateur courant et de tous les autres utilisateurs, \textit{i.e.}, tous les processus~:
+        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+$ ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 09:23 ?        00:00:05 /sbin/init splash
+root           2       0  0 09:23 ?        00:00:00 [kthreadd]
+...
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}{Gestion des processus}{Les états d'un processus sous \lstinline{ps}}
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{|p{0.1\textwidth}|p{0.8\textwidth}|}
+                \hline
+                \textbf{État} & \textbf{Description}                                                                      \\ \hline
+                \textbf{D}    & Sommeil ininterrompu (habituellement en attente d'IO)                                     \\ \hline
+                \textbf{R}    & En cours d'exécution ou prêt à être exécuté (dans la file d'attente)                      \\ \hline
+                \textbf{S}    & Sommeil interruptible (en attente de la complétion d'un événement)                        \\ \hline
+                \textbf{T}    & Arrêté, soit par un signal de contrôle de tâche, soit parce qu'il est tracé               \\ \hline
+                \textbf{W}    & Pagination (non valide depuis le noyau 2.6.xx)                                            \\ \hline
+                \textbf{X}    & Mort (ne devrait jamais être vu)                                                          \\ \hline
+                \textbf{Z}    & Processus défunt (\textquote{zombie}), terminé mais non récupéré par son processus parent \\ \hline
+            \end{tabular}
+            \caption{États des processus sous Linux sous \lstinline{ps}}
+        \end{table}
+    \end{frame}
+
+    \begin{frame}{Gestion des processus}{L'interface \lstinline{top}}
+        La commande \lstinline{top} affiche tous les processus.
+        Mais il ne permet pas de trouver les processus par nom contrairement à \lstinline{ps}.
+        \bigbreak
+        Les principales fonctions que l'on peut appeler dans l'interface~:
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{|p{0.1\textwidth}|p{0.8\textwidth}|}
+                \hline
+                \textbf{Touche} & \textbf{Fonction}                           \\ \hline
+                \textbf{k}      & Met fin à un processus                      \\ \hline
+                \textbf{m}      & Trie la liste par utilisation de la mémoire \\ \hline
+                \textbf{n}      & Trie la liste par PID                       \\ \hline
+                \textbf{r}      & Modifie la priorité d’un processus          \\ \hline
+                \textbf{h}      & Affiche la fenêtre d’aide                   \\ \hline
+                \textbf{z}      & Affiche les processus en cours en couleurs  \\ \hline
+                \textbf{d}      & Modifie l’intervalle de rafraîchissement    \\ \hline
+                \textbf{c}      & Affiche le chemin absolu d’un processus     \\ \hline
+                \textbf{f}      & Écran de personnalisation                   \\ \hline
+            \end{tabular}
+            \caption{États des processus sous Linux sous \lstinline{top}}
+        \end{table}
+    \end{frame}
+
+    \begin{frame}{Gestion des processus}{Les états d'un processus sous \lstinline{top}}
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{|p{0.1\textwidth}|p{0.8\textwidth}|}
+                \hline
+                \textbf{État} & \textbf{Description}                      \\ \hline
+                \textbf{D}    & Sommeil ininterrompu                      \\ \hline
+                \textbf{I}    & Inactif                                   \\ \hline
+                \textbf{R}    & En cours d'exécution                      \\ \hline
+                \textbf{S}    & En sommeil                                \\ \hline
+                \textbf{T}    & Arrêté par un signal de contrôle de tâche \\ \hline
+                \textbf{t}    & Arrêté par un débogueur lors d'un traçage \\ \hline
+                \textbf{Z}    & Processus zombie                          \\ \hline
+            \end{tabular}
+            \caption{États des processus sous Linux sous \lstinline{top}}
+        \end{table}
+    \end{frame}
+
+    \begin{frame}{Gestion des processus}{L'interface \lstinline{top}}
+        Top et \textquote{c} pour afficher la ligne de commande~:
+        \bigbreak
+        \centering
+        \includegraphics[width=10cm]{image/top-interface}
+    \end{frame}
+
+    \begin{frame}[fragile]{Gestion des processus}{La commande \lstinline{kill}}
+        La commande \lstinline{top} permet de terminer un processus dans l'interface avec \textbf{k}.
+        En fonction de son PID, qu'on aurait auparavant dans cette même interface.
+        ou avec la commande \lstinline{ps}, on peut le tuer avec la commande \lstinline{kill}.
+        \bigbreak
+        Mais il existe une commande spécifique, c'est \lstinline{kill}, elle envoie un signal au processus ici SIGKILL avec l'option \lstinline{-9}.
+        Elle permet de terminer un processus dont aurait trouvé le PID avec \lstinline{ps} ou \lstinline{top}.
+        \begin{lstlisting}[language=bash]
+$ kill -9 <PID>
+        \end{lstlisting}
+        \bigbreak
+        La commande \lstinline{pkill} permet de tuer un processus par son nom, celui qui s'affiche dans \lstinline{ps} ou \lstinline{top}.
+        \begin{lstlisting}[language=bash]
+$ pkill -9 <nom>
+        \end{lstlisting}
+    \end{frame}
+
+    \subsection{Les signaux}\label{subsec:signals}
+
+    \begin{frame}{Gestion des processus}{Les signaux\footnote{\label{uclouvain-signaux}\url{https://sites.uclouvain.be/SystInfo/notes/Theorie/Fichiers/fichiers-signaux.html\#signaux}}}
+        L'envoi et la réception de signaux est le mécanisme de communication entre processus le plus primitif sous Unix.
+        Un signal est une forme d'interruption logicielle.
+        Un microprocesseur utilise les interruptions pour permettre au système d'exploitation de réagir aux événements extérieurs qui surviennent, et aux demandes d'action de la part du processeur ou d'un programme.
+        Un signal Unix est un mécanisme qui permet à un processus de réagir de façon \textit{asynchrone} à un événement qui s'est produit.
+        Certains de ces événements sont directement liés au fonctionnement du matériel.
+        D'autres sont provoqués par le processus lui-même ou un autre processus s'exécutant sur le système.
+    \end{frame}
+
+    \begin{frame}{Gestion des processus}{Les signaux\cref{uclouvain-signaux}}
+        Liste non exhaustive des (principaux) signaux~:
+        \begin{tiny}
+            \begin{table}[h!]
+                \centering
+                \begin{tabular}{|p{2cm}|p{9cm}|}
+                    \hline
+                    \textbf{Signal}    & \textbf{Description}                                                                                                                                                                                                                                                               \\
+                    \hline
+                    SIGALRM            & Ce signal survient lorsqu'une alarme définie par la fonction \lstinline{alarm(3posix)} ou l'appel système \lstinline{setitimer(2)} a expiré. Par défaut, la réception de ce signal provoque la terminaison du processus.                                                           \\
+                    \hline
+                    SIGBUS             & Ce signal correspond à une erreur au niveau matériel. Par défaut, la réception de ce signal provoque la terminaison du processus.                                                                                                                                                  \\
+                    \hline
+                    SIGSEGV            & Ce signal correspond à une erreur dans l'accès à la mémoire, typiquement une tentative d'accès en dehors de la zone mémoire allouée au processus. Par défaut, la réception de ce signal provoque la terminaison du processus.                                                      \\
+                    \hline
+                    SIGFPE             & Ce signal correspond à une erreur au niveau de l'utilisation des fonctions mathématiques, notamment en virgule flottante mais pas seulement. Par défaut, la réception de ce signal provoque la terminaison du processus.                                                           \\
+                    \hline
+                    SIGTERM            & Ce signal est le signal utilisé par défaut par la commande \lstinline{kill(1)} pour demander la fin d'un processus. Par défaut, la réception de ce signal provoque la terminaison du processus.                                                                                    \\
+                    \hline
+                    SIGKILL            & Ce signal permet de forcer la fin d'un processus. Alors qu'un processus peut définir un gestionnaire pour le signal \lstinline{SIGTERM}, il n'est pas possible d'en définir un pour \lstinline{SIGKILL}. Ce signal est le seul qui ne peut être traité et ignoré par un processus. \\
+                    \hline
+                    SIGUSR1 et SIGUSR2 & Ces signaux peuvent être utilisés par des processus sans conditions particulières. Par défaut, la réception d'un tel signal provoque la terminaison du processus.                                                                                                                  \\
+                    \hline
+                    SIGCHLD            & Ce signal indique qu'un processus fils s'est arrêté ou a fini son exécution. Par défaut, ce signal est ignoré.                                                                                                                                                                     \\
+                    \hline
+                    SIGHUP             & Aux débuts de Unix, ce signal servait à indiquer que la connexion avec le terminal avait été rompue. Aujourd'hui, il est parfois utilisé par des processus serveurs pour qu'ils rechargent leur fichier de configuration lorsqu'ils reçoivent ce signal.                           \\
+                    \hline
+                    SIGINT             & Ce signal est envoyé par le shell lorsque l'utilisateur tape \lstinline{Ctrl-C} pendant l'exécution d'un programme. Il provoque normalement la terminaison du processus.                                                                                                           \\
+                    \hline
+                \end{tabular}
+            \end{table}
+        \end{tiny}
+    \end{frame}
+
+    \begin{frame}[fragile]{Gestion des processus}{Les signaux\cref{uclouvain-signaux}}
+        Mais sur ma machine, la commande \lstinline{kill} en connait bien plus~:
+        \begin{lstlisting}[language=bash]
+$ kill -l
+ 1) SIGHUP       2) SIGINT       3) SIGQUIT      4) SIGILL       5) SIGTRAP
+ 6) SIGABRT      7) SIGBUS       8) SIGFPE       9) SIGKILL     10) SIGUSR1
+11) SIGSEGV     12) SIGUSR2     13) SIGPIPE     14) SIGALRM     15) SIGTERM
+16) SIGSTKFLT   17) SIGCHLD     18) SIGCONT     19) SIGSTOP     20) SIGTSTP
+21) SIGTTIN     22) SIGTTOU     23) SIGURG      24) SIGXCPU     25) SIGXFSZ
+26) SIGVTALRM   27) SIGPROF     28) SIGWINCH    29) SIGIO       30) SIGPWR
+31) SIGSYS      34) SIGRTMIN    35) SIGRTMIN+1  36) SIGRTMIN+2  37) SIGRTMIN+3
+38) SIGRTMIN+4  39) SIGRTMIN+5  40) SIGRTMIN+6  41) SIGRTMIN+7  42) SIGRTMIN+8
+43) SIGRTMIN+9  44) SIGRTMIN+10 45) SIGRTMIN+11 46) SIGRTMIN+12 47) SIGRTMIN+13
+48) SIGRTMIN+14 49) SIGRTMIN+15 50) SIGRTMAX-14 51) SIGRTMAX-13 52) SIGRTMAX-12
+53) SIGRTMAX-11 54) SIGRTMAX-10 55) SIGRTMAX-9  56) SIGRTMAX-8  57) SIGRTMAX-7
+58) SIGRTMAX-6  59) SIGRTMAX-5  60) SIGRTMAX-4  61) SIGRTMAX-3  62) SIGRTMAX-2
+63) SIGRTMAX-1  64) SIGRTMAX
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}[fragile]{Gestion des processus}{Les signaux\cref{uclouvain-signaux}}
+        Pour être certain de terminer un process, on envoie donc un SIGKILL avec la commande~:
+        \begin{lstlisting}[language=bash]
+kill -9 <PID>
+        \end{lstlisting}
+        Équivalent à~:
+        \begin{lstlisting}[language=bash]
+kill -SIGKILL <PID>
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}{Gestion des processus}{Les signaux}
+        Exercice \execcounterdispinc{}~:
+        Le signal SIGSEGV
+        \begin{itemize}
+            \item Dans quel cas précis est-il envoyé~?
+            \item Pourquoi est-il crucial pour la sécurité des programmes exécutés.
+        \end{itemize}
+        \bigbreak
+        \centering
+        \includegraphics[width=3cm]{image/guy-in-front-of-desktop}
+    \end{frame}
+
+    \begin{frame}[fragile]{Buffer Overflow}{Example de Stack-Based Buffer Overflow\footnote{\label{hacking}Hacking, The art of exploitation, Jon Erickson, 2nd edition}}
+        Le programme \lstinline{auth-overflow.c} est un programme en C qui vérifie un mot de passe et est vulnérable à un buffer overflow~:
+        % C listing
+        \begin{lstlisting}[language=C,basicstyle=\tiny\ttfamily]
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int check_authentication(char *password) {
+    char password_buffer[16];
+    int auth_flag = 0;
+    strcpy(password_buffer, password); // Not so safe at all
+    if (strcmp(password_buffer, "brillig") == 0)
+        auth_flag = 1;
+    if (strcmp(password_buffer, "outgrabe") == 0)
+        auth_flag = 1;
+    return auth_flag;
+}
+int main(int argc, char *argv[]) {
+    if (argc < 2) {
+        printf("Usage: %s <password>\n", argv[0]);
+        exit(0);
+    }
+    if (check_authentication(argv[1])) {
+        printf("Access Granted.\n");
+    } else {
+        printf("Access Denied.\n");
+    }
+}
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}[fragile]{Buffer Overflow}{Example de Stack-Based Buffer Overflow\cref{hacking}}
+        % C listing
+        \begin{lstlisting}[language=bash]
+$ gcc auth-overflow.c -o auth-overflow
+$ ./auth-overflow brillig
+Access Granted.
+$ ./auth-overflow $(python3 -c "print('A'*2)")
+Access Denied.
+$ ./auth-overflow $(python3 -c "print('A'*24)")
+Access Denied.
+$ ./auth-overflow $(python3 -c "print('A'*25)")
+*** stack smashing detected ***: terminated
+Abandon (core dumped)
+        \end{lstlisting}
+        Expliquer ce qui se passe dans ces cas~?
+        \pause
+        \bigbreak
+        \lstinline{stack smashing detected} veut dire que GCC à détecter un buffer overflow et fait crasher le programme de manière préventive.
+        Il parle de la stack, car c'est dans cette mémoire que les variables locales sont stockées.
+    \end{frame}
+
+    \begin{frame}[fragile]{Buffer Overflow}{Example de Stack-Based Buffer Overflow\cref{hacking}}
+        \begin{lstlisting}[language=bash]
+$ gcc auth-overflow.c -fno-stack-protector -o auth-overflow
+$ ./auth-overflow $(python3 -c "print('A'*25)")
+Access Denied.
+$ ./auth-overflow $(python3 -c "print('A'*266)")
+Erreur de segmentation (core dumped)
+$ ./auth-overflow $(python3 -c "print('A'*30)")
+Access Granted.
+        \end{lstlisting}
+        \bigbreak
+        \begin{columns}
+            \begin{column}{0.6\textwidth}
+                Si on désactive cette protection avec l'option \lstinline{-fno-stack-protector}.
+                \begin{dangercolorbox}
+                    L'OS ne trouvera pas toujours ces débordements de mémoire, mais quand il les trouve, c'est un SIGSEGV qu'il envoie au programme dont la mémoire est corrompue.
+                \end{dangercolorbox}
+            \end{column}
+            \begin{column}{0.4\textwidth}
+                \includegraphics[width=5cm]{image/old-programmer-exploding}
+            \end{column}
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}[fragile]{Gestion des processus}{Les signaux\cref{uclouvain-signaux}}
+        Certains sont gérés par l'OS d'autres par le programme \lstinline{sigusr.c}~:
+        \begin{lstlisting}[language=C,basicstyle=\tiny\ttfamily]
+#include <stdlib.h>
+#include <string.h>
+#include <signal.h>
+#include <unistd.h>
+#include <stdio.h>
+volatile sig_atomic_t n_sigusr1 = 0;
+static void sig_handler(int);
+int main(int argc, char *argv[]) {
+    if (signal(SIGUSR1, sig_handler) == SIG_ERR) {
+        perror("signal");
+        exit(EXIT_FAILURE);
+    }
+    while ((n_sigusr1) < 5) {} // Boucle infinie
+    printf("Fin du processus\n");
+    printf("Reçu %d SIGUSR1\n", n_sigusr1);
+    return (EXIT_SUCCESS);
+}
+static void sig_handler(int signum) {
+    if (signum == SIGUSR1) { // +1 sur le compteur
+        n_sigusr1++;
+    }
+    else { // Exit en plantage si autre que SIGUSR1
+        char *msg = "Reçu signal inattendu\n";
+        write(STDERR_FILENO, msg, strlen(msg));
+        _exit(EXIT_FAILURE);
+    }
+}
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}{Gestion des processus}{Les signaux}
+        On peut donc controller un programme de l'extérieur, déclencher une action dans ce dernier à la suite de la réception de la réception du signal.
+        Ou une interruption/mise en dormance du programme pour laisser les ressources à un autre processus.
+        \bigbreak
+        Exercice \execcounterdispinc{}~:
+        \begin{columns}
+            \column{0.7\textwidth}
+            \begin{itemize}
+                \item Quel est le comportement du programme \lstinline{sigusr.c} lorsqu'on lui envoie un signal \lstinline{SIGUSR1}~?
+                \item Quel est le comportement du programme \lstinline{sigusr.c} lorsqu'on lui envoie un signal \lstinline{SIGUSR2}~?
+                \item Quel est le comportement du programme \lstinline{sigusr.c} lorsqu'on lui envoie un signal \lstinline{SIGKILL}~?
+            \end{itemize}
+            \column{0.3\textwidth}
+            \centering
+            \includegraphics[width=3cm]{image/guy-in-front-of-desktop}
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}{Gestion des processus}{Le dossier \lstinline{/proc}\footnote{The /proc Filesystem, \url{https://docs.kernel.org/filesystems/proc.html}}}
+        \begin{footnotesize}
+            Le dossier \lstinline{/proc} contient des informations sur les processus sous l'arborescence de son PID donc \lstinline{/proc/<PID>/} dans les fichiers suivants~:
+            \begin{tiny}
+                \begin{table}[h!]
+                    \centering
+                    \begin{tabular}{|p{2cm}|p{8cm}|}
+                        \hline
+                        \textbf{File}             & \textbf{Content}                                                                                                                \\
+                        \hline
+                        \lstinline{clear\_refs}   & Clears page referenced bits shown in smaps output                                                                               \\
+                        \hline
+                        \lstinline{cmdline}       & Command line arguments                                                                                                          \\
+                        \hline
+                        \lstinline{cpu}           & Current and last cpu in which it was executed (2.4)(smp)                                                                        \\
+                        \hline
+                        \lstinline{cwd}           & Link to the current working directory                                                                                           \\
+                        \hline
+                        \lstinline{environ}       & Values of environment variables                                                                                                 \\
+                        \hline
+                        \lstinline{exe}           & Link to the executable of this process                                                                                          \\
+                        \hline
+                        \lstinline{fd}            & Directory, which contains all file descriptors                                                                                  \\
+                        \hline
+                        \lstinline{maps}          & Memory maps to executables and library files (2.4)                                                                              \\
+                        \hline
+                        \lstinline{mem}           & Memory held by this process                                                                                                     \\
+                        \hline
+                        \lstinline{root}          & Link to the root directory of this process                                                                                      \\
+                        \hline
+                        \lstinline{stat}          & Process status                                                                                                                  \\
+                        \hline
+                        \lstinline{statm}         & Process memory status information                                                                                               \\
+                        \hline
+                        \lstinline{status}        & Process status in human readable form                                                                                           \\
+                        \hline
+                        \lstinline{wchan}         & Present with \lstinline{CONFIG\_KALLSYMS=y:} it shows the kernel function symbol the task is blocked in - or “0” if not blocked \\
+                        \hline
+                        \lstinline{pagemap}       & Page table                                                                                                                      \\
+                        \hline
+                        \lstinline{stack}         & Report full stack trace, enable via \lstinline{CONFIG\_STACKTRACE}                                                              \\
+                        \hline
+                        \lstinline{smaps}         & An extension based on maps, showing the memory consumption of each mapping and flags associated with it                         \\
+                        \hline
+                        \lstinline{smaps\_rollup} & Accumulated smaps stats for all mappings of the process. This can be derived from smaps, but is faster and more convenient      \\
+                        \hline
+                        \lstinline{numa\_maps}    & An extension based on maps, showing the memory locality and binding policy as well as mem usage (in pages) of each mapping      \\
+                        \hline
+                    \end{tabular}
+                \end{table}
+            \end{tiny}
+        \end{footnotesize}
+    \end{frame}
+
+    \begin{frame}{Système de fichier}{Exercices sur les processus}
+        \begin{small}
+            Exercice \execcounterdispinc{}, quels droits ai-je \lstinline{/proc} sur les processus des autres utilisateurs~?
+            \bigbreak
+            Exercice \execcounterdispinc{}, quels droits ai-je \lstinline{/proc} sur mes processus~?
+            \bigbreak
+            Exercice \execcounterdispinc{}, terminer un processus découvert sous \lstinline{top} avec la commande \lstinline{kill}.
+            \bigbreak
+            Exercice \execcounterdispinc{}, terminer un processus découvert sous \lstinline{top} avec la commande \lstinline{pkill}.
+            \bigbreak
+            Personnaliser \lstinline{top} pour que l'interface affiche les processus non pas en pourcentage totale de CPU consommé (par défaut) mais en pourcentage par cœur.
+        \end{small}
+        \begin{center}
+            \includegraphics[width=3cm]{image/guy-in-front-of-desktop}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Système de fichier}{Exercices \execcounterdispinc{}}
+        \begin{itemize}
+            \item Lancer en arrière plan le script Shell \lstinline{endless-loop.sh}.
+            \item Arrêter le processus correspondant au script dans \lstinline{top}.
+            \item Lancer à nouveau en arrière plan le script Shell \lstinline{endless-loop.sh}.
+            \item Arrêter le processus correspondant au script à l'aide de  \lstinline{ps} et \lstinline{kill}.
+        \end{itemize}
+        \bigbreak
+        \centering
+        \includegraphics[width=3cm]{image/guy-in-front-of-desktop}
+    \end{frame}
+
+    \begin{frame}{Système de fichier}{Exercices sur les processus}
+        Exercices \execcounterdispinc{}, à partir de vos connaissances sur les process et des commandes précédentes comparer l'activité d'une machine Ubuntu, d'un WSL ubuntu et d'un WSL Debian, ou un FreeBSD~.
+
+        Que remarquez-vous~?
+        \pause
+        \bigbreak
+        \centering
+        \includegraphics[width=10cm]{image/top-debian} \\ Ubuntu est-il en train de devenir un \textit{bloatware~}, lui aussi\ldots \emoji{window}?
+    \end{frame}
+
+    \subsection{Gestion des priorités des processus}\label{subsec:process-priority}
+
+    \begin{frame}{Gestion des Priorités des Processus}{Définition\footnote{\label{process-priority}Linux commands: How to manipulate process priority, \url{https://www.redhat.com/sysadmin/manipulate-process-priority}}}
+        \begin{itemize}
+            \item Dans un système multi-tâches, plusieurs processus s'exécutent en parallèle.
+            \item Le système d'exploitation doit allouer équitablement les ressources (CPU, RAM, \textit{etc}) entre ces processus.
+            \item Les priorités permettent de contrôler l'ordonnancement des processus.
+            \item Chaque processus a une priorité.
+            \item Une priorité plus élevée signifie que le processus recevra plus de temps CPU~.
+            \item Sur les systèmes Unix/Linux, la priorité est représentée par une valeur appelée \lstinline{nice}.
+            \item Une bonne gestion des priorités est cruciale lors montées en charge du système (scaling).
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Gestion des Priorités des Processus}{Commande \lstinline{nice}\cref{process-priority}}
+        \begin{itemize}
+            \item \lstinline{nice} permet de démarrer un processus avec une priorité spécifique.
+            \item Syntaxe~: \lstinline{nice -n [valeur] [commande]}.
+            \item La valeur de nice varie de -20 (priorité élevée) à 19 (priorité faible).
+            \item Exemple~: \lstinline{nice -n 10 myprocess}
+            \item On retrouve ce niveau de priorité dans \lstinline{top} avec la colonne \textquote{NI}.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Gestion des Priorités des Processus}{Commande \lstinline{renice}\cref{process-priority}}
+        \begin{itemize}
+            \item \lstinline{renice} modifie la priorité d'un processus en cours d'exécution.
+            \item Elle nécessite les droits superutilisateur.
+            \item Syntaxe~: \lstinline{renice [valeur] -p [PID]}.
+            \item PID (Process ID) est l'identifiant unique du processus.
+            \item Utiliser \lstinline{ps} pour trouver le PID du processus.
+            \item Exemple~: \lstinline{renice -5 -p 1234}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[fragile]{Commandes \lstinline{nice} et \lstinline{renice}}{Exemple de commandes}
+        Une priorité peut être attribuée au début de l'exécution et modifiée par la suite~:
+        \begin{lstlisting}[language=bash]
+$ nohup nice -n 15 ./endless-loop.sh &
+[1] 906674
+$ nohup: les entrées sont ignorées et la sortie est ajoutée à 'nohup.out'
+$ renice -19 -p 906674
+renice: échec de configuration de priorité pour 906674 (process ID): Permission non accordée
+$ sudo renice -19 -p 906674
+906674 process ID) priorité précédente 15, nouvelle priorité -19
+        \end{lstlisting}
+        \begin{center}
+            \includegraphics[width=5cm]{image/pinguins-racing}
+        \end{center}
+    \end{frame}
+
+
+    \section{Sécurité}\label{sec:security}
+
+    \begin{frame}{Sécurité}{Lignes de défense Linux}
+        Parmi les lignes de défense on pense principalement à~:
+        \begin{columns}
+            \column{0.7\textwidth}
+            \begin{itemize}
+                \item La qualité du code liée au maintient par la communauté open source.
+                \item La gestion des droits utilisateurs.
+                \item Le module SELinux (Security-Enhanced Linux).
+                \item Le module AppArmor, pour gérer les droits des programmes.
+                \item UEFI (Unified Extensible Firmware Interface) Secure Boot.
+                \item La cryptographie as \textit{first class citizen} dans les communications et la donnée.
+            \end{itemize}
+            \column{0.3\textwidth}
+            \centering
+            \includegraphics[width=4cm]{image/tux-fighting-attack}
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}{Sécurité}{La qualité du code liée au maintient par la communauté open source}
+        \begin{footnotesize}
+            Un linux est construit à partir de ses dépendances logicielles, ses paquets.
+            \bigbreak
+            Ces paquets ont leurs équipes de développement.
+            Par exemple, GCC le compilateur de Debian et de la plupart des distributions, compte 508 personnes\footnote{Contributors to GCC, \url{https://gcc.gnu.org/onlinedocs/gcc/Contributors.html}}.
+            \bigbreak
+            Pour intégrer toutes ces briques et développer celles qui manques, Debian compte 1020 membres officiels\footnote{Official members of the Debian project, \url{https://nm.debian.org/members/}}.
+            \bigbreak
+            Sachant que Debian est composée de centaines de paquets, on imagine que le nombre de personnes impliquées permet d'atteindre un certain niveau de qualité et donc de sécurité.
+            \bigbreak
+            Là on parle de développeurs impliqué officiellement sur un projet, cela ne compte pas les contributions ponctuelles qui peuvent venir spontanément de GitHub ou d'autre plateformes similaires.
+        \end{footnotesize}
+    \end{frame}
+
+    \begin{frame}{Sécurité}{La qualité du code liée au maintient par la communauté open source}
+        Red Hat qui développe RHEL (Red Hat Enterprise Linux) a 19 000 employés\footnote{Red Hat, \url{https://www.redhat.com/en/about/company-details}}.
+        \bigbreak
+        C'est une filiale d'IBM, présent dès les premiers jours de Unix et Linux.
+        \bigbreak
+        Ils mettent en open source leurs développements pour faire des distributions comme Rocky Linux, Alma Linux et bien d'autres.
+        \bigbreak
+        En cas de faille de sécurité, l'impact réputationnel est très important pour ce type de sociétés.
+        On imagine donc l'attention portée à ce sujet.
+    \end{frame}
+
+    \begin{frame}{Utilisateurs, groupes et droits d'accès}{Les droits\footnote{\label{rights-digitalocean}An Introduction to Linux Permissions, \url{https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-permissions}}}
+        \begin{dangercolorbox}
+            Cela montre que des users qui ne sont pas prioritaires et qui ne font pas partie du groupe propriétaire peuvent avoir des droits.
+            Par défaut ces droits sont en lecture seule, n'ont n'avons pas pu écrire dans le fichier.
+        \end{dangercolorbox}
+        \centering
+        \includegraphics[width=7cm]{image/permission-classes}
+        \flushleft
+        Les droits par défaut du fichier en question étaient \lstinline{-rw-rw-r--}.
+    \end{frame}
+
+    \begin{frame}[fragile]{Utilisateurs, groupes et droits d'accès}{Les droits\cref{rights-digitalocean}}
+        \begin{lstlisting}[language=bash]
+$ ls -lha digicomp-little-secret/
+total 12K
+drwxrwxr-x  2 root     digicomp 4,0K août  15 16:07 .
+drwxrwxr-x 10 chrichri chrichri 4,0K août  15 16:07 ..
+-rw-rw-r--  1 root     digicomp   29 août  15 16:08 secret.txt
+        \end{lstlisting}
+        \begin{columns}
+            \column{0.4\textwidth}
+            N'étant ni dans le groupe propriétaire, ni propriétaire, l'utilisateur \lstinline{chrichri} est autre, ses droits sont donc \lstinline{r--}.
+
+            Qui veut dire, \textit{read} uniquement.
+            Ce qui est cohérent avec les commandes précédentes.
+            \column{0.6\textwidth}
+            \begin{center}
+                \includegraphics[width=6.5cm]{image/ls-details}
+            \end{center}
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}{Utilisateurs, groupes et droits d'accès}{Les droits\cref{rights-digitalocean}\footnotestep\footnote{\label{octal}Octal Notation and Linux Permissions, \url{https://cratecode.com/info/octal-notation}}}
+        \begin{columns}
+            \column{0.5\textwidth}
+            La notation octale est une manière de représenter les droits d'accès.
+            \bigbreak
+            \textit{In fine}, c'est un nombre qui est la concaténation de 3 suites de valeurs binaires\ldots.
+            \column{0.5\textwidth}
+            \begin{center}
+                \includegraphics[width=6.5cm]{image/binary-explosion}
+            \end{center}
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}[fragile]{Utilisateurs, groupes et droits d'accès}{Représentation binaire la notation octale avec Python\cref{octal}}
+        \begin{lstlisting}[language=bash]
+int("000", 2) # Masque binaire de 3 de longs donc 0 est le minimum
+Out[30]: 0
+int("111", 2) # 7 le maximum, de 0 à 7 il y a 8 valeurs d'où octal
+Out[31]: 7
+int("001", 2) # Execute: --x
+Out[32]: 1
+int("010", 2) # Write: -w-
+Out[33]: 2
+int("100", 2) # Read: r--
+Out[34]: 4
+int("110", 2) # Read/write: rw-
+Out[35]: 6
+int("111", 2) # Read/write/execute: rwx
+Out[36]: 7
+int("011", 2) # Write/execute: -wx
+Out[37]: 3
+int("101", 2) # Write/execute: w-x
+Out[38]: 5
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}[fragile]{Utilisateurs, groupes et droits d'accès}{Notation octale\cref{octal}}
+        Cela fait bien des droits qui vont de 0 pour la lecture seule au user, à 777 pour la lecture, l'écriture et l'exécution au user, groupe et autres.
+        \begin{lstlisting}[language=bash]
+"".join(map(str, [int("100", 2), int("000", 2), int("000", 2)])) # r-- pour user
+Out[46]: '400'
+"".join(map(str, [int("111", 2), int("111", 2), int("111", 2)])) # rwx pour tous
+Out[45]: '777'
+        \end{lstlisting}
+        Ces droits s'appliquent avec la commande \lstinline{chmod} pour CHange MODe.
+        Selon le format suivant \lstinline{chmod <mode> <file>}.
+        \lstinline{<mode>} étant le chiffre calculé entre 000 et 777 calculé au dessus.
+        Comme pour \lstinline{chown}, l'option \lstinline{-R} peut être ajoutée pour être récursif dans les sous-dossiers et fichiers.
+        \bigbreak
+        Des utilitaires de validation de cette notation, plus user friendly que Python, sont en ligne comme \url{https://chmod-calculator.com/}.
+    \end{frame}
+
+    \begin{frame}[fragile]{Utilisateurs, groupes et droits d'accès}{Notation octale\cref{octal}}
+        En résumé, restreindre les droits à la lecture par l'utilisateur propriétaire m'empêche de lire le fichier~:
+        \begin{lstlisting}[language=bash]
+$ sudo chmod 400 digicomp-little-secret/secret.txt
+$ cat digicomp-little-secret/secret.txt
+cat: digicomp-little-secret/secret.txt: Permission non accordée
+        \end{lstlisting}
+        Graĉe à \lstinline{sudo} je peux me donner les droits en lecture ou écriture par exemple~:
+        \begin{lstlisting}[language=bash]
+$ sudo chmod 007 digicomp-little-secret/secret.txt
+$ cat digicomp-little-secret/secret.txt
+Le code de l'entrée est 8564
+$ sudo chmod 002 digicomp-little-secret/secret.txt
+$ cat digicomp-little-secret/secret.txt
+cat: digicomp-little-secret/secret.txt: Permission non accordée
+$ echo "Le code de l'entrée est 8564" > digicomp-little-secret/secret.txt
+        \end{lstlisting}
+    \end{frame}
+
+    \subsection{Utilisateurs}\label{subsec:utilisateurs}
+    \begin{frame}{Utilisateurs, groupes et droits d'accès}{Les utilisateurs}
+        Les utilisateurs sont les personnes qui utilisent le système.
+        Les bonnes pratiques veulent qu'il y en a un par personne physique.
+        L'utilisateur a pour s'identifier un user et un mot de passe et/ou une clé privé.
+        C'est l'administrateur du système qui lui génère son premier mot de passe et sa première clé.
+        Un user peut faire partie de plusieurs groupes, comme ici \lstinline{daniel} qui est \lstinline{dba} et \lstinline{prod}.
+        \begin{columns}
+            \column{0.5\textwidth}
+            Exemple de commandes pour gérer un utilisateur~:
+            \begin{itemize}
+                \item \lstinline{adduser}~: Ajouter un utilisateur.
+                \item \lstinline{passwd}~: Changer le mot de passe.
+                \item \lstinline{usermod}~: Modifier un utilisateur.
+                \item \lstinline{userdel}~: Supprimer un utilisateur.
+            \end{itemize}
+            \column{0.5\textwidth}
+            \centering
+            \includegraphics[width=5cm]{image/groups-and-users.drawio}
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}[fragile]{Utilisateurs, groupes et droits d'accès}{Les utilisateurs}
+        Exemple avec la création du user \lstinline{digiformateur}.
+        \begin{lstlisting}[language=bash]
+$ useradd -s /bin/bash -m -d $/home/digiformateur digiformateur
+useradd: Permission denied.
+useradd~: impossible de vérouiller /etc/passwd ; réessayer plus tard.
+$ sudo useradd -s /bin/bash -m -d $/home/digiformateur digiformateur # sudo
+$ passwd digiformateur
+passwd~: Vous ne devriez pas voir ou modifier l'information du mot de passe pour digiformateur.
+$ sudo passwd digiformateur # superutilisateur
+Nouveau mot de passe~:
+Retapez le nouveau mot de passe~:
+passwd~: mot de passe mis à jour avec succès
+$ su digiformateur
+Mot de passe~:
+$ whoami
+digiformateur
+$ exit
+exit
+$ userdel digiformateur # superutilisateur
+userdel: Permission denied.
+userdel~: impossible de vérouiller /etc/passwd ; réessayer plus tard.
+$ sudo userdel digiformateur
+        \end{lstlisting}
+    \end{frame}
+
+    \subsection{Mot de passe}\label{subsec:password}
+    \begin{frame}{Utilisateurs, groupes et droits d'accès}{Recommandation sur les motrs de passe}
+        \begin{footnotesize}
+            Bonnes pratiques de l'ANSSI\footnote{Bonnes pratiques - Protégez-vous~!, \url{https://cyber.gouv.fr/bonnes-pratiques-protegez-vous}} pour les mots de passe~:
+            \begin{columns}
+                \column{0.5\textwidth}
+                \begin{itemize}
+                    \item Créez un mot de passe suffisamment long, complexe et inattendu~:
+                    de 8 caractères minimum et contenant des minuscules, des majuscules,
+                    des chiffres et des caractères spéciaux.
+
+                    \item Ne communiquez jamais votre mot de passe à un tiers~: aucune
+                    organisation ou personne de confiance ne vous demandera de lui
+                    communiquer votre mot de passe.
+
+                \end{itemize}
+                \column{0.6\textwidth}
+                \centering
+                \includegraphics[width=6.5cm]{image/real-password-cracking} \\ Hashcat benchmark\footnotemark \\
+            \end{columns}
+            Mais le mot de passe seul n'est pas suffisant, le plus sûr reste le SSH avec la paire de clés privé et publique.
+            \footnotetext{Those Tables With Password Cracking Times That Scare You And Peddle Snake Oil — Are Mostly Wrong!, \url{https://billatnapier.medium.com/those-tables-password-cracking-times-that-scare-you-are-mostly-wrong-7d03bf4aec6}}
+        \end{footnotesize}
+    \end{frame}
+
+    \subsection{Exercice}\label{subsec:user-group-rights-exercice}
+    \begin{frame}{Utilisateurs, groupes et droits d'accès}{Exercice \execcounterdispinc}
+        Cet exercice a pour objectif de montrer que les droits d'accès sont une question de sécurité, les configurations et les services sont très sensibles.
+        En effet, les services sont le plus souvent exécutés par l'utilisateur root et ont donc le maximum de droits.
+        \bigbreak
+        Il est courant de donner des droits en lecture seule à un fichier de configuration, mais de ne pas donner de droits en écriture.
+        \begin{itemize}
+            \item Créer un user qui aura des droits en écriture sur la configuration d'un service dans \lstinline{/etc/systemd/system}.
+            \item Créer un groupe qui aura des droits en écriture sur la configuration d'un autre service dans \lstinline{/etc/systemd/system}.
+            \item Ajouter à ce dernier groupe le nouveau user.
+            \item Supprimer groupe et user.
+            \item Remettre les droits comme avant sur les deux services.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Utilisateurs, groupes et droits d'accès}{Exercice \execcounterdispinc}
+        Cet exercice a pour objectif de créer un simple site web static isolé par le jeu des user/groupes/droits.
+        \begin{itemize}
+            \item Créer un groupe pour ce serveur/site web.
+            \item Créer un user type développeur qui aura des droits adéquats sur un dossier et fichier \lstinline{/var/www/html/digicomp/index.html}.
+            \item Créer un user type production qui aura des droits adéquats sur un dossier et fichier \lstinline{/var/www/html/digicomp/index.html}.
+            \item Un script shell à exécuter grâce au shebang \lstinline{\#!/bin/bash} qui lance la commande Python \lstinline{python3 -m http.server -d /var/www/html/digicomp/}.
+            Ce script shell ne peut être exécuté par l'utilisateur de production uniquement et aucune resource ne doit pouvoir être modifiée.
+        \end{itemize}
+    \end{frame}
+
+
     \section{Licence CC}\label{sec:licence}
 
-    \begin
-    {frame}{Licence}{Licence Creative Commons}
+    \begin{frame}{Licence}{Licence Creative Commons}
         Support de cours sous licence Creative Commons BY-NC-ND~.
         \bigbreak
         Vous pouvez donc, partager, copier, distribuer le document.
