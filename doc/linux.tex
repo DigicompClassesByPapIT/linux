@@ -1,5 +1,5 @@
 \documentclass{beamer}
-\include{../style/cours-style.sty}
+\input{../style/cours-style.sty}
 
 % Title
 \title[LINUX]{Introduction à l'environnement Linux - LINUX}
@@ -42,7 +42,7 @@
             \begin{scriptsize}
                 \begin{itemize}
                     \item Connaître les origines de Unix et les caractéristiques de ses dérivés (SysV, BSD, Linux, OSX)
-                    \item Savoir se connecter et déconnecter sur un systèmeLinux
+                    \item Savoir se connecter et déconnecter sur un système Linux
                     \item Connaître les bases du travail sur un Shell
                     \item Utiliser les outils d'aide pour apprendre des détails sur les commandes, les formats de fichiers ou le Shell
                     \item Modifier des fichiers en utilisant les éditeurs usuels de Linux
@@ -130,7 +130,7 @@
         \begin{itemize}
             \item IBM System/360 Operating System d'IBM~.
             \item Unix.
-            \item MSDOS.
+            \item MSDOS~.
             \item L'évolution vers des interfaces graphiques avec MacOS et Windows.
             \item Aujourd'hui, des OS comme Android dominent sur les smartphones.
         \end{itemize}
@@ -148,10 +148,10 @@
     \subsection{L'interface utilisateur}\label{subsec:hmi}
 
     \begin{frame}{L'interface utilisateur}{les principales}
-        Les interfaces A.K.A.\ IHM ou \textit{HMI} en anglais ont évolués avec les technologies et les besoins des utilisateurs.
+        Les interfaces A.K.A.\ IHM ou \textit{HMI} en anglais ont évoluées avec les technologies et les besoins des utilisateurs.
         \begin{itemize}
             \item Les premières interfaces étaient textuelles, comme les terminaux des mainframes IBM et leur IBM System/360 Operating System apparu en 1964\footnote{The IBM System/360, \url{https://www.ibm.com/history/system-360}} et le TSO\footnote{IBM System/360 Operating System: Time Sharing Option Guide, \url{http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/360/os/R20.1_Mar71/GC28-6698-3_TSO_Option_Guide_Rel_20.1_Jun71.pdf}}.
-            Cette interface existe toujours dans les dernières version de ces environnements de type mainframe, aujourd'hui appelé maintenant Z/OS~.
+            Cette interface existe toujours dans les dernières version de ces environnements de type mainframe, aujourd'hui appelé Z/OS~.
             Il y a plus \textit{user friendly} mais la productivité est là.
             \begin{columns}
                 \column{0.7\textwidth}
@@ -159,7 +159,7 @@
                 Il ouvre la voie à l'Apple Lisa et Windows.
                 \column{0.2\textwidth}
                 \begin{center}
-                    \includegraphics[width=2cm]{image/alto-windows}
+                    \includegraphics[width=3cm]{image/alto-windows}
                 \end{center}
             \end{columns}
         \end{itemize}
@@ -177,8 +177,8 @@ Linux chrichri-HKD-WXX 6.8.0-41-generic #41-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug  
 $ whoami
 chrichri
                 \end{lstlisting}
-                \item Des protocoles de communication comme RDP, VNC permettent de garder l'approche \textit{user friendly} des fenêtres tout en se connectant de manière sécurisé à une machine distante.
-                \item Les interfaces tactiles où la souris est remplacée par un écran tactiles.
+                \item Des protocoles de communication comme RDP, VNC permettent de garder l'approche \textit{user friendly} des fenêtres tout en se connectant de manière sécurisée à une machine distante.
+                \item Les interfaces tactiles o la souris est remplacée par un écran tactile.
                 Ces interfaces sont principalement portées par les OS destinés aux smartphones et tablettes comme Android, basé sur Linux et iOS, basé sur BSD Unix\footnote{Android adn iOS, \url{https://home.ubalt.edu/abento/315/android-ios/index.html}}.
             \end{itemize}
         \end{scriptsize}
@@ -190,14 +190,14 @@ chrichri
         Les principaux Unix sont~:
         \begin{itemize}
             \item System V~: Développé par AT\&T en 1983.
-            Ils donnent~:
+            Il donne~:
             \begin{itemize}
                 \item AIX~: développé par IBM~.
                 \item Solaris~: de Sun Microsystems.
             \end{itemize}
             \item BSD~: Développé par l'Université de Berkeley en 1992.
             Un \textit{rewrite} complet de l'Unix d'AT\&T~.
-            Ils donnent~:
+            Il donne~:
             \begin{itemize}
                 \item FreeBSD~: développé à partir 1993.
                 \item Toutes les BSD, NetBSD, OpenBSD, \textit{etc}
@@ -221,7 +221,7 @@ chrichri
                 \item Linux est open source, donc peut être gratuit.
                 \item Linux est open source, donc son code peut être audité pour vérifier sa sécurité.
                 \item Linux est open source et a donc une communauté qui le maintient, le débug et l'améliore constamment.
-                \item Linux est une technologie mature qui a un écosystème pouvant répondre à virtuellement tous les besoins~:
+                \item Linux est une technologie mature qui a un écosystème pouvant répondre à virtuellement à tous les besoins~:
                 \begin{itemize}
                     \begin{footnotesize}
                         \item Réseau, FortiOS de Fortinet est basé sur Linux\footnote{\url{https://community.fortinet.com/t5/FortiGate/Technical-Tip-How-to-check-Kernel-version-of-FortiGate/ta-p/323390}}.
@@ -243,7 +243,7 @@ chrichri
     \end{frame}
 
     \begin{frame}{Pourquoi Linux~?}{L'espionnage}
-        Solaris à espionner ses clients, particulièrement les industriels et financiers de Suisse Romande.
+        Solaris a espionné ses clients, particulièrement les industriels et financiers de Suisse Romande.
         Le développeur Sun Microsystem à disparu\ldots
         \bigbreak
         \begin{columns}
@@ -256,7 +256,7 @@ chrichri
     \end{frame}
 
     \begin{frame}{Pourquoi Linux~?}{Performances\footnote{These Windows 10 Vs Pop OS Benchmarks Reveal A Surprising Truth About Linux Gaming Performance, \url{https://www.forbes.com/sites/jasonevangelho/2019/07/17/these-windows-10-vs-pop-os-benchmarks-reveal-a-surprising-truth-about-linux-gaming-performance/}}}
-        Performances proche de celles de Windows, parfois supérieurs~!
+        Performances proches de celles de Windows, parfois supérieurs~!
         \begin{center}
             \includegraphics[width=8cm]{image/linux-vs-windows}
         \end{center}
@@ -320,7 +320,7 @@ chrichri
         Multi user au sens \textit{Time-Sharing}, \textit{i.e.}, plus d'un utilisateur en même temps.
 
         Les premiers OS Multi user était OS/360 d'IBM dans les années 60.
-        Un concurrent est développé par Bell Labs, une filiale d'AT\&T (Avant le démantèlement en 1982), c'est Unix en 1969.
+        Unix est un concurrent développé par Bell Labs, une filiale d'AT\&T (Avant le démantèlement en 1982), en 1969.
 
         Linux est ainsi multi user dès le début.
         Par opposition à Windows, qui par défaut (sans RDP ni bricolage), ne l'est pas.
@@ -425,7 +425,7 @@ chrichri
     \end{frame}
 
     \begin{frame}{Les distributions}{Des critères manquants~?}
-        L'énorme succès d'une distribution à part, Alpine Linux, pousser par les technologies de virtualisation et de conteneurisation.
+        L'énorme succès d'une distribution à part, Alpine Linux, poussée par les technologies de virtualisation et de conteneurisation.
         \bigbreak
         Une des premières phrases de présentation sur leur site est \textit{Alpine Linux is built around musl libc and busybox. A container requires no more than 8 MB and a minimal installation to disk requires around 130 MB of storage.}\footnote{About, \url{https://alpinelinux.org/about/}}.
         \bigbreak
@@ -474,7 +474,7 @@ chrichri
                 \item Pas de concurrent dans le Cloud et ce dernier se porte très bien.
                 \item Un challenger sur le marché Desktop, grâce à son environnement de plus en plus convivial.
                 \item Plus d'instabilité géopolitique et de guerres économiques favorise les solutions ouvertes.
-                Car on ne sait pas si la propriété intellectuel peut poser des soucis de production.
+                Car on ne sait pas si la propriété intellectuel pourra poser des soucis de production à l'avenir.
                 Thalès passe des appels d'offres sur les plateforme ouvertes comme RISC-V~.
                 \item 1 seul concurrent sur le mobile.
                 \item De plus en plus de Rust pour améliorer la sécurité et les performances.
@@ -494,14 +494,14 @@ chrichri
     \subsection{Login et Logout}\label{subsec:login-logout}
 
     \begin{frame}{Login et Logout}
-        Lors de l'installation, on définit un l'identifiant d'un utilisateur avec les droits administrateurs aussi appelé superutilisateur.
+        Lors de l'installation, on définit l'identifiant d'un utilisateur avec les droits administrateurs aussi appelé superutilisateur.
         Souvent cette utilisateur est appelé \lstinline{root} et ne peut être changé.
         \bigbreak
-        Ce superutilisateur pourra par la suite créer d'autres utilisateurs.
+        Ce superutilisateur pourra par la suite créer d'autres utilisateurs et superutilisateurs.
         \bigbreak
         En fonction de la distribution utilisée, les paramétrages initiaux se font dans une interface graphique ou dans une interface textuelle.
 
-        Si c'est une distribution pour les serveurs/le cloud, elle favorise la performance et la légèreté avec simple interface textuelle.
+        Si c'est une distribution pour les serveurs/le cloud, elle favorise la performance et la légèreté avec une simple interface textuelle.
 
         Des interfaces d'installation plus conviviales existent pour le desktop.
     \end{frame}
@@ -571,7 +571,7 @@ $ shutdown -c
             \includegraphics[width=5cm]{image/nautilus-gui} \\ Nautilus est bien trouver par le launcher \\
             \column{0.5\textwidth}
             \centering
-            \includegraphics[width=5cm]{image/nautilus-cli} \\ Le gestionnaire se lance quand on lance la commande nautilus \\
+            \includegraphics[width=5cm]{image/nautilus-cli} \\ Le gestionnaire se lance quand on lance la commande \lstinline{nautilus} \\
         \end{columns}
     \end{frame}
 
@@ -579,13 +579,13 @@ $ shutdown -c
         Il n'existe pas sous une version serveur~:
         % bash listing
         \begin{lstlisting}[language=bash]
-@ubuntu:~$ nautilus
+$ nautilus
 
 La commande « nautilus » n'a pas été trouvée, mais peut être installée avec~:
 
-sudo apt install nautilus
+$ sudo apt install nautilus
         \end{lstlisting}
-        Il faut naviguer avec les commandes du du terminal A.K.A.\ le Shell.
+        Il faut naviguer avec les commandes du terminal A.K.A.\ le Shell.
         \begin{itemize}
             \item \lstinline{ls}~: Liste les fichiers et répertoires.
             \item \lstinline{cd}~: Change de répertoire.
@@ -624,7 +624,7 @@ dr-xr-xr-x  13 root     root        0 août  26 10:03 sys
     \end{frame}
 
     \begin{frame}[fragile]{Les chemins}
-        Les chemin ou \textit{path} en anglais sont des adresses pour accéder à des fichiers ou des répertoires.
+        Les chemins ou \textit{paths} en anglais sont des adresses pour accéder à des fichiers ou des répertoires.
         Ils sont relatifs ou absolus~:
         \bigbreak
         \begin{columns}
@@ -717,7 +717,7 @@ $ pwd
         Quel est l'intérêt de la commande \lstinline{cd} puisqu'en comprenant et connaissant les chemins de la machine on peut lancer n'importe qu'elle commande de n'importe où~?
         \pause
         \begin{itemize}
-            \item Pour éviter de taper des chemins absolus ou relatif trop long.
+            \item Pour éviter de taper des chemins absolus ou relatifs trop long.
             \item Si un programme ou script doit s'exécuter dans un chemin donné.
         \end{itemize}
     \end{frame}
@@ -823,7 +823,7 @@ s/True/False/
         \begin{dangercolorbox}
             Avis du formateur~:
             \begin{itemize}
-                \item Pas de coloration syntaxique donc peut adapter au fichier complexe.
+                \item Pas de coloration syntaxique donc peut adapté aux fichiers complexes.
                 \item Compliqué à cause du buffer et des commandes associées.
                 \item UX très peu conviviale.
             \end{itemize}
@@ -913,7 +913,7 @@ s/True/False/
 
     \begin{frame}{Editer des données avec \lstinline{vi}}{Rechercher et Remplacer\cref{marquette-vi}}
         \begin{itemize}
-            \item \lstinline{/motif}~: Recherche le motif dans le fichier.
+            \item \lstinline{/<pattern>}~: Recherche le pattern dans le fichier.
             \item \lstinline{n}~: Aller à la prochaine occurrence du motif.
             \item \lstinline{:\%s/ancien/nouveau/g}~: Remplacer toutes les occurrences de \lstinline{ancien} par \lstinline{nouveau}.
         \end{itemize}
@@ -945,7 +945,7 @@ s/True/False/
             \item Modifier la description d'un service de \lstinline{/etc/systemd/system}.
             \item Ajouter une ligne de commentaire.
             \item Sauvegarder et quitter le fichier.
-            \item Supprimé la ligne de commentaire ajoutée.
+            \item Supprimer la ligne de commentaire ajoutée.
             \item Sauvegarder et quitter le fichier.
         \end{itemize}
     \end{frame}
@@ -953,7 +953,7 @@ s/True/False/
 
     \section{XTerm}\label{sec:xterm}
 
-    \begin{frame}{XTerm}{Qu'est-ce que XTerm\footnote{\label{xterm}XTerm\url{https://invisible-island.net/xterm/}}~?}
+    \begin{frame}{XTerm}{Qu'est-ce que XTerm\footnote{\label{xterm}XTerm, \url{https://invisible-island.net/xterm/}}~?}
         \begin{itemize}
             \item XTerm est un émulateur de terminal pour le système X Window.
             \item Initialement développé dans les années 1980 pour émuler les terminaux DEC VT102 et Tektronix 4014.
@@ -966,7 +966,7 @@ s/True/False/
         \begin{itemize}
             \item En 1995, Thomas E. Dickey commence à travailler sur XTerm pour améliorer la prise en charge des couleurs.
             \item XTerm a évolué pour devenir un émulateur complet pour les terminaux VT220.
-            \item La description préférée du terminal est passée de VT102 (jusqu'en 1996) à VT220 (jusqu'en 2012), et finalement à VT420 depuis 2012.
+            \item On peut le décrire comme un terminal de VT102 jusqu'en 1996, à VT220 jusqu'en 2012, et finalement à VT420 depuis 2012.
         \end{itemize}
     \end{frame}
 
@@ -994,7 +994,7 @@ s/True/False/
             \item Les options peuvent être définies via des fichiers de configuration ou en ligne de commande.
         \end{itemize}
         \begin{dangercolorbox}
-            De nombreux terminaux similaire ou même conviviaux existe sous tous les environnements Linux.
+            De nombreux terminaux similaires et même plus conviviaux existe sous tous les environnements Linux.
             Comme par exemple~:
             \begin{itemize}
                 \item Le terminal de Gnome appelé \textquote{Terminal}.
@@ -1005,7 +1005,7 @@ s/True/False/
 
     \begin{frame}{XTerm}{Exercice \execcounterdispinc}
         \begin{itemize}
-            \item Trouver tous les émulateurs de terminaux
+            \item Trouver tous les émulateurs de terminaux de votre machine.
             \item Ouvrer les tous pour les comparer.
         \end{itemize}
         \bigbreak
@@ -1023,7 +1023,7 @@ s/True/False/
         \begin{itemize}
             \item C'est un exécutable.
             \item Un interpréteur de ligne de commande.
-            Ne pas confondre avec des Shell spécifique comme le Python Shell ou le MySQL Shell qui interagissent spécifiquement avec ces applications.
+            Ne pas confondre avec des Shells spécifiques comme le Python Shell ou le MySQL Shell qui interagissent spécifiquement avec ces applications.
             \item Et donc un interpréteur de scripts Shell.
             \item C'est une interface entre l'OS et l'humain.
             \item Existe sur la plupart des plateformes Linux, Unix, Windows® (\lstinline{Bash}, installé avec Git par exemple), \textit{etc}.
@@ -1047,9 +1047,9 @@ s/True/False/
                     \lstinline{\#\!/bin/bash}                         & \lstinline{\#\!/bin/sh}                   \\ \hline
                     It has more functionality with up-gradation       & It has less functionality                 \\ \hline
                     Supports job controls                             & Does not support job control              \\ \hline
-                    bash is not a valid POSIX shell                   & sh is a valid POSIX shell                 \\ \hline
+                    \lstinline{bash} is not a valid POSIX shell       & \lstinline{sh} is a valid POSIX shell     \\ \hline
                     Easy to use                                       & Not as easy as bash                       \\ \hline
-                    Less portable than sh                             & More portable than bash                   \\ \hline
+                    Less portable than \lstinline{sh}                 & More portable than \lstinline{bash}       \\ \hline
                     Extended version of language                      & Original language                         \\ \hline
                     Bash scripting is scripting specifically for Bash & Shell scripting is scripting in any shell \\ \hline
                     Supports command history                          & Does not support command history          \\ \hline
@@ -1084,7 +1084,7 @@ Dockerfile       README.pdf         UML-Sequence.drawio       celia.ipynb
         \begin{itemize}
             \item Un interpréteur de lignes de commandes.
             \item \lstinline{sh} et \lstinline{bash} peuvent appeler les mêmes exécutables.
-            \item \lstinline{sh} et \lstinline{bash} n'ont pas des scripts compatibles.
+            \item \lstinline{sh} et \lstinline{bash} n'ont pas des scripts toujours compatibles.
             \item \lstinline{sh}, le Shell POSIX ou Bourne Shell est plus léger et plus rapide que \lstinline{bash}.
             \item \lstinline{bash}, le Bourne Again Shell est plus complet et plus facile à utiliser.
             \item Shell n'est qu'une interface.
@@ -1113,7 +1113,7 @@ Dockerfile       README.pdf         UML-Sequence.drawio       celia.ipynb
         Et c'est vrai, KornShell est plus rapide que Bash en arithmétique numérique.
 
         Ici par exemple avec la suite de Fibonacci~:
-        \begin{lstlisting}[language=bash]
+        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
 $ time bash fibo_cached.bash 20
 6765
 
@@ -1184,7 +1184,7 @@ sys	0m0,003s
         \bigbreak
         L'absence de bureau, avoir uniquement cette interface, est une des raisons de cette différence de taille.
 
-        L'interface graphique n'est donc pas installé dans les distributions dédiées aux serveurs.
+        L'interface graphique n'est donc pas installée dans les distributions dédiées aux serveurs.
         Shell et l'accès Shell distant sécurisé \lstinline{SSH} (Secure SHell), sont utilisés.
         Un client SSH comme Putty, SSH de GitBASH sous Windows® ou un terminal sous Linux permettent d'accéder à un server Linux.
         \bigbreak
@@ -1414,13 +1414,13 @@ lrwxrwxrwx 1 chrichri chrichri 28 janv. 14 21:27 /home/chrichri/.ssh -> /home/ch
         Il existe deux solutions pour découvrir ces options~:
         \begin{itemize}
             \item Utiliser l'aide de la commande.
-            Le plus souvent avec l'option \lstinline{-h}, équivalente à \lstinline{--help}.
+            Le plus souvent avec l'option \lstinline{--help} souvent équivalente à \lstinline{-h}.
             \begin{lstlisting}[language=bash]
 $ ls --help # -h c'est human readable avec ls...
             \end{lstlisting}
-            \item Ce qui revient à lire la documentation de la commande avec la commande~:
+            \item Une documentation souvent plus complète est accessible avec \lstinline{man}~:
             \begin{lstlisting}[language=bash]
-$ man ls # Same as above
+$ man ls
             \end{lstlisting}
         \end{itemize}
     \end{frame}
@@ -1465,7 +1465,7 @@ which, who, whoami, xargs, xxd, xz, xzcat, yes, zcat
 $ busybox ls
 LICENSE            checkmytex.sh      compress-image.sh  dept.csv           employee.csv       sqlite-hr.sh       venv
         \end{lstlisting}
-        Et s'utilise en préfixant la commande par \lstinline{busybox <commande>}.
+        Il s'utilise en préfixant la commande par \lstinline{busybox <commande>}.
         \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
 $ busybox sha256sum employee.csv
 c148c36111463e962f490742af787c1f8e49776f09d89e19f71c6cdcf220240d  employee.csv
@@ -1486,17 +1486,19 @@ c148c36111463e962f490742af787c1f8e49776f09d89e19f71c6cdcf220240d  employee.csv
     \end{frame}
 
     \begin{frame}{Commandes de base}{Opérateurs de redirection et piping\footnote{Five ways to use redirect operators in Bash, \url{https://www.redhat.com/sysadmin/redirect-operators-bash}}}
-        \begin{itemize}
-            \item \lstinline{>}~: Redirige la sortie standard vers un fichier.
-            \item \lstinline{>>}~: Redirige la sortie standard vers un fichier en ajoutant le contenu à la fin.
-            \item \lstinline{<}~: Redirige un fichier vers l'entrée standard.
-            \item \lstinline{2>}~: Redirige la sortie d'erreur vers un fichier.
-            \item \lstinline{|}~: Piping, redirige la sortie standard d'une commande vers l'entrée standard d'une autre.
-        \end{itemize}
-        À quoi ces opérateurs peuvent-ils servir~?
-        \begin{center}
-            \includegraphics[width=3cm]{image/question-mark}
-        \end{center}
+        \begin{footnotesize}
+            \begin{itemize}
+                \item \lstinline{>}~: Redirige la sortie standard vers un fichier.
+                \item \lstinline{>>}~: Redirige la sortie standard vers un fichier en ajoutant le contenu à la fin.
+                \item \lstinline{<}~: Redirige un fichier vers l'entrée standard.
+                \item \lstinline{2>}~: Redirige la sortie d'erreur vers un fichier.
+                \item \lstinline{|}~: Piping, redirige la sortie standard d'une commande vers l'entrée standard d'une autre.
+            \end{itemize}
+            À quoi ces opérateurs peuvent-ils servir~?
+            \begin{center}
+                \includegraphics[width=3cm]{image/question-mark}
+            \end{center}
+        \end{footnotesize}
     \end{frame}
 
     \begin{frame}{Commandes de base}{Les flux standards dans le Shell Linux\footnote{\label{standard-stream}The Standard Streams, \url{https://zedas.fr/posts/linux-explained-6-standard-streams/}}}
@@ -1505,7 +1507,7 @@ c148c36111463e962f490742af787c1f8e49776f09d89e19f71c6cdcf220240d  employee.csv
             \item \textbf{entrée standard (Entrée standard)}~:
             \begin{itemize}
                 \item Flux pour les données d'entrée d'un programme.
-                \item Exemple~: Taper la commande \lstinline{ls} utilise entrée standard pour entrer la commande.
+                \item Exemple~: Lancer la commande \lstinline{grep} en utilisant l'entrée standard comme source de donnée.
             \end{itemize}
             \item \textbf{sortie standard (Sortie standard)~:}
             \begin{itemize}
@@ -1590,7 +1592,7 @@ c148c36111463e962f490742af787c1f8e49776f09d89e19f71c6cdcf220240d  employee.csv
         Ils peuvent tous avoir avoir l'extension \lstinline{.sh} quelque soit le type de Shell.
         \bigbreak
         Mais il peut être pratique de les différencier surtout lorsqu'ils sont spécifiques à un interpréteur Shell.
-        On les différencie avec en extension leur nom ou diminution de Shell, \lstinline{sh} pour le POSIX, \lstinline{ksh} pour me Korn, \lstinline{bash} pour le Bash, \lstinline{zsh} pour le Z Shell, \lstinline{csh} pour le C Shell, \textit{etc}.
+        On les différencie avec en extension leur nom ou diminutif de Shell, \lstinline{sh} pour le POSIX, \lstinline{ksh} pour me Korn, \lstinline{bash} pour le Bash, \lstinline{zsh} pour le Z Shell, \lstinline{csh} pour le C Shell, \textit{etc}.
         \bigbreak
         Exemple ici pour différencier Bash de Korn~:
         \begin{lstlisting}[language=bash]
@@ -1678,7 +1680,7 @@ Qui suis-je: chrichri
 
     \begin{frame}[fragile]{Shell}{Les alias}
         Les alias sont des raccourcis pour des commandes.
-        ils sont donc intéressant à paramétrer pour les commandes longues et récurrente.
+        ils sont donc intéressant à paramétrer pour les commandes longues et récurrentes.
         \bigbreak
         Par exemple, pour la commande \lstinline{ls -l}~:
         \begin{lstlisting}[language=bash]
@@ -1702,7 +1704,7 @@ $ echo "alias ll='ls -l'" >> ~/.bashrc
     \begin{frame}[fragile]{Shell}{Vous décidez~: les options}
         On peut accéder aux options de Bash et Korn Shell avec l'option \lstinline{--help} qui liste dans le terminal les autres options.
         \bigbreak
-        Sinon comme pour toutes commandes, on peut accéder à la documentation avec \lstinline{man <nom de la commande>}.
+        Sinon, comme pour toutes commandes, on peut accéder à la documentation avec \lstinline{man <nom de la commande>}.
         \bigbreak
         Exercice \execcounterdispinc~:
         \begin{itemize}
@@ -1793,7 +1795,7 @@ Qui suis-je: chrichri
             Les forums~:
             \begin{itemize}
                 \item \href{https://askubuntu.com/}{Ask Ubuntu} blog de la galaxy Stack Exchange Inc, Stack Overflow, \textit{etc}.
-                \item \href{https://ubuntuforums.org}{Ubuntu forums} forum et ressource très populaire en anglais.
+                \item \href{https://ubuntuforums.org}{Ubuntu forums} forum et ressources très populaire en anglais.
             \end{itemize}
         \end{footnotesize}
     \end{frame}
@@ -1878,15 +1880,15 @@ riscv64-linux-gnu-gcc-ranlib-13 (1) - a wrapper around ranlib adding the --plugi
 
     \begin{frame}{Editeurs}{VS Code de Microsoft}
         L'objectif de cette section est d'éditer un script Shell dans un environment dédié au développement.
-        Un environment qui contient tous les outils nécessaires pour trouver rapidement les erreurs de syntaxe et tester sont script.
+        Un environment qui contient tous les outils nécessaires pour trouver rapidement les erreurs de syntaxe et tester son script.
         \bigbreak
-        Pour le lancer taper code dans la barre de recherche de Linux ou \lstinline{code .} dans un terminal pour le lancer dans le répertoire courant.
+        Pour le lancer taper \textquote{code} dans la barre de recherche de Linux ou \lstinline{code .} dans un terminal pour le lancer dans le répertoire courant.
         \begin{itemize}
             \item Ouvrir VS Code.
             \item Ouvrir ou créer le fichier contenant le code Shell.
             \item Trouver un plugin dédié au développement Shell dans la \textit{marketplace}.
             Ici \textquote{ShellCheck} pour la vérification de la syntaxe.
-            En lisant la doc on comprend que c'est une intégration de ShellCheck qui vient sans ce dernier sur certaines plateforme.
+            En lisant la doc on comprend que c'est une intégration de ShellCheck qui vient sans ce dernier sur certaines plateformes.
             Il faut installer ShellCheck.
             \item Installer le plugin.
             \item Tester le plugin en écrivant sciemment un code erroné.
@@ -1973,7 +1975,7 @@ In fibo.ksh line 14:
         Chacun peut créer son extension.
         Mais la commande \lstinline{file <chemin du fichier ou dossier>}, en examinant le contenu, nous indique le type de fichier/dossier.
         \begin{lstlisting}[language=bash]
-        $ file fibo.sh
+$ file fibo.sh
 fibo.sh: POSIX shell script, ASCII text executable
 $ file out/linux.pdf
 out/linux.pdf: PDF document, version 1.5
@@ -2029,7 +2031,7 @@ lentgh of the string: 46
 lentgh of the struct: 35
         \end{lstlisting}
         La valeur d'un octet est comprise entre 0 et 255, mais pour obtenir du texte, on passe par une table de correspondance, un encodage, qui donnera un seul caractère.
-        La valeur numérique la plus élevée pour ce même octet en texteb donc 9.
+        La valeur numérique la plus élevée pour ce même octet en texte est donc 9.
         \bigbreak
         Pour des soucis de performance, de coût (du cloud), il n'est pas rare que les formats de données soit binaires.
     \end{frame}
@@ -2239,7 +2241,7 @@ root           2       0  0 09:23 ?        00:00:00 [kthreadd]
 
     \begin{frame}[fragile]{Gestion des processus}{La commande \lstinline{kill}}
         La commande \lstinline{top} permet de terminer un processus dans l'interface avec \textbf{k}.
-        En fonction de son PID, qu'on aurait auparavant dans cette même interface.
+        En fonction de son PID, qu'on aurait auparavant trouvé dans cette même interface.
         ou avec la commande \lstinline{ps}, on peut le tuer avec la commande \lstinline{kill}.
         \bigbreak
         Mais il existe une commande spécifique, c'est \lstinline{kill}, elle envoie un signal au processus ici SIGKILL avec l'option \lstinline{-9}.
@@ -2257,7 +2259,7 @@ $ pkill -9 <nom>
     \subsection{Les signaux}\label{subsec:signals}
 
     \begin{frame}{Gestion des processus}{Les signaux\footnote{\label{uclouvain-signaux}\url{https://sites.uclouvain.be/SystInfo/notes/Theorie/Fichiers/fichiers-signaux.html\#signaux}}}
-        L'envoi et la réception de signaux est le mécanisme de communication entre processus le plus primitif sous Unix.
+        L'envoi et la réception de signaux est le mécanisme de communication \textquote{primitif} entre processus sous Unix.
         Un signal est une forme d'interruption logicielle.
         Un microprocesseur utilise les interruptions pour permettre au système d'exploitation de réagir aux événements extérieurs qui surviennent, et aux demandes d'action de la part du processeur ou d'un programme.
         Un signal Unix est un mécanisme qui permet à un processus de réagir de façon \textit{asynchrone} à un événement qui s'est produit.
@@ -2322,11 +2324,11 @@ $ kill -l
     \begin{frame}[fragile]{Gestion des processus}{Les signaux\cref{uclouvain-signaux}}
         Pour être certain de terminer un process, on envoie donc un SIGKILL avec la commande~:
         \begin{lstlisting}[language=bash]
-kill -9 <PID>
+$ kill -9 <PID>
         \end{lstlisting}
         Équivalent à~:
         \begin{lstlisting}[language=bash]
-kill -SIGKILL <PID>
+$ kill -SIGKILL <PID>
         \end{lstlisting}
     \end{frame}
 
@@ -2390,7 +2392,7 @@ Abandon (core dumped)
         Expliquer ce qui se passe dans ces cas~?
         \pause
         \bigbreak
-        \lstinline{stack smashing detected} veut dire que GCC à détecter un buffer overflow et fait crasher le programme de manière préventive.
+        \lstinline{stack smashing detected} veut dire que GCC a détecté un buffer overflow et fait crasher le programme de manière préventive.
         Il parle de la stack, car c'est dans cette mémoire que les variables locales sont stockées.
     \end{frame}
 
@@ -2419,7 +2421,7 @@ Access Granted.
     \end{frame}
 
     \begin{frame}[fragile]{Gestion des processus}{Les signaux\cref{uclouvain-signaux}}
-        Certains sont gérés par l'OS d'autres par le programme \lstinline{sigusr.c}~:
+        Certains sont gérés par l'OS d'autres par les programmes ou utilisateurs, exemple de \lstinline{sigusr.c}~:
         \begin{lstlisting}[language=C,basicstyle=\tiny\ttfamily]
 #include <stdlib.h>
 #include <string.h>
@@ -2452,7 +2454,7 @@ static void sig_handler(int signum) {
     \end{frame}
 
     \begin{frame}{Gestion des processus}{Les signaux}
-        On peut donc controller un programme de l'extérieur, déclencher une action dans ce dernier à la suite de la réception de la réception du signal.
+        On peut donc controller un programme de l'extérieur, déclencher une action dans ce dernier à la suite de la réception du signal.
         Ou une interruption/mise en dormance du programme pour laisser les ressources à un autre processus.
         \bigbreak
         Exercice \execcounterdispinc{}~:
@@ -2525,9 +2527,9 @@ static void sig_handler(int signum) {
 
     \begin{frame}{Système de fichier}{Exercices sur les processus}
         \begin{small}
-            Exercice \execcounterdispinc{}, quels droits ai-je \lstinline{/proc} sur les processus des autres utilisateurs~?
+            Exercice \execcounterdispinc{}, quels droits ai-je sur \lstinline{/proc} sur les processus des autres utilisateurs~?
             \bigbreak
-            Exercice \execcounterdispinc{}, quels droits ai-je \lstinline{/proc} sur mes processus~?
+            Exercice \execcounterdispinc{}, quels droits ai-je sur \lstinline{/proc} sur mes processus~?
             \bigbreak
             Exercice \execcounterdispinc{}, terminer un processus découvert sous \lstinline{top} avec la commande \lstinline{kill}.
             \bigbreak
@@ -2641,11 +2643,11 @@ $ sudo renice -19 -p 906674
             Ces paquets ont leurs équipes de développement.
             Par exemple, GCC le compilateur de Debian et de la plupart des distributions, compte 508 personnes\footnote{Contributors to GCC, \url{https://gcc.gnu.org/onlinedocs/gcc/Contributors.html}}.
             \bigbreak
-            Pour intégrer toutes ces briques et développer celles qui manques, Debian compte 1020 membres officiels\footnote{Official members of the Debian project, \url{https://nm.debian.org/members/}}.
+            Pour intégrer toutes ces briques et développer celles qui manquent, Debian compte 1020 membres officiels\footnote{Official members of the Debian project, \url{https://nm.debian.org/members/}}.
             \bigbreak
             Sachant que Debian est composée de centaines de paquets, on imagine que le nombre de personnes impliquées permet d'atteindre un certain niveau de qualité et donc de sécurité.
             \bigbreak
-            Là on parle de développeurs impliqué officiellement sur un projet, cela ne compte pas les contributions ponctuelles qui peuvent venir spontanément de GitHub ou d'autre plateformes similaires.
+            Là on parle de développeurs impliqués officiellement sur un projet, cela ne compte pas les contributions ponctuelles qui peuvent venir spontanément de GitHub ou d'autre plateformes similaires.
         \end{footnotesize}
     \end{frame}
 
@@ -2660,7 +2662,7 @@ $ sudo renice -19 -p 906674
         On imagine donc l'attention portée à ce sujet.
     \end{frame}
 
-    \begin{frame}{Sécurité}{Les droits\footnote{\label{rights-digitalocean}An Introduction to Linux Permissions, \url{https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-permissions}}}
+    \begin{frame}{Sécurité}{Les droits par défaut\footnote{\label{rights-digitalocean}An Introduction to Linux Permissions, \url{https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-permissions}}}
         \begin{dangercolorbox}
             Cela montre que des users qui ne sont pas prioritaires et qui ne font pas partie du groupe propriétaire peuvent avoir des droits.
             Par défaut ces droits sont en lecture seule, n'ont n'avons pas pu écrire dans le fichier.
@@ -2706,7 +2708,7 @@ drwxrwxr-x 10 chrichri chrichri 4,0K août  15 16:07 ..
     \end{frame}
 
     \begin{frame}[fragile]{Sécurité}{Représentation binaire la notation octale avec Python\cref{octal}}
-        \begin{lstlisting}[language=bash]
+        \begin{lstlisting}
 int("000", 2) # Masque binaire de 3 de longs donc 0 est le minimum
 Out[30]: 0
 int("111", 2) # 7 le maximum, de 0 à 7 il y a 8 valeurs d'où octal
@@ -2730,7 +2732,7 @@ Out[38]: 5
 
     \begin{frame}[fragile]{Sécurité}{Notation octale\cref{octal}}
         Cela fait bien des droits qui vont de 0 pour la lecture seule au user, à 777 pour la lecture, l'écriture et l'exécution au user, groupe et autres.
-        \begin{lstlisting}[language=bash]
+        \begin{lstlisting}
 "".join(map(str, [int("100", 2), int("000", 2), int("000", 2)])) # r-- pour user
 Out[46]: '400'
 "".join(map(str, [int("111", 2), int("111", 2), int("111", 2)])) # rwx pour tous
@@ -2741,7 +2743,7 @@ Out[45]: '777'
         \lstinline{<mode>} étant le chiffre calculé entre 000 et 777 calculé au dessus.
         Comme pour \lstinline{chown}, l'option \lstinline{-R} peut être ajoutée pour être récursif dans les sous-dossiers et fichiers.
         \bigbreak
-        Des utilitaires de validation de cette notation, plus user friendly que Python, sont en ligne comme \url{https://chmod-calculator.com/}.
+        Des utilitaires de validation de cette notation, plus \textit{user friendly} que Python, sont en ligne comme \url{https://chmod-calculator.com/}.
     \end{frame}
 
     \begin{frame}[fragile]{Sécurité}{Notation octale\cref{octal}}
@@ -2856,8 +2858,8 @@ $ sudo userdel digiformateur
             \item Créer un groupe pour ce serveur/site web.
             \item Créer un user type développeur qui aura des droits adéquats sur un dossier et fichier \lstinline{/var/www/html/digicomp/index.html}.
             \item Créer un user type production qui aura des droits adéquats sur un dossier et fichier \lstinline{/var/www/html/digicomp/index.html}.
-            \item Un script shell à exécuter grâce au shebang \lstinline{\#!/bin/bash} qui lance la commande Python \lstinline{python3 -m http.server -d /var/www/html/digicomp/}.
-            Ce script shell ne peut être exécuté par l'utilisateur de production uniquement et aucune resource ne doit pouvoir être modifiée.
+            \item Un script Shell à exécuter grâce au shebang \lstinline{\#!/bin/bash} qui lance la commande Python \lstinline{python3 -m http.server -d /var/www/html/digicomp/}.
+            Ce script Shell ne peut être exécuté par l'utilisateur de production uniquement et aucune resource ne doit pouvoir être modifiée.
         \end{itemize}
     \end{frame}
 
@@ -2881,7 +2883,7 @@ $ sudo userdel digiformateur
         \end{itemize}
     \end{frame}
 
-    \subsection{SELinux}\label{subsec:selinux}
+    \subsection{AppArmor}\label{subsec:apparmor}
 
     \begin{frame}{Sécurité}{Qu'est-ce qu'AppArmor~?\footnote{\label{apparmor}AppArmor, \url{https://gitlab.com/apparmor/apparmor/-/wikis/home}}}
         \begin{itemize}
@@ -2974,7 +2976,7 @@ $ sudo userdel digiformateur
 
     \begin{frame}{Sécurité}{Cryptographie avec OpenSSL\footnote{Welcome to the OpenSSL project, \url{https://github.com/openssl/openssl}}}
         \begin{itemize}
-            \item \textbf{OpenSSL}~: Bibliothèque robuste et un ensemble d'outils pour l'implémentation de la cryptographie en ligne de commande et API dans divers langage.
+            \item \textbf{OpenSSL}~: Bibliothèque robuste et un ensemble d'outils pour l'implémentation de la cryptographie en ligne de commande et API dans divers langages.
             \item \textbf{Fonctionnalités}~:
             \begin{itemize}
                 \item Chiffrement et déchiffrement.
@@ -3021,6 +3023,7 @@ $ sudo userdel digiformateur
             \end{itemize}
             \item \textbf{Salage}~: Ajout d'une chaîne aléatoire avant le hachage pour renforcer la sécurité.
         \end{itemize}
+        Exercice \execcounterdispinc: Explorer les commandes \lstinline{md5sum}, \lstinline{sha1sum}, et \lstinline{sha256sum}.
     \end{frame}
 
     \begin{frame}{Sécurité}{Cryptographie Hybride\cref{cryptoas-goffinet}}
@@ -3061,7 +3064,7 @@ secret
     \section{Imprimer et e-mail}\label{sec:print-n-mail}
 
     \begin{frame}{Imprimer et e-mail}{Imprimer}
-        La plupart des logiciel d'édition comme ceux de la suite LibreOffice on un bouton imprimer.
+        La plupart des logiciels d'édition comme ceux de la suite LibreOffice on un bouton imprimer.
         La plupart des logiciels de visualisation de PDF comme Evince ou Okular également.
         \bigbreak
         Comme sous d'autres OS, le Ctrl+p fonctionne sous ses logiciels pour imprimer.
@@ -3080,7 +3083,7 @@ secret
 
     \begin{frame}{Imprimer et e-mail}{Lp Spooling System\footnote{A Guide to the Lp Printer Spooler, \url{https://9p.io/sys/doc/lp.html}}}
         \begin{itemize}
-            \item \textbf{Lp} est une collection de programmes qui offre une interface simple pour l'impression de divers types de documents sur différentes imprimantes.
+            \item \textbf{Lp} est une collection de programmes qui offrent une interface simple pour l'impression de divers types de documents sur différentes imprimantes.
             \item Il agit comme une interface entre les traducteurs de langages de document et les programmes de communication avec les imprimantes.
             \item \textbf{Fonctionnalités clés}~:
             \begin{itemize}
@@ -3126,7 +3129,7 @@ $ lpr -P DCP-L2530DW requirements.txt
                 \item Imprimantes réseau et USB locales avec des pilotes basés sur les fichiers PostScript Printer Description (PPD) hérités
                 \item CUPS inclut également le support des fichiers PPD (PostScript Printer Description) et une interface Web pour la configuration et la gestion des imprimantes.
                 \item CUPS peut gérer des classes, qui sont des groupes d'imprimantes recevant une tâche d'impression.
-                Elle transmise à une seule imprimante cible de la classe en fonction de la disponibilité.
+                Elle est transmise à une seule imprimante cible de la classe en fonction de la disponibilité.
                 \item La centralisation sur un serveur permet d'administration les politiques/restrictions liées à l'impression en un seul point.
                 Donc on imagine de manière plus efficiente.
             \end{itemize}
@@ -3139,7 +3142,7 @@ $ lpr -P DCP-L2530DW requirements.txt
             C'est un protocole client - serveur et c'est le serveur que vous installé.
             \item \textbf{Configuration}~: Le fichier de configuration principal est \lstinline{/etc/cups/cupsd.conf}, similaire à la configuration d'Apache.
             \item \textbf{Interface Web}~: Accessible via \lstinline{http://localhost:631}, elle permet de gérer les imprimantes et de configurer CUPS.
-            \item Pour administrer les imprimantes CUPS, il faut est dans le groupe \lstinline{lpadmin}.
+            \item Pour administrer les imprimantes CUPS, il faut être dans le groupe \lstinline{lpadmin}.
             Pour ajouter un utilisateur au groupe \lstinline{lpadmin}, utiliser la commande \lstinline{sudo usermod -aG lpadmin nomutilisateur}.
         \end{itemize}
     \end{frame}
@@ -3165,7 +3168,7 @@ $ lpr -P DCP-L2530DW requirements.txt
         Le client communique avec lui à travers ce dernier pour imprimer.
         On peut citer les clients~:
         \begin{itemize}
-            \item \textbf{cups-client}~: Un package qui vient toutes les commandes \lstinline{lp} et \lstinline{lpstat}, \textit{etc}.
+            \item \textbf{cups-client}~: Un package qui vient avec toutes les commandes \lstinline{lp} et \lstinline{lpstat}, \textit{etc}.
             \item Un client Python \lstinline{pycups} qui permet de faire la même chose. Développé par les développeurs de CUPS\footnote{CUPS bindings for Python, \url{https://github.com/OpenPrinting/pycups}}.
             \item \href{https://github.com/harwey/cups4j}{cup4j} en Java.
             \item \textit{Many More}
@@ -3195,7 +3198,7 @@ $ lpr -P DCP-L2530DW requirements.txt
             Nous n'allons pas couvrir ici l'aspect serveur de mail. Même si Linux est le candidat de choix, qui fait tourner l'immense majorité des serveurs de mail hors Exchange de MS.
             \bigbreak
             Il n'est quasi plus possible d'envoyer des mails sans \textquote{montrer patte blanche}.
-            Suite au abus/spams les serveurs de mail sont devenus très restrictifs et utilisent des listes noires chez des spécialistes comme \href{https://www.spamhaus.org/}{Spamhaus}.
+            Suite au abus/spams les serveurs de mails sont devenus très restrictifs et utilisent des listes noires chez des spécialistes comme \href{https://www.spamhaus.org/}{Spamhaus}.
             C'est à eux qu'il faut prouver son intégrité.
             \bigbreak
             C'est un sujet très vaste et complexe, qui nécessiterait un cours à lui seul.
@@ -3222,9 +3225,9 @@ $ lpr -P DCP-L2530DW requirements.txt
     \begin{frame}{Imprimer et e-mail}{e-mail avec Postfix}
         Développé à la base par IBM research.
         \bigbreak
-        Postfix est le Service de Transfert de Courriel (MTA) par défaut d'Ubuntu.
+        Postfix est le \lstinline{Mail Transfert Agent} (MTA) par défaut d'Ubuntu.
         Il est conçu pour être sûr autant que facile et rapide à configurer.
-        Il permet uniquement d'envoyer des mails, il faut d'autre protocoles et libraires pour les recevoir.
+        Il permet uniquement d'envoyer des mails, il faut d'autres protocoles et libraires pour les recevoir.
 
         Il est souvent utilisé pour envoyer des e-mails de notifications automatiques.
         \bigbreak
@@ -3240,11 +3243,11 @@ $ lpr -P DCP-L2530DW requirements.txt
         \begin{tiny}
             Installer les dépendances~:
             \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
-sudo apt-get install libsasl2-modules postfix
+$ sudo apt-get install libsasl2-modules postfix
             \end{lstlisting}
             Éditer la configuration~:
             \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
-sudo nano /etc/postfix/main.cf
+$ sudo nano /etc/postfix/main.cf
             \end{lstlisting}
             Ajouter ou modifier les lignes suivantes dans le fichier \lstinline{main.cf}~:
             \begin{lstlisting}[basicstyle=\tiny\ttfamily]
@@ -3256,7 +3259,7 @@ smtp_use_tls = yes
             \end{lstlisting}
             Créer un fichier de mot de passe pour stocker le mot de passe de l'utilisateur~:
             \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
-sudo nano /etc/postfix/sasl_passwd
+$ sudo nano /etc/postfix/sasl_passwd
             \end{lstlisting}
             Ajouter les lignes suivantes dans le fichier \lstinline{sasl_passwd}~:
             \begin{lstlisting}[basicstyle=\tiny\ttfamily]
@@ -3264,8 +3267,8 @@ sudo nano /etc/postfix/sasl_passwd
             \end{lstlisting}
             Créer la base de données Postfix pour le mot de passe et redémarrer Postfix
             \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
-sudo postmap /etc/postfix/sasl_passwd
-sudo systemctl restart postfix
+$ sudo postmap /etc/postfix/sasl_passwd
+$ sudo systemctl restart postfix
             \end{lstlisting}
         \end{tiny}
     \end{frame}
@@ -3273,7 +3276,7 @@ sudo systemctl restart postfix
     \begin{frame}[fragile]{Imprimer et e-mail}{e-mail et configuration de Postfix}
         Envoi d'un e-mail de test avec la commande \lstinline{echo "<Corp de l'e-mail>" | mail -s "<Sujet de l'e-mail>" -a "From: <e-mail envoi>" <e-mail destinataire>}.
         \begin{lstlisting}[language=bash]
-echo "This is a test email body." | \
+$ echo "This is a test email body." | \
     mail -s "Super sujet" -a "From: christophe.brun@papit.fr" christophe.brun@papit.fr
         \end{lstlisting}
         \begin{center}
@@ -3319,7 +3322,7 @@ echo "This is a test email body." | \
                 \item Les couches matérielles sont les câbles, les cartes réseaux, les switchs, les routeurs, les serveurs, les clients, \textit{etc}.
                 \item Les couches protocolaires sont les protocoles de communication, les adresses IP, les ports, les protocoles de routage, les protocoles de sécurité, protocoles applicatifs, \textit{etc}.
                 \item Le même protocole peut être supporté par des couches et des hardwares différents de la stack.
-                Par exemple le WiFi peut être gérer par un hardware dédiée comme un SOC WiFi ESP32\footnote{ESP32, A feature-rich MCU with integrated Wi-Fi and Bluetooth connectivity for a wide-range of applications, \url{https://www.espressif.com/en/products/socs/esp32}} ou un SD-WLAN de Verizon\footnote{Apprenez à votre Wi-Fi à prendre ses propres décisions, \url{https://www.verizon.com/business/fr-fr/products/networks/managed-network-services/managed-sd-wireless-lan/}}.
+                Par exemple le WiFi peut être géré par un hardware dédié comme un SOC WiFi ESP32\footnote{ESP32, A feature-rich MCU with integrated Wi-Fi and Bluetooth connectivity for a wide-range of applications, \url{https://www.espressif.com/en/products/socs/esp32}} ou un SD-WLAN de Verizon\footnote{Apprenez à votre Wi-Fi à prendre ses propres décisions, \url{https://www.verizon.com/business/fr-fr/products/networks/managed-network-services/managed-sd-wireless-lan/}}.
                 \item Le même protocole peut avoir des couches inférieurs de la stack différentes.
                 Par exemple IPv6 over Ethernet ou IPv6 over WiFi.
                 Matter, un protocole applicatif, unifie les protocoles de communication DSL, DOCSIS, Cellulaire, Wi-Fi, Thread, 802.15.4, Bluetooth, BLE, \textit{etc}\footnote{Comment fonctionne Matter ?, \url{https://nodon.fr/protocoles-sans-fil/matter/}}.
@@ -3333,7 +3336,7 @@ echo "This is a test email body." | \
         \begin{columns}
             \column{0.7\textwidth}
             Rsync est un outil de synchronisation de fichiers qui permet de copier des fichiers locaux ou distants.
-            Mais sont réel atout est bien pour fichiers distant, en local on a \lstinline{cp}\ldots
+            Mais sont réel atout est bien pour les fichiers distants, en local on a \lstinline{cp}\ldots
             \bigbreak
             Il est souvent utilisé pour synchroniser des fichiers entre un serveur et un client SSH~.
             \bigbreak
@@ -3349,11 +3352,11 @@ echo "This is a test email body." | \
         Pour pousser du code sur une autre machine (qui est donc serveur SSH) la destination est préfixée par le user et l'hôte~:
         \bigbreak
         \begin{lstlisting}[language=bash]
-rsync -a /chemin/vers/mon-dossier/ utilisateur@serveur:/chemin/vers/mon-dossier/
+$ rsync -a /chemin/vers/mon-dossier/ utilisateur@serveur:/chemin/vers/mon-dossier/
         \end{lstlisting}
         Pour récupérer du code depuis une autre machine la source est préfixée par le user et l'hôte~:
         \begin{lstlisting}[language=bash]
-rsync -a utilisateur@serveur:/chemin/vers/mon-dossier/ /chemin/vers/mon-dossier/
+$ rsync -a utilisateur@serveur:/chemin/vers/mon-dossier/ /chemin/vers/mon-dossier/
         \end{lstlisting}
     \end{frame}
 
@@ -3407,13 +3410,14 @@ rsync -a utilisateur@serveur:/chemin/vers/mon-dossier/ /chemin/vers/mon-dossier/
 
     \begin{frame}[fragile]{Networking}{Lynx, le site Digicomp}
         Par défault le package n'est plus installé sous Ubuntu\ldots
+
         La commande pour l'installer est~:
         \begin{lstlisting}[language=bash]
-sudo apt install lynx
+$ sudo apt install lynx
         \end{lstlisting}
         Pour lancer le navigateur~:
         \begin{lstlisting}[language=bash]
-lynx <URL de navigation>
+$ lynx <URL de navigation>
         \end{lstlisting}
         Pour naviguer~:
         \begin{itemize}
@@ -3421,8 +3425,8 @@ lynx <URL de navigation>
             \item \textbf{Entrée}~: Suivre un lien.
             \item \emoji{up-arrow} ou \textbf{Ctrl+TAB} pour remonter au précédent lien ou input.
             \item \emoji{down-arrow} ou \textbf{TAB} pour aller au lien ou input suivant.
-            \item \emoji{left-arrow} ou \textbf{Carriage Return} pour revenir à l'URl précédent.
-            \item \emoji{right-arrow} ou \textbf{Return} pour revenir à l'URl précédent.
+            \item \emoji{left-arrow} ou \textbf{Carriage Return} pour revenir à l'URL précédent.
+            \item \emoji{right-arrow} ou \textbf{Return} pour revenir à l'URL précédent.
             \item \textbf{g}~: pour aller à une URL.
             \item \textbf{Q}~: Quitter.
         \end{itemize}
@@ -3436,18 +3440,245 @@ lynx <URL de navigation>
         \end{itemize}
     \end{frame}
 
-    \begin{frame}[fragile]{Networking}{La commande \lstinline{rsync}\footnote{Rsync Command in Linux with Examples, \url{https://linuxize.com/post/how-to-use-rsync-for-local-and-remote-data-transfer-and-synchronization/}}}
-        Lynx est un navigateurs web en mode texte utilisable via une console ou un terminal.
-        Distribué sous licence GNU GPL, il supporte Gopher, HTTP, HTTPS, FTP, WAIS, NNTP et le SSL. Le Javascript n'est quand à lui pas supporté.
-        La navigation se fait entièrement au clavier et les différents éléments des pages Web (par exemple: les liens hypertexte) sont mis en évidence grâce à une coloration syntaxique.
-        Il est très populaire en tant que navigateur adapté aux déficiences visuelles car son interface est facile à mettre en œuvre avec un synthétiseur vocal.
-        Des versions de Lynx sont également disponibles pour Windows et MacOSX.
+    \subsection{Transférer depuis des URLs – curl}\label{subsec:curl}
+
+    \begin{frame}{Transférer depuis des URLs – curl}{Qu'est-ce que Curl?\footnote{\label{linux-curl}Linux cURL - How to use the Curl Command in Linux, \url{https://www.ionos.com/digitalguide/server/tools/introduction-to-curl-in-linux/}}}
+        Le logiciel cURL se compose de deux éléments.
+        La bibliothèque logicielle libcurl sert de colonne vertébrale pour le transfert de données et prend en charge les protocoles suivants~:
+        \begin{itemize}
+            \item DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET, TFTP.
+        \end{itemize}
+        Le programme en ligne de commande cURL agit comme une interface textuelle et interagit avec libcurl via la ligne de commande. Cet outil est essentiel pour le développement web, permettant aux développeurs de communiquer directement avec les serveurs et d'automatiser des processus, des tests et des débogages.
+    \end{frame}
+
+    \begin{frame}{Transférer depuis des URLs – curl}{Curl en CLI\cref{linux-curl}}
+        \begin{itemize}
+            \item Curl est un outil en ligne de commande utilisé pour transférer des données via diverses méthodes de protocole.
+            \item Supporte des protocoles comme HTTP, HTTPS, FTP, et bien d'autres.
+            \item Couramment utilisé pour tester et interagir avec des API web.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[fragile]{Transférer depuis des URLs – curl}{Libcurl\cref{linux-curl}}
+        \begin{itemize}
+            \item \textbf{Libcurl} est une bibliothèque conçue pour permettre aux programmes d'accéder aux fonctionnalités de Curl.
+            \item \textbf{Langages supportés}~: C, C++, Python, PHP, et bien d'autres.
+            \item \textbf{Fonctionnalités}~:
+            \begin{itemize}
+                \item Téléchargement et envoi de fichiers via divers protocoles (HTTP, FTP, etc.).
+                \item Gestion des cookies, authentification, et proxy.
+                \item Supporte les requêtes asynchrones pour améliorer les performances.
+            \end{itemize}
+            \item \textbf{Utilisation courante}~: Intégration dans des applications pour automatiser les interactions avec des serveurs web.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[fragile]{Transférer depuis des URLs – curl}{Installation de Curl\cref{linux-curl}}
+        \begin{itemize}
+            \item Sur les distributions basées sur Debian~:
+            \begin{lstlisting}[language=bash]
+$ sudo apt-get install curl
+            \end{lstlisting}
+            \item Sur les distributions basées sur Red Hat~:
+            \begin{lstlisting}[language=bash]
+$ sudo yum install curl
+            \end{lstlisting}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[fragile]{Transférer depuis des URLs – curl}{Utilisation de base de Curl\cref{linux-curl}}
+        \begin{itemize}
+            \item Pour effectuer une requête GET~:
+            \begin{lstlisting}[language=bash]
+$ curl http://example.com
+            \end{lstlisting}
+            \item Pour télécharger un fichier~:
+            \begin{lstlisting}[language=bash]
+$ curl -O http://example.com/file.txt
+            \end{lstlisting}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[fragile]{Transférer depuis des URLs – curl}{Options avancées de Curl\cref{linux-curl}}
+        \begin{itemize}
+            \item \textbf{Authentification}~: Utiliser l'option \lstinline{-u} pour spécifier un nom d'utilisateur et un mot de passe.
+            \begin{lstlisting}[language=bash]
+$ curl -u username:password http://example.com
+            \end{lstlisting}
+            \item \textbf{Téléchargement en arrière-plan}~:
+            \begin{lstlisting}[language=bash]
+$ curl -s -o /dev/null http://example.com &
+            \end{lstlisting}
+            \item \textbf{Aspirer un site web}~:
+            \begin{lstlisting}[language=bash]
+$ wget -r -l5 -k -E "http://example.com"
+            \end{lstlisting}
+            \lstinline{-r} de manière récursive, \lstinline{-5} sur 5 niveaux, \lstinline{-k} pour convertir les liens, \lstinline{-E} pour enregistrer les fichiers.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[fragile]{Transférer depuis des URLs – curl}{Envoi de Données avec cURL\cref{linux-curl}}
+        \begin{itemize}
+            \item \textbf{Requête GET}~: Utilisée pour récupérer des données du serveur. Les données peuvent être envoyées en les ajoutant à l'URL.
+            \begin{lstlisting}[language=bash]
+$ curl "http://example.com/api?param1=value1&param2=value2"
+            \end{lstlisting}
+            \item \textbf{Requête POST}~: Utilisée pour envoyer des données au serveur, généralement dans le cadre d'un formulaire.
+            \begin{lstlisting}[language=bash]
+$ curl --data "param1=value1&param2=value2" http://example.com/api
+            \end{lstlisting}
+            \item \textbf{Requête GET avec données dans le corps}~: Rarement utilisée.
+            \begin{lstlisting}[language=bash]
+$ curl --data "param1=value1&param2=value2" http://example.com/api --get
+            \end{lstlisting}
+        \end{itemize}
+    \end{frame}
+
+
+    \section{Moyens de download avec wget}\label{sec:wget}
+
+    \begin{frame}[fragile]{Moyens de download avec Wget}
+        \begin{footnotesize}
+            Wget est un outil essentiel sur les systèmes Linux pour télécharger des fichiers depuis Internet.
+            Il permet de récupérer du contenu directement depuis le terminal.
+            Lancé pour la première fois en 1996 et géré par le projet GNU, wget est un outil gratuit inclus par défaut dans la plupart des distributions Linux, comme Debian ou Ubuntu.
+            Vous pouvez lancer des téléchargements en utilisant la commande wget.
+            Les téléchargements sont pris en charge par les serveurs FTP, HTTP et HTTPS.
+            \bigbreak
+            La syntaxe de la commande est~:
+            \begin{lstlisting}[language=bash]
+$ wget <option> <URL>
+            \end{lstlisting}
+            Les options~:
+            \begin{itemize}
+                \item \lstinline{-c}~: Continue un téléchargement précédemment interrompu.
+                \item \lstinline{-N}~: Télécharge un fichier uniquement s'il est plus récent qu'un fichier du même nom déjà présent sur votre ordinateur.
+                \item \lstinline{-t <nombre de tentatives>}~: Définit le nombre de tentatives de téléchargement d'un fichier.
+                \item \lstinline{-w <nombre de secondes>}~: Définit le nombre de secondes que \lstinline{wget} attendra entre plusieurs téléchargements.
+            \end{itemize}
+        \end{footnotesize}
+    \end{frame}
+
+    \begin{frame}{Moyens de download avec Wget}{Exercice \execcounterdispinc}
+        \begin{itemize}
+            \item Télécharger le fichier \url{https://www.papit.fr/pdf/CoBOL\%20in\%20GraalVM.pdf}
+        \end{itemize}
+        \bigbreak
+        \centering
+        \includegraphics[width=3cm]{image/guy-in-front-of-desktop}
+    \end{frame}
+
+
+    \section{X11 - la GUI Linux}\label{sec:x11}
+
+    \begin{frame}{X11 - la GUI Linux}{Introduction à X11\footnote{\label{x11}Qu'est-ce que X11 (système X Window) ?, \url{https://phoenixnap.fr/glossaire/qu\%27est-ce-que-x11}}}
+        \begin{itemize}
+            \item \textbf{X11}, aussi appelé \textbf{X Window System}, est un protocole réseau et un système graphique utilisé principalement sous Linux et Unix.
+            \item Il fournit les outils nécessaires pour gérer les interfaces graphiques utilisateur (GUI) et permet de lancer des applications graphiques.
+        \end{itemize}
+        Pour l'installer avec le package manager \lstinline{sudo apt-get install xorg}.
+        \bigbreak
+        S'il est installé, pour passer du terminal au serveur de GUI, il suffit de lancer la commande \lstinline{startx}.
+    \end{frame}
+
+    \begin{frame}{X11 - la GUI Linux}{Fonctionnement de X11\cref{x11}}
+        \begin{itemize}
+            \item X11 fonctionne selon un modèle client-serveur, où le serveur X gère l'affichage.
+            \item Les applications agissent en tant que clients X et communiquent avec le serveur X pour afficher des fenêtres.
+            \item X11 permet également l'affichage à distance d'applications graphiques sur un autre terminal via le réseau.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{X11 - la GUI Linux}{Composants de X11\cref{x11}}
+        \begin{itemize}
+            \item \textbf{X Server}~: Gère l'affichage graphique, les claviers, et les souris.
+            \item \textbf{Window Manager}~: Contrôle l'apparence des fenêtres et leur comportement.
+            \item \textbf{X Clients}~: Applications graphiques qui utilisent X11 pour interagir avec le serveur X.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{X11 - la GUI Linux}{Avantages et Inconvénients\cref{x11}}
+        \begin{itemize}
+            \item \textbf{Avantages}~:
+            \begin{itemize}
+                \item Flexibilité dans l'affichage et la gestion des interfaces graphiques.
+                \item Support du multi-utilisateur et des connexions à distance.
+            \end{itemize}
+            \item \textbf{Inconvénients}~:
+            \begin{itemize}
+                \item Complexité de configuration.
+                \item Problèmes de performance sur des réseaux lents.
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{X11 - la GUI Linux}{Alternatives à X11\cref{x11}}
+        \begin{itemize}
+            \item \textbf{Wayland}~: Un protocole moderne visant à remplacer X11, offrant de meilleures performances et sécurité.
+            \item \textbf{Mir}~: Une autre alternative développée par Canonical, initialement pour Ubuntu.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{X11 - la GUI Linux}{Démarrer des applications distantes}
+        Il existe des protocoles dédiés pour lancer des applications graphiques sur un serveur distant.
+        Les principaux sont~:
+        \begin{itemize}
+            \item \textbf{VNC}~: \textit{Virtual Network Computing}, Permet de visualiser et de contrôler un bureau à distance.
+            \item \textbf{RDP}~: \textit{Remote Desktop Protocole}, Protocole similaire de Microsoft pour accéder à un bureau à distance qui fonctionne sous Linux également.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{X11 - la GUI Linux}{Bureau à distance / accès à distance\footnote{Bureau à distance / accès à distance, \url{https://doc.ubuntu-fr.org/bureau_a_distance}}}
+        La fonctionnalité de visionnage de bureaux distants (ou bureau à distance, ou encore partage de bureau ou partage d'écran) est une technique permettant l'affichage et le contrôle d'un ordinateur depuis un autre.
+        À l'aide d'un logiciel appelé le \textit{visionneur de bureau distant}, vous pouvez afficher sur l'écran de votre propre ordinateur ce que vous verriez à l'écran d'un ordinateur distant.
+
+        Ceci vous permet, par exemple, de travailler à la maison comme si vous étiez au bureau, accéder à vos programmes lorsque vous êtes en déplacement ou assister une personne éloignée ayant des problèmes avec son ordinateur.
+        Dans tous les cas les deux ordinateurs doivent être reliés par un réseau (local ou Internet).
+    \end{frame}
+
+
+    \begin{frame}[fragile]{X11 - la GUI Linux}{Bureau à distance / accès à distance\footnote{\label{redhat-vnc}TigerVNC, \url{https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-tigervnc}}}
+        Installer un serveur VNC~:
+        \begin{lstlisting}[language=bash]
+$ yum install tigervnc-server # Sous les distributions de type RedHat
+        \end{lstlisting}
+        Lancer le serveur VNC~:
+        \begin{lstlisting}[language=bash]
+$ vncserver <options>
+        \end{lstlisting}
         \begin{dangercolorbox}
-            Du fait de l'absence de support de Javascript il ne vas être possible de naviguer sur de nombreux sites.
-            Ceux qui utilisent des frameworks web modernes, comme par exemple le site \lstinline{Digicomp.ch}.
-            Lancer une recherche Google est possible mais le site a besoin de Javascript pour aller du résultat à la ressource elle même.
-            En son absence, il bloque la navigation.
+            Le serveur VNC est maintenant lancé sur le port 5901.
+            Vous pouvez vous connecter à l'adresse IP de votre serveur avec un client VNC.
         \end{dangercolorbox}
+    \end{frame}
+
+    \begin{frame}[fragile]{X11 - la GUI Linux}{Bureau à distance / accès à distance\cref{redhat-vnc}}
+        Installer le client VNC~:
+        \begin{lstlisting}[language=bash]
+$ yum install tigervnc # Sous les distributions de type RedHat
+        \end{lstlisting}
+        Lancer le serveur VNC~:
+        \begin{lstlisting}[language=bash]
+$ vncviewer <IP address:display number>
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}{Accès à distance}
+        \begin{dangercolorbox}
+            Il est compliqué d'accéder à distance à certaines configurations comme par exemple les Ubuntu qui utilisent Wayland.
+            \bigbreak
+            Dans ce cas il existe \lstinline{waypipe} qui permet de lancer facilement une application si le SSH du serveur est activé.
+        \end{dangercolorbox}
+        Néanmoins des entreprises configurent des machines spécialement pour, par exemple en faisant tourner xfce4 sur un serveur central qui peut servir de nombreux/tous les desktops et les applications.
+        Cette stratégie peut être très efficace en terme d'administration système et mutualisation des ressources.
+        \bigbreak
+        Exercice \execcounterdispinc~:
+        \begin{itemize}
+            \item Installer un serveur VNC sur une VM.
+            \item Configurer le serveur qu'il écoute sur toutes les interfaces, pas juste localhost.
+            \item Configurer un user pour un camarade.
+            \item Se connecter à la machine d'un camarade avec un client VNC.
+        \end{itemize}
     \end{frame}
 
 
