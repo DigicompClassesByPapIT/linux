@@ -1697,7 +1697,7 @@ $ echo "alias ll='ls -l'" >> ~/.bashrc
         De cette manière à chaque fois qu'un Shell est ouvert, la commande est exécutée.
     \end{frame}
 
-    \subsection{Vous décidez : les options}\label{subsec:shell-options}
+    \subsection{Vous décidez~: les options}\label{subsec:shell-options}
 
     \begin{frame}[fragile]{Shell}{Vous décidez~: les options}
         On peut accéder aux options de Bash et Korn Shell avec l'option \lstinline{--help} qui liste dans le terminal les autres options.
@@ -2066,7 +2066,7 @@ lentgh of the struct: 35
                     \hline
                     \lstinline{/root}   & racine                               & Répertoire personnel du super-utilisateur                                                                                      \\
                     \hline
-                    \lstinline{/run}    & exécution système                    & Informations relatives au système depuis son dernier démarrage (ex : utilisateurs actifs, services en cours d'exécution, etc.) \\
+                    \lstinline{/run}    & exécution système                    & Informations relatives au système depuis son dernier démarrage (ex~: utilisateurs actifs, services en cours d'exécution, etc.) \\
                     \hline
                     \lstinline{/sbin}   & binaires système                     & Exécutables système essentiels                                                                                                 \\
                     \hline
@@ -2090,13 +2090,13 @@ lentgh of the struct: 35
                     \hline
                     \lstinline{/usr}       & ressources système Unix & Hiérarchie secondaire, pour des données en lecture seule par les utilisateurs. Ce répertoire contient la vaste majorité des applications usuelles des utilisateurs et leurs fichiers \\
                     \hline
-                    \lstinline{/usr/bin}   &                         & Exécutables des programmes additionnels disponibles pour tous les utilisateurs (ex : le gestionnaire de fichiers, le lecteur de musique, le navigateur Web…)                         \\
+                    \lstinline{/usr/bin}   &                         & Exécutables des programmes additionnels disponibles pour tous les utilisateurs (ex~: le gestionnaire de fichiers, le lecteur de musique, le navigateur Web…)                         \\
                     \hline
                     \lstinline{/usr/lib}   &                         & Bibliothèques partagées par les applications additionnelles de /usr/bin et /usr/sbin                                                                                                 \\
                     \hline
                     \lstinline{/usr/local} &                         & Hiérarchie tertiaire. Emplacement où les utilisateurs doivent installer les applications qu'ils compilent.                                                                           \\
                     \hline
-                    \lstinline{/usr/share} &                         & Fichiers non reliés à l'architecture partagés par les applications de /usr/bin et /usr/sbin (ex : les icônes, les thèmes, la documentation…)                                         \\
+                    \lstinline{/usr/share} &                         & Fichiers non reliés à l'architecture partagés par les applications de /usr/bin et /usr/sbin (ex~: les icônes, les thèmes, la documentation…)                                         \\
                     \hline
                     \lstinline{/var}       & variable                & Données variables et diverses                                                                                                                                                        \\
                     \hline
@@ -2623,7 +2623,7 @@ $ sudo renice -19 -p 906674
             \begin{itemize}
                 \item La qualité du code liée au maintient par la communauté open source.
                 \item La gestion des droits utilisateurs.
-                \item Le module SELinux (Security-Enhanced Linux).
+                \item Le module SELinux (Security-Enhanced Linux), qui contrôles les accès pour les applications, processus et fichiers d'un système.
                 \item Le module AppArmor, pour gérer les droits des programmes.
                 \item UEFI (Unified Extensible Firmware Interface) Secure Boot.
                 \item La cryptographie as \textit{first class citizen} dans les communications et la donnée.
@@ -2660,7 +2660,7 @@ $ sudo renice -19 -p 906674
         On imagine donc l'attention portée à ce sujet.
     \end{frame}
 
-    \begin{frame}{Utilisateurs, groupes et droits d'accès}{Les droits\footnote{\label{rights-digitalocean}An Introduction to Linux Permissions, \url{https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-permissions}}}
+    \begin{frame}{Sécurité}{Les droits\footnote{\label{rights-digitalocean}An Introduction to Linux Permissions, \url{https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-permissions}}}
         \begin{dangercolorbox}
             Cela montre que des users qui ne sont pas prioritaires et qui ne font pas partie du groupe propriétaire peuvent avoir des droits.
             Par défaut ces droits sont en lecture seule, n'ont n'avons pas pu écrire dans le fichier.
@@ -2671,7 +2671,7 @@ $ sudo renice -19 -p 906674
         Les droits par défaut du fichier en question étaient \lstinline{-rw-rw-r--}.
     \end{frame}
 
-    \begin{frame}[fragile]{Utilisateurs, groupes et droits d'accès}{Les droits\cref{rights-digitalocean}}
+    \begin{frame}[fragile]{Sécurité}{Les droits\cref{rights-digitalocean}}
         \begin{lstlisting}[language=bash]
 $ ls -lha digicomp-little-secret/
 total 12K
@@ -2692,7 +2692,7 @@ drwxrwxr-x 10 chrichri chrichri 4,0K août  15 16:07 ..
         \end{columns}
     \end{frame}
 
-    \begin{frame}{Utilisateurs, groupes et droits d'accès}{Les droits\cref{rights-digitalocean}\footnotestep\footnote{\label{octal}Octal Notation and Linux Permissions, \url{https://cratecode.com/info/octal-notation}}}
+    \begin{frame}{Sécurité}{Les droits\cref{rights-digitalocean}\footnotestep\footnote{\label{octal}Octal Notation and Linux Permissions, \url{https://cratecode.com/info/octal-notation}}}
         \begin{columns}
             \column{0.5\textwidth}
             La notation octale est une manière de représenter les droits d'accès.
@@ -2705,7 +2705,7 @@ drwxrwxr-x 10 chrichri chrichri 4,0K août  15 16:07 ..
         \end{columns}
     \end{frame}
 
-    \begin{frame}[fragile]{Utilisateurs, groupes et droits d'accès}{Représentation binaire la notation octale avec Python\cref{octal}}
+    \begin{frame}[fragile]{Sécurité}{Représentation binaire la notation octale avec Python\cref{octal}}
         \begin{lstlisting}[language=bash]
 int("000", 2) # Masque binaire de 3 de longs donc 0 est le minimum
 Out[30]: 0
@@ -2728,7 +2728,7 @@ Out[38]: 5
         \end{lstlisting}
     \end{frame}
 
-    \begin{frame}[fragile]{Utilisateurs, groupes et droits d'accès}{Notation octale\cref{octal}}
+    \begin{frame}[fragile]{Sécurité}{Notation octale\cref{octal}}
         Cela fait bien des droits qui vont de 0 pour la lecture seule au user, à 777 pour la lecture, l'écriture et l'exécution au user, groupe et autres.
         \begin{lstlisting}[language=bash]
 "".join(map(str, [int("100", 2), int("000", 2), int("000", 2)])) # r-- pour user
@@ -2744,7 +2744,7 @@ Out[45]: '777'
         Des utilitaires de validation de cette notation, plus user friendly que Python, sont en ligne comme \url{https://chmod-calculator.com/}.
     \end{frame}
 
-    \begin{frame}[fragile]{Utilisateurs, groupes et droits d'accès}{Notation octale\cref{octal}}
+    \begin{frame}[fragile]{Sécurité}{Notation octale\cref{octal}}
         En résumé, restreindre les droits à la lecture par l'utilisateur propriétaire m'empêche de lire le fichier~:
         \begin{lstlisting}[language=bash]
 $ sudo chmod 400 digicomp-little-secret/secret.txt
@@ -2764,7 +2764,7 @@ $ echo "Le code de l'entrée est 8564" > digicomp-little-secret/secret.txt
     \end{frame}
 
     \subsection{Utilisateurs}\label{subsec:utilisateurs}
-    \begin{frame}{Utilisateurs, groupes et droits d'accès}{Les utilisateurs}
+    \begin{frame}{Sécurité}{Les utilisateurs}
         Les utilisateurs sont les personnes qui utilisent le système.
         Les bonnes pratiques veulent qu'il y en a un par personne physique.
         L'utilisateur a pour s'identifier un user et un mot de passe et/ou une clé privé.
@@ -2785,7 +2785,7 @@ $ echo "Le code de l'entrée est 8564" > digicomp-little-secret/secret.txt
         \end{columns}
     \end{frame}
 
-    \begin{frame}[fragile]{Utilisateurs, groupes et droits d'accès}{Les utilisateurs}
+    \begin{frame}[fragile]{Sécurité}{Les utilisateurs}
         Exemple avec la création du user \lstinline{digiformateur}.
         \begin{lstlisting}[language=bash]
 $ useradd -s /bin/bash -m -d $/home/digiformateur digiformateur
@@ -2812,7 +2812,7 @@ $ sudo userdel digiformateur
     \end{frame}
 
     \subsection{Mot de passe}\label{subsec:password}
-    \begin{frame}{Utilisateurs, groupes et droits d'accès}{Recommandation sur les motrs de passe}
+    \begin{frame}{Sécurité}{Recommandation sur les motrs de passe}
         \begin{footnotesize}
             Bonnes pratiques de l'ANSSI\footnote{Bonnes pratiques - Protégez-vous~!, \url{https://cyber.gouv.fr/bonnes-pratiques-protegez-vous}} pour les mots de passe~:
             \begin{columns}
@@ -2836,8 +2836,7 @@ $ sudo userdel digiformateur
         \end{footnotesize}
     \end{frame}
 
-    \subsection{Exercice}\label{subsec:user-group-rights-exercice}
-    \begin{frame}{Utilisateurs, groupes et droits d'accès}{Exercice \execcounterdispinc}
+    \begin{frame}{Sécurité}{Exercice \execcounterdispinc}
         Cet exercice a pour objectif de montrer que les droits d'accès sont une question de sécurité, les configurations et les services sont très sensibles.
         En effet, les services sont le plus souvent exécutés par l'utilisateur root et ont donc le maximum de droits.
         \bigbreak
@@ -2851,7 +2850,7 @@ $ sudo userdel digiformateur
         \end{itemize}
     \end{frame}
 
-    \begin{frame}{Utilisateurs, groupes et droits d'accès}{Exercice \execcounterdispinc}
+    \begin{frame}{Sécurité}{Exercice \execcounterdispinc}
         Cet exercice a pour objectif de créer un simple site web static isolé par le jeu des user/groupes/droits.
         \begin{itemize}
             \item Créer un groupe pour ce serveur/site web.
@@ -2860,6 +2859,564 @@ $ sudo userdel digiformateur
             \item Un script shell à exécuter grâce au shebang \lstinline{\#!/bin/bash} qui lance la commande Python \lstinline{python3 -m http.server -d /var/www/html/digicomp/}.
             Ce script shell ne peut être exécuté par l'utilisateur de production uniquement et aucune resource ne doit pouvoir être modifiée.
         \end{itemize}
+    \end{frame}
+
+    \subsection{SELinux}\label{subsec:selinux}
+
+    \begin{frame}{Sécurité}{Qu'est-ce que SELinux~?\footnote{\label{selinux-redhat}SELinux, qu'est-ce que c'est~?, \url{https://www.redhat.com/fr/topics/linux/what-is-selinux}}}
+        \begin{itemize}
+            \item SELinux (Security-Enhanced Linux) est une architecture de sécurité pour les systèmes Linux.
+            \item Conçu initialement par la NSA, il a été intégré au noyau Linux en 2003.
+            \item SELinux utilise des politiques de sécurité pour définir et contrôler les accès aux applications, processus et fichiers.
+            \item Le contrôle d'accès est effectué par le biais de contextes SELinux qui étiquettent chaque fichier, processus et port du système.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Sécurité}{Fonctionnement et Configuration de SELinux\cref{selinux-redhat}}
+        \begin{itemize}
+            \item Lorsqu'un processus tente d'accéder à un objet (fichier, processus), SELinux vérifie le cache des autorisations (AVC).
+            \item Si l'accès n'est pas clair, une requête est envoyée au serveur de sécurité qui applique les règles définies dans la politique SELinux.
+            \item SELinux peut fonctionner en mode \textit{Enforcing} (appliqué), \textit{Permissive} (permissif), ou être désactivé.
+            \item Les principales configurations incluent les politiques ciblées (par défaut) et la sécurité multiniveau (MLS - Multi-Level Security), utilisée principalement par les gouvernements.
+        \end{itemize}
+    \end{frame}
+
+    \subsection{SELinux}\label{subsec:selinux}
+
+    \begin{frame}{Sécurité}{Qu'est-ce qu'AppArmor~?\footnote{\label{apparmor}AppArmor, \url{https://gitlab.com/apparmor/apparmor/-/wikis/home}}}
+        \begin{itemize}
+            \item AppArmor est un module de sécurité pour le noyau Linux utilisant le contrôle d'accès obligatoire (MAC - Mandatory Access Control).
+            \item Il fournit une protection pour les applications en limitant les ressources auxquelles elles peuvent accéder.
+            \item Contrairement à SELinux, AppArmor utilise des profils basés sur des chemins qui définissent les permissions pour chaque programme.
+            \item Ces profils peuvent être en mode appliqué (enforcing) ou en mode de plainte (complain).
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Sécurité}{Fonctionnement et Configuration d'AppArmor\cref{apparmor}}
+        \begin{itemize}
+            \item Chaque programme a un profil qui peut restreindre l'accès aux fichiers, aux capacités réseau, et plus encore.
+            \item Les profils peuvent être ajustés manuellement ou générés automatiquement pour de nouvelles applications.
+            \item AppArmor est intégré à plusieurs distributions Linux comme Ubuntu et openSUSE.
+            \item Pour gérer AppArmor, on utilise des commandes telles que \lstinline{aa-status}, \lstinline{aa-enforce}, et \lstinline{aa-complain}.
+        \end{itemize}
+    \end{frame}
+
+    \subsection{SELinux VS AppApmor}\label{subsec:selinux-vs-apparmor}
+
+    \begin{frame}{Sécurité}{Comparaison~: AppArmor vs SELinux\footnote{Technologies for container isolation: A comparison of AppArmor and SELinux, \url{https://www.redhat.com/sysadmin/apparmor-selinux-isolation}}}
+        \begin{footnotesize}
+            \begin{itemize}
+                \item AppArmor et SELinux sont des solutions de sécurité basées sur le contrôle d'accès obligatoire MAC.
+                \item AppArmor utilise des profils basés sur des chemins, tandis que SELinux est basé sur l'étiquetage des fichiers et processus.
+                \item SELinux offre un contrôle plus granulaire, incluant la sécurité MLS, ce que AppArmor ne supporte pas.
+                \item AppArmor est reconnu plus simple d'utilisation et a été développé dans ce sens.
+            \end{itemize}
+
+            \begin{table}[h!]
+                \centering
+                \begin{tabular}{|l|c|c|}
+                    \hline
+                    \textbf{Technologie}       & \textbf{AppArmor}         & \textbf{SELinux}          \\
+                    \hline
+                    Type Enforcement           & \emoji{check-mark-button} & \emoji{check-mark-button} \\
+                    \hline
+                    MLS\/MCS                   & \emoji{no-entry}          & \emoji{check-mark-button} \\
+                    \hline
+                    Générateur de politiques   & \emoji{check-mark-button} & \emoji{no-entry}          \\
+                    \hline
+                    Générateur pour containers & \emoji{no-entry}          & \emoji{check-mark-button} \\
+                    \hline
+                \end{tabular}
+                \caption{Comparaison des fonctionnalités}
+            \end{table}
+        \end{footnotesize}
+    \end{frame}
+
+    \subsection{UEFI}\label{subsec:uefi}
+
+    \begin{frame}{Sécurité}{Qu'est-ce que l'UEFI Secure Boot~?\footnote{\label{uefi}Comprendre le démarrage sécurisé de l'UEFI, \url{https://docs.redhat.com/fr/documentation/red\_hat\_enterprise\_linux/9/html/managing\_monitoring\_and\_updating\_the\_kernel/con\_what-is-uefi-secure-boot\_updating-the-secure-boot-revocation-list}}}
+        \begin{small}
+            \begin{itemize}
+                \item UEFI Secure Boot est une technologie de sécurité qui assure que le système ne démarre que des logiciels authentifiés.
+                \item Elle vérifie les signatures numériques à l'aide d'algorithmes de cryptographie des bootloader, du noyau et des modules avant de les exécuter.
+                \item Une \textquote{chaîne de confiance} est établie depuis le firmware UEFI jusqu'aux pilotes signés, garantissant que seul le code de confiance est exécuté.
+                \item Les clés publiques utilisées pour vérifier les signatures sont stockées dans la base de données UEFI.
+            \end{itemize}
+            Quel type de cryptographie est-ce~?
+            \begin{center}
+                \includegraphics[width=3cm]{image/question-mark}
+            \end{center}
+        \end{small}
+    \end{frame}
+
+    \begin{frame}{Sécurité}{Comparaison UEFI Secure Boot et BIOS Legacy\cref{uefi}}
+        \begin{footnotesize}
+            C'est le successeur du BIOS depuis les années 2000.
+            \begin{table}[h!]
+                \centering
+                \begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|}
+                    \hline
+                    \textbf{Caractéristiques} & \textbf{UEFI Secure Boot}                            & \textbf{BIOS Legacy}                                        \\
+                    \hline
+                    Sécurité                  & Vérifie les signatures des composants de démarrage   & Pas de vérification des signatures                          \\
+                    \hline
+                    Compatibilité             & Supporte les disques GPT et les systèmes 64 bits     & Supporte les disques MBR et les systèmes 32 bits\/64 bits   \\
+                    \hline
+                    Interface                 & Interface graphique et support de la souris          & Interface texte uniquement                                  \\
+                    \hline
+                    Mise à jour               & Plus flexible, peut être mis à jour sans redémarrage & Mise à jour plus complexe, nécessite souvent un redémarrage \\
+                    \hline
+                \end{tabular}
+                \caption{Comparaison entre UEFI Secure Boot et BIOS Legacy}
+            \end{table}
+        \end{footnotesize}
+    \end{frame}
+
+    \begin{frame}{Sécurité}{Cryptographie avec OpenSSL\footnote{Welcome to the OpenSSL project, \url{https://github.com/openssl/openssl}}}
+        \begin{itemize}
+            \item \textbf{OpenSSL}~: Bibliothèque robuste et un ensemble d'outils pour l'implémentation de la cryptographie en ligne de commande et API dans divers langage.
+            \item \textbf{Fonctionnalités}~:
+            \begin{itemize}
+                \item Chiffrement et déchiffrement.
+                \item Gestion des certificats SSL/TLS.
+                \item Génération de clés privées et publiques.
+            \end{itemize}
+            \item \textbf{Utilisation}~: Indispensable pour sécuriser les communications sur Internet, largement utilisé dans les serveurs Web.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Sécurité}{Cryptographie Asymétrique\footnote{\label{cryptoas-goffinet}Cryptographie asymétrique, \url{https://linux.goffinet.org/administration/confidentialite/chiffrement-asymetrique}}}
+        \begin{itemize}
+            \item \textbf{Principe}~: Utilise une paire de clés, publique et privée. La clé publique chiffre les données, la clé privée les déchiffre.
+            \item \textbf{Algorithmes Principaux}~:
+            \begin{itemize}
+                \item \textbf{RSA}~: Utilisé pour le chiffrement et la signature numérique.
+                \item \textbf{DSA}~: Principalement utilisé pour la signature numérique.
+                \item \textbf{Diffie-Hellman}~: Protocole d'échange de clés.
+            \end{itemize}
+            \item \textbf{Avantages}~: Sécurise les échanges de clés, assure la confidentialité et l'authenticité des messages.
+            \item \textbf{Inconvénients}~: Algorithmes lents par rapport aux méthodes symétriques.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Sécurité}{Cryptographie Asymétrique\cref{cryptoas-goffinet}}
+        \begin{center}
+            \includegraphics[width=12cm]{image/assymetrie-signature-vs-chiffrement}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Sécurité}{Fonctions de Hachage\cref{cryptoas-goffinet}}
+        \begin{itemize}
+            \item \textbf{Définition}~: Convertit des données en une empreinte unique (hachage) de longueur fixe.
+            \item \textbf{Utilisations}~:
+            \begin{itemize}
+                \item Vérification de l'intégrité des données.
+                \item Génération de signatures numériques.
+            \end{itemize}
+            \item \textbf{Algorithmes}~:
+            \begin{itemize}
+                \item \textbf{MD5}~: Ancien, vulnérable à certaines attaques.
+                \item \textbf{SHA-1}~: Plus sécurisé que MD5, mais considéré comme obsolète.
+                \item \textbf{SHA-256}~: Recommandé pour la sécurité actuelle.
+            \end{itemize}
+            \item \textbf{Salage}~: Ajout d'une chaîne aléatoire avant le hachage pour renforcer la sécurité.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Sécurité}{Cryptographie Hybride\cref{cryptoas-goffinet}}
+        \begin{itemize}
+            \item \textbf{Concept}~: Combine la cryptographie symétrique et asymétrique pour tirer parti des avantages des deux.
+            \item \textbf{Processus}~:
+            \begin{itemize}
+                \item Génération d'une clé de session symétrique aléatoire.
+                \item Chiffrement du message avec la clé symétrique.
+                \item Chiffrement de la clé symétrique avec la clé publique du destinataire.
+            \end{itemize}
+            \item \textbf{Applications}~: Utilisé dans des protocoles comme TLS pour sécuriser les communications en ligne.
+            \item \textbf{Avantage}~: Allie la rapidité de la cryptographie symétrique à la sécurité de la cryptographie asymétrique.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[fragile]{Sécurité}{Génération et utilisation d'une paire de clés RSA avec OpenSSL}
+        Alice génère les clés RSA sur sa machine
+        \begin{lstlisting}[language=bash,basicstyle=\ttfamily\small]
+$  openssl genrsa -out cle.pem 2048
+$ openssl rsa -in cle.pem -pubout -out pub.pem
+writing RSA key
+        \end{lstlisting}
+        Sur sa machine, Bob, avec la clé publique d'Alice chiffre un secret.
+        \begin{lstlisting}[language=bash,basicstyle=\ttfamily\small]
+$ echo secret | openssl pkeyutl -inkey pub.pem -pubin -out crypto.dat -encrypt
+        \end{lstlisting}
+        De retour sur sa machine, Alice déchiffre le secret.
+        \begin{lstlisting}[language=bash,basicstyle=\ttfamily\small]
+$ openssl pkeyutl -inkey cle.pem -in crypto.dat -decrypt
+secret
+        \end{lstlisting}
+        Exercice \execcounterdispinc~:
+        Partager un secret chiffré avec un de vos camarades.
+    \end{frame}
+
+
+    \section{Imprimer et e-mail}\label{sec:print-n-mail}
+
+    \begin{frame}{Imprimer et e-mail}{Imprimer}
+        La plupart des logiciel d'édition comme ceux de la suite LibreOffice on un bouton imprimer.
+        La plupart des logiciels de visualisation de PDF comme Evince ou Okular également.
+        \bigbreak
+        Comme sous d'autres OS, le Ctrl+p fonctionne sous ses logiciels pour imprimer.
+        \bigbreak
+        En tapant imprimante dans la barre de recherche on tombe sur la liste des imprimantes et scanners.
+        \begin{center}
+            \includegraphics[width=6cm]{image/ubuntu-printers}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{Imprimer}
+        \begin{center}
+            \includegraphics[width=11cm]{image/print-configuration}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{Lp Spooling System\footnote{A Guide to the Lp Printer Spooler, \url{https://9p.io/sys/doc/lp.html}}}
+        \begin{itemize}
+            \item \textbf{Lp} est une collection de programmes qui offre une interface simple pour l'impression de divers types de documents sur différentes imprimantes.
+            \item Il agit comme une interface entre les traducteurs de langages de document et les programmes de communication avec les imprimantes.
+            \item \textbf{Fonctionnalités clés}~:
+            \begin{itemize}
+                \item Facilite l'impression de fichiers dans divers formats.
+                \item Gère les files d'attente d'impression et permet la sélection de l'imprimante.
+                \item Offre des commandes pour vérifier, annuler, ou surveiller les tâches d'impression.
+            \end{itemize}
+            \item \textbf{Usage}~: Lp est utilisé dans l'environnement Unix, Plan 9 et maintenant Linux pour gérer l'impression en assurant une vue cohérente des imprimantes et des documents.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[fragile]{Imprimer et e-mail}{lp Spooling System}
+        Il est également possible depuis le terminal avec les commandes \lstinline{lpstats} et \lstinline{lpr}.
+        \bigbreak
+        \lstinline{lpstat} liste les imprimantes disponibles~:
+        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+$ lpstat -t
+scheduler is running
+no system default destination
+matériel pour Brother_MFC_L3770CDW_series~: ipp://BROTHER-CDI.local:631/ipp/print
+matériel pour DCP-L2530DW~: dnssd://Brother%20DCP-L2530DW%20series._ipp._tcp.local/?uuid=e3248000-80ce-11db-8000-5c61997a44ed
+Brother_MFC_L3770CDW_series accepte des requêtes depuis ven. 30 août 2024 13:38:42
+DCP-L2530DW accepte des requêtes depuis ven. 30 août 2024 10:43:40
+printer Brother_MFC_L3770CDW_series now printing Brother_MFC_L3770CDW_series-146.  enabled since ven. 30 août 2024 13:38:42
+        Unable to locate printer "BROTHER-CDI.local".
+printer DCP-L2530DW is idle.  enabled since ven. 30 août 2024 10:43:40
+Brother_MFC_L3770CDW_series-146 chrichri         14336   ven. 30 août 2024 10:43:11
+        \end{lstlisting}
+        \lstinline{lpr} imprime un fichier sur une imprimantes disponibles~:
+        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+$ lpr -P DCP-L2530DW requirements.txt
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{Qu'est-ce que CUPS~?}
+        \begin{footnotesize}
+            \begin{itemize}
+                \item CUPS (Common UNIX Printing System) est le système principal d'impression sous Ubuntu et la plupart des distributions.
+                \item CUPS organise les tâches d'impression, les met en file d'attente, et permet l'impression en réseau via le protocole IPP (Internet Printing Protocol).
+                \item Il offre un large support pour de nombreuses imprimantes, incluant tous types imprimantes.
+                \item Support des imprimantes AirPrint™ et IPP Everywhere™
+                \item Imprimantes réseau et USB locales avec des applications d'impression
+                \item Imprimantes réseau et USB locales avec des pilotes basés sur les fichiers PostScript Printer Description (PPD) hérités
+                \item CUPS inclut également le support des fichiers PPD (PostScript Printer Description) et une interface Web pour la configuration et la gestion des imprimantes.
+                \item CUPS peut gérer des classes, qui sont des groupes d'imprimantes recevant une tâche d'impression.
+                Elle transmise à une seule imprimante cible de la classe en fonction de la disponibilité.
+                \item La centralisation sur un serveur permet d'administration les politiques/restrictions liées à l'impression en un seul point.
+                Donc on imagine de manière plus efficiente.
+            \end{itemize}
+        \end{footnotesize}
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{Installation et Configuration de CUPS}
+        \begin{itemize}
+            \item \textbf{Installation}~: Utilisez la commande \lstinline{sudo apt install cups} pour installer CUPS. Le service démarre automatiquement après l'installation.
+            C'est un protocole client - serveur et c'est le serveur que vous installé.
+            \item \textbf{Configuration}~: Le fichier de configuration principal est \lstinline{/etc/cups/cupsd.conf}, similaire à la configuration d'Apache.
+            \item \textbf{Interface Web}~: Accessible via \lstinline{http://localhost:631}, elle permet de gérer les imprimantes et de configurer CUPS.
+            \item Pour administrer les imprimantes CUPS, il faut est dans le groupe \lstinline{lpadmin}.
+            Pour ajouter un utilisateur au groupe \lstinline{lpadmin}, utilisez la commande \lstinline{sudo usermod -aG lpadmin nomutilisateur}.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{Installation et Configuration de CUPS}
+        Exercice \execcounterdispinc~:
+        \begin{itemize}
+            \item Trouver l'interface Web de CUPS.
+            \item Trouver les imprimantes.
+            \item Essayer de modifier une option par défaut.
+            Cela ne devrait pas être possible.
+            \item Sécuriser l'administration \lstinline{/admin} de l'interface avec les identifiant de votre user.
+            \item Maintenant qu'elle est sécurisé, rendre accessible l'interface sur tout votre réseau, c'est à dire sur votre IP ou 0.0.0.0.
+            \item Partager l'imprimante sur le réseau.
+            \item Modifier une option par défaut.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{Utilisation de CUPS client pour imprimer}
+        Ce serveur CUPS est donc potentiellement accessible sur le réseau.
+        En fonction de son paramétrage et de celui du réseau.
+        \bigbreak
+        Le client communique avec lui à travers ce dernier pour imprimer.
+        On peut citer les clients~:
+        \begin{itemize}
+            \item \textbf{cups-client}~: Un package qui vient toutes les commandes \lstinline{lp} et \lstinline{lpstat}, \textit{etc}.
+            \item Un client Python \lstinline{pycups} qui permet de faire la même chose. Développé par les développeurs de CUPS\footnote{CUPS bindings for Python, \url{https://github.com/OpenPrinting/pycups}}.
+            \item \href{https://github.com/harwey/cups4j}{cup4j} en Java.
+            \item \textit{Many More}
+        \end{itemize}
+        Des impressions peuvent donc être lancées sur réseau dans un script Shell ou un programme complexe (Java, Python ou autre).
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{Utilisation de CUPS client pour imprimer}
+        \begin{center}
+            \includegraphics[width=11cm]{image/cups.drawio}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{Installation et Configuration de CUPS}
+        % Following https://www.linuxquestions.org/questions/linux-general-1/printing-over-network-with-only-cups-client-4175504852/ tutorial
+        % ou https://www.debian-fr.org/t/how-to-partage-dimprimante-en-2-minutes-grace-a-cups/7898
+        Exercice \execcounterdispinc~:
+        \begin{itemize}
+            \item Trouver l'interface Web de CUPS du serveur, le serveur sur la machine d'un camarade.
+            \item Configurer votre client avec l'IP du serveur.
+            \item Tester avec \lstinline{lpstats} et en lançant une impression avec ou \lstinline{lpr}.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{e-mail}
+        \begin{dangercolorbox}
+            Nous n'allons pas couvrir ici l'aspect serveur de mail. Même si Linux est le candidat de choix, qui fait tourner l'immense majorité des serveurs de mail hors Exchange de MS.
+            \bigbreak
+            Il n'est quasi plus possible d'envoyer des mails sans \textquote{montrer patte blanche}.
+            Suite au abus/spams les serveurs de mail sont devenus très restrictifs et utilisent des listes noires chez des spécialistes comme \href{https://www.spamhaus.org/}{Spamhaus}.
+            C'est à eux qu'il faut prouver son intégrité.
+            \bigbreak
+            C'est un sujet très vaste et complexe, qui nécessiterait un cours à lui seul.
+        \end{dangercolorbox}
+        Nous allons nous concentrer sur le côté client.
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{e-mail}
+        Thunderbird est un client de messagerie open source, multiplateforme et gratuit.
+        Il gère les protocoles IMAP et POP3 pour la réception de courrier électronique et SMTP pour l'envoi.
+        \bigbreak
+        Ce logiciel ne support pas le protocole Exchange de Microsoft.
+        Il nécessite un plugin appelé Chouette qui est payant.
+        \bigbreak
+        On le configure en renseignant son adresse mail, son mot de passe, le serveur IMAP/POP3 et SMTP de son prestataire/cloud provider.
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{e-mail avec GUI}
+        \begin{center}
+            \includegraphics[width=12cm]{image/thunderbird}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{e-mail avec Postfix}
+        Développé à la base par IBM research.
+        \bigbreak
+        Postfix est le Service de Transfert de Courriel (MTA) par défaut d'Ubuntu.
+        Il est conçu pour être sûr autant que facile et rapide à configurer.
+        Il permet uniquement d'envoyer des mails, il faut d'autre protocoles et libraires pour les recevoir.
+
+        Il est souvent utilisé pour envoyer des e-mails de notifications automatiques.
+        \bigbreak
+        Une fois configuré, il est possible d'envoyer des mails par des nombreux moyens~:
+        \begin{itemize}
+            \item Une simple ligne de commande dans un script Shell~!
+            \item Une librairie SMTP comme \lstinline{smtplib} de la Standard Librairy de Python.
+            \item \textit{Many more}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[fragile]{Imprimer et e-mail}{e-mail et configuration de Postfix\footnote{Configure Postfix to Send Email Using External SMTP Servers, \url{https://www.linode.com/docs/guides/postfix-smtp-debian7/}}}
+        \begin{tiny}
+            Installer les dépendances~:
+            \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+sudo apt-get install libsasl2-modules postfix
+            \end{lstlisting}
+            Éditer la configuration~:
+            \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+sudo nano /etc/postfix/main.cf
+            \end{lstlisting}
+            Ajouter ou modifier les lignes suivantes dans le fichier \lstinline{main.cf}~:
+            \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+relayhost = [<domaine du server>]:<port du server>
+smtp_sasl_auth_enable = yes
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+smtp_sasl_security_options = noanonymous
+smtp_use_tls = yes
+            \end{lstlisting}
+            Créer un fichier de mot de passe pour stocker le mot de passe de l'utilisateur~:
+            \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+sudo nano /etc/postfix/sasl_passwd
+            \end{lstlisting}
+            Ajouter les lignes suivantes dans le fichier \lstinline{sasl_passwd}~:
+            \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+[<domaine du server>]:<port du server> <nom d'utilisateur>:<mot de passe>
+            \end{lstlisting}
+            Créer la base de données Postfix pour le mot de passe et redémarrer Postfix
+            \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+sudo postmap /etc/postfix/sasl_passwd
+sudo systemctl restart postfix
+            \end{lstlisting}
+        \end{tiny}
+    \end{frame}
+
+    \begin{frame}[fragile]{Imprimer et e-mail}{e-mail et configuration de Postfix}
+        Envoi d'un e-mail de test avec la commande \lstinline{echo "<Corp de l'e-mail>" | mail -s "<Sujet de l'e-mail>" -a "From: <e-mail envoi>" <e-mail destinataire>}.
+        \begin{lstlisting}[language=bash]
+echo "This is a test email body." | \
+    mail -s "Super sujet" -a "From: christophe.brun@papit.fr" christophe.brun@papit.fr
+        \end{lstlisting}
+        \begin{center}
+            \includegraphics[width=6cm]{image/sendmail}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Imprimer et e-mail}{e-mail et configuration de Postfix}
+        Exercice \execcounterdispinc~:
+        Configurer Postfix et envoyer avec succès le mail de test.
+        \bigbreak
+        Exercice \execcounterdispinc~:
+        Dans un script Shell, envoyer un mail de notification de l'exécution d'un commande contenant un statut de la commande, ses logs et un horodatage.
+        \bigbreak
+        \centering
+        \includegraphics[width=3cm]{image/guy-in-front-of-desktop}
+    \end{frame}
+
+
+    \section{Networking}\label{sec:networking}
+
+    \subsection{Base du réseau}\label{subsec:basic-network}
+
+    \begin{frame}{Networking}{Les différentes couches\footnote{What is the application layer in an industrial network?, \url{https://www.motioncontroltips.com/what-is-the-application-layer-in-an-industrial-network/}}}
+        \centering
+        \includegraphics[width=11cm]{image/OSI-vs-TCPIP-Layers}
+    \end{frame}
+
+    \begin{frame}{Networking}{Les différentes couches\footnote{The TCP/IP Protocol Suite, \url{http://www.c-jump.com/CIS24/Slides/Networking/N01_0260_protocol_suite.htm}}}
+        \centering
+        \includegraphics[width=11cm]{image/tcp_ip_suite}
+    \end{frame}
+
+    \begin{frame}{Networking}{Les différentes couches\footnote{Visualizing gRPC Language Stacks, \url{https://grpc.io/blog/grpc-stacks/}}}
+        \centering
+        \includegraphics[width=11cm]{image/grpc-core-stack}
+    \end{frame}
+
+    \begin{frame}{Networking}{Définition possible}
+        \begin{scriptsize}
+            \begin{itemize}
+                \item Un réseau est un ensemble de couches matériels et protocolaires qui permettent à des machines de communiquer entre eux.
+                \item Les couches matérielles sont les câbles, les cartes réseaux, les switchs, les routeurs, les serveurs, les clients, \textit{etc}.
+                \item Les couches protocolaires sont les protocoles de communication, les adresses IP, les ports, les protocoles de routage, les protocoles de sécurité, protocoles applicatifs, \textit{etc}.
+                \item Le même protocole peut être supporté par des couches et des hardwares différents de la stack.
+                Par exemple le WiFi peut être gérer par un hardware dédiée comme un SOC WiFi ESP32\footnote{ESP32, A feature-rich MCU with integrated Wi-Fi and Bluetooth connectivity for a wide-range of applications, \url{https://www.espressif.com/en/products/socs/esp32}} ou un SD-WLAN de Verizon\footnote{Apprenez à votre Wi-Fi à prendre ses propres décisions, \url{https://www.verizon.com/business/fr-fr/products/networks/managed-network-services/managed-sd-wireless-lan/}}.
+                \item Le même protocole peut avoir des couches inférieurs de la stack différentes.
+                Par exemple IPv6 over Ethernet ou IPv6 over WiFi.
+                Matter, un protocole applicatif, unifie les protocoles de communication DSL, DOCSIS, Cellulaire, Wi-Fi, Thread, 802.15.4, Bluetooth, BLE, \textit{etc}\footnote{Comment fonctionne Matter ?, \url{https://nodon.fr/protocoles-sans-fil/matter/}}.
+            \end{itemize}
+        \end{scriptsize}
+    \end{frame}
+
+    \subsection{Synchronisation avec rsync}\label{subsec:rsync-syncro}
+
+    \begin{frame}{Networking}{rsync}
+        \begin{columns}
+            \column{0.7\textwidth}
+            Rsync est un outil de synchronisation de fichiers qui permet de copier des fichiers locaux ou distants.
+            Mais sont réel atout est bien pour fichiers distant, en local on a \lstinline{cp}\ldots
+            \bigbreak
+            Il est souvent utilisé pour synchroniser des fichiers entre un serveur et un client SSH~.
+            \bigbreak
+            Par exemple les IDE JetBrains peuvent synchroniser le code avec d'autres machines pour le déploiement sur les environnements de développement/testing, \textit{etc}.
+            \column{0.3\textwidth}
+            \centering
+            \includegraphics[width=4cm]{image/hdd-synchronous}
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}[fragile]{Networking}{La commande \lstinline{rsync}\footnote{Rsync Command in Linux with Examples, \url{https://linuxize.com/post/how-to-use-rsync-for-local-and-remote-data-transfer-and-synchronization/}}}
+        La syntaxe générale de la commande est \lstinline{rsync <OPTION(S)> <SRC> <DEST>}.
+        Pour pousser du code sur une autre machine (qui est donc serveur SSH) la destination est préfixée par le user et l'hôte~:
+        \bigbreak
+        \begin{lstlisting}[language=bash]
+rsync -a /chemin/vers/mon-dossier/ utilisateur@serveur:/chemin/vers/mon-dossier/
+        \end{lstlisting}
+        Pour récupérer du code depuis une autre machine la source est préfixée par le user et l'hôte~:
+        \begin{lstlisting}[language=bash]
+rsync -a utilisateur@serveur:/chemin/vers/mon-dossier/ /chemin/vers/mon-dossier/
+        \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}{Networking}{Exercice \execcounterdispinc}
+        Utiliser \lstinline{rsync} pour synchroniser un dossier entre deux VMs.
+        \begin{itemize}
+            \item Envoyer un fichier sur la VM de votre camarade.
+            \item Vérifier que le fichier transféré est bien synchronisé donc identique avec \lstinline{sha256sum} ou \lstinline{md5sum}.
+            \item Récupérer un fichier de la VM de votre camarade.
+            \item Vérifier que le fichier transféré est bien synchronisé donc identique avec \lstinline{sha256sum} ou \lstinline{md5sum}.
+            \item À l'image d'un backup périodique, utiliser crontab et \lstinline{rsync} pour synchroniser un fichier toutes les 5 minutes.
+        \end{itemize}
+        \begin{center}
+            \includegraphics[width=3cm]{image/guy-in-front-of-desktop}
+        \end{center}
+    \end{frame}
+
+    \subsection{Un navigateur texte – lynx}\label{subsec:lynx}
+
+    \begin{frame}{Networking}{Lynx\footnote{Lynx, \url{https://doc.ubuntu-fr.org/lynx}}}
+        Lynx est un navigateurs web en mode texte utilisable via une console ou un terminal.
+        Distribué sous licence GNU GPL, il supporte Gopher, HTTP, HTTPS, FTP, WAIS, NNTP et le SSL. Le Javascript n'est quand à lui pas supporté.
+        La navigation se fait entièrement au clavier et les différents éléments des pages Web (par exemple: les liens hypertexte) sont mis en évidence grâce à une coloration syntaxique.
+        Il est très populaire en tant que navigateur adapté aux déficiences visuelles car son interface est facile à mettre en œuvre avec un synthétiseur vocal.
+        Des versions de Lynx sont également disponibles pour Windows et MacOSX.
+        \begin{dangercolorbox}
+            Du fait de l'absence de support de Javascript il ne vas être possible de naviguer sur de nombreux sites.
+            Ceux qui utilisent des frameworks web modernes, comme par exemple le site \lstinline{Digicomp.ch}.
+            Google Maps, ne fonctionne pas et affiche un message d'erreur.
+            TripAdvisor ne fonctionne pas.
+        \end{dangercolorbox}
+    \end{frame}
+
+    \begin{frame}[fragile]{Networking}{Lynx, le site Digicomp}
+        \begin{center}
+            \includegraphics[width=11cm]{image/lynx-digicomp}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}[fragile]{Networking}{Lynx, le site Google Maps}
+        \begin{center}
+            \includegraphics[width=11cm]{image/lynx-gmaps}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}[fragile]{Networking}{Lynx, le site Tripadvisor}
+        \begin{center}
+            \includegraphics[width=11cm]{image/lynx-tripadvisor}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}[fragile]{Networking}{La commande \lstinline{rsync}\footnote{Rsync Command in Linux with Examples, \url{https://linuxize.com/post/how-to-use-rsync-for-local-and-remote-data-transfer-and-synchronization/}}}
+        Lynx est un navigateurs web en mode texte utilisable via une console ou un terminal.
+        Distribué sous licence GNU GPL, il supporte Gopher, HTTP, HTTPS, FTP, WAIS, NNTP et le SSL. Le Javascript n'est quand à lui pas supporté.
+        La navigation se fait entièrement au clavier et les différents éléments des pages Web (par exemple: les liens hypertexte) sont mis en évidence grâce à une coloration syntaxique.
+        Il est très populaire en tant que navigateur adapté aux déficiences visuelles car son interface est facile à mettre en œuvre avec un synthétiseur vocal.
+        Des versions de Lynx sont également disponibles pour Windows et MacOSX.
+        \begin{dangercolorbox}
+            Du fait de l'absence de support de Javascript il ne vas être possible de naviguer sur de nombreux sites.
+            Ceux qui utilisent des frameworks web modernes, comme par exemple le site \lstinline{Digicomp.ch}.
+            Lancer une recherche Google est possible mais le site a besoin de Javascript pour aller du résultat à la ressource elle même.
+            En son absence il bloque la navigation.
+        \end{dangercolorbox}
     \end{frame}
 
 

@@ -1,0 +1,67 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="eiRsWgtg5604Djj0I1mS">
+    <mxGraphModel dx="1434" dy="870" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-6" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.pc;" vertex="1" parent="1">
+          <mxGeometry x="625" y="107.5" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-7" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.laptop;" vertex="1" parent="1">
+          <mxGeometry x="635" y="357.5" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-8" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.copier;" vertex="1" parent="1">
+          <mxGeometry x="100" y="355" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-9" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.printer;" vertex="1" parent="1">
+          <mxGeometry x="105" y="235" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-10" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.server;" vertex="1" parent="1">
+          <mxGeometry x="635" y="217.5" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-11" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.server;" vertex="1" parent="1">
+          <mxGeometry x="369" y="210" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-12" value="&lt;font color=&quot;#000000&quot;&gt;Printers&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;fontColor=#ffffff;strokeColor=#3700CC;strokeWidth=3;verticalAlign=top;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="150" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-13" value="&lt;font color=&quot;#000000&quot;&gt;CUPS server&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;fontColor=#ffffff;strokeColor=#A50040;strokeWidth=3;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="339" y="40" width="150" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-14" value="&lt;font color=&quot;#000000&quot;&gt;CUPS clients&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;fontColor=#000000;strokeColor=#BD7000;strokeWidth=3;verticalAlign=top;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="605" y="40" width="150" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-15" value="HTTP" style="endArrow=classic;html=1;rounded=0;entryX=1.007;entryY=0.523;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;horizontal=1;verticalAlign=bottom;labelBackgroundColor=none;fontColor=#000000;" edge="1" parent="1" target="dPf4S3eLiPIL0ItzNHD1-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="270" as="sourcePoint" />
+            <mxPoint x="490" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-16" value="Air Print" style="endArrow=classic;html=1;rounded=0;entryX=1.007;entryY=0.523;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;horizontal=1;verticalAlign=bottom;labelBackgroundColor=none;fontColor=#000000;exitX=-0.007;exitY=0.727;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="339.00000000000006" y="360.0000000000001" as="sourcePoint" />
+            <mxPoint x="231.05" y="360.12" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-17" value="IPP Everywhere" style="endArrow=classic;html=1;rounded=0;entryX=1.007;entryY=0.523;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;horizontal=1;verticalAlign=bottom;labelBackgroundColor=none;fontColor=#000000;exitX=-0.007;exitY=0.727;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="338" y="400" as="sourcePoint" />
+            <mxPoint x="230" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-18" value="USB" style="endArrow=classic;html=1;rounded=0;entryX=1.007;entryY=0.523;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;horizontal=1;verticalAlign=bottom;labelBackgroundColor=none;fontColor=#000000;exitX=-0.007;exitY=0.727;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="339.00000000000006" y="260.0000000000001" as="sourcePoint" />
+            <mxPoint x="231.05" y="260.12" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-19" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.printer;" vertex="1" parent="1">
+          <mxGeometry x="105" y="110" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dPf4S3eLiPIL0ItzNHD1-20" value="&lt;font color=&quot;#000000&quot;&gt;Class&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;fontColor=#ffffff;strokeColor=#2D7600;strokeWidth=3;verticalAlign=top;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="80" width="130" height="270" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
