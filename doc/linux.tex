@@ -683,13 +683,13 @@ $ ls -lha ../linux.tex
 
     \begin{frame}{Gestion des chemins et des répertoires}{Exercice \execcounterdispinc}
         \begin{enumerate}
-            \item Créez un répertoire \lstinline{test} dans votre répertoire personnel.
-            \item Créez un fichier \lstinline{test.txt} dans ce répertoire.
-            \item Déplacez-vous dans le répertoire \lstinline{test}.
-            \item Affichez le contenu du répertoire.
-            \item Remontez d'un répertoire.
-            \item Affichez le contenu du répertoire.
-            \item Supprimez le répertoire \lstinline{test} et son contenu.
+            \item Créer un répertoire \lstinline{test} dans votre répertoire personnel.
+            \item Créer un fichier \lstinline{test.txt} dans ce répertoire.
+            \item Déplacer-vous dans le répertoire \lstinline{test}.
+            \item Afficher le contenu du répertoire.
+            \item Remonter d'un répertoire.
+            \item Afficher le contenu du répertoire.
+            \item Supprimer le répertoire \lstinline{test} et son contenu.
         \end{enumerate}
     \end{frame}
 
@@ -770,16 +770,16 @@ $ pwd
 
     \begin{frame}{Editer des données sans \lstinline{vi}}{Lancement de \lstinline{ed}\cref{redhated}}
         \begin{itemize}
-            \item Tapez simplement \lstinline{ed} pour lancer l'éditeur.
+            \item Taper simplement \lstinline{ed} pour lancer l'éditeur.
             \item L'éditeur ne fournit pas de retour immédiat ; il attend vos commandes.
-            \item Utilisez la commande \lstinline{p} pour afficher un prompt~: \lstinline{?}.
+            \item Utiliser la commande \lstinline{p} pour afficher un prompt~: \lstinline{?}.
         \end{itemize}
     \end{frame}
 
     \begin{frame}[fragile]{Editer des données sans \lstinline{vi}}{Ajout et modification de texte avec \lstinline{ed}\cref{redhated}}
         \begin{itemize}
-            \item Utilisez la commande \lstinline{a} pour ajouter du texte à la mémoire tampon.
-            \item Finissez l'édition avec un point seul sur une ligne \lstinline{.} pour retourner au mode commande.
+            \item Utiliser la commande \lstinline{a} pour ajouter du texte à la mémoire tampon.
+            \item Terminer l'édition avec un point seul sur une ligne \lstinline{.} pour retourner au mode commande.
             \item Exemple~:
             \begin{lstlisting}
 a
@@ -792,11 +792,11 @@ widget=True
 
     \begin{frame}[fragile]{Editer des données sans \lstinline{vi}}{Sauvegarder et lire des fichiers avec \lstinline{ed}\cref{redhated}}
         \begin{itemize}
-            \item Sauvegardez la mémoire tampon dans un fichier avec la commande \lstinline{w}~:
+            \item Sauvegarder la mémoire tampon dans un fichier avec la commande \lstinline{w}~:
             \begin{lstlisting}
 w fichier.txt
             \end{lstlisting}
-            \item Chargez un fichier existant dans la mémoire tampon avec la commande \lstinline{r}~:
+            \item Charger un fichier existant dans la mémoire tampon avec la commande \lstinline{r}~:
             \begin{lstlisting}
 r /etc/myconfig.txt
             \end{lstlisting}
@@ -805,8 +805,8 @@ r /etc/myconfig.txt
 
     \begin{frame}[fragile]{Editer des données sans \lstinline{vi}}{Visualiser et éditer la mémoire tampon de \lstinline{ed}\cref{redhated}}
         \begin{itemize}
-            \item Affichez toutes les lignes avec la commande \lstinline{,p}.
-            \item Modifiez une ligne spécifique en utilisant le numéro de ligne et la commande \lstinline{s}~:
+            \item Afficher toutes les lignes avec la commande \lstinline{,p}.
+            \item Modifier une ligne spécifique en utilisant le numéro de ligne et la commande \lstinline{s}~:
             \begin{lstlisting}
 2
 s/True/False/
@@ -816,7 +816,7 @@ s/True/False/
 
     \begin{frame}{Editer des données sans \lstinline{vi}}{Vider et quitter \lstinline{ed}\cref{redhated}}
         \begin{itemize}
-            \item Utilisez la commande \lstinline{c} pour vider la mémoire tampon.
+            \item Utiliser la commande \lstinline{c} pour vider la mémoire tampon.
             \item Quittez \lstinline{ed} avec la commande \lstinline{q} ou en appuyant sur Ctrl+D~.
             \item Attention~: Si vous quittez sans sauvegarder, vos modifications seront perdues.
         \end{itemize}
@@ -865,7 +865,7 @@ s/True/False/
         \begin{itemize}
             \item \textbf{Mode Commande}~: Déplacer le curseur, supprimer du texte, copier-coller, sauvegarder le fichier.
             \item \textbf{Mode Insertion}~: Insérer du texte dans le fichier.
-            \item Utilisez la touche \lstinline{ESC} pour passer du mode Insertion au mode Commande.
+            \item Utiliser la touche \lstinline{ESC} pour passer du mode Insertion au mode Commande.
         \end{itemize}
     \end{frame}
 
@@ -2818,11 +2818,11 @@ $ sudo userdel digiformateur
             \begin{columns}
                 \column{0.5\textwidth}
                 \begin{itemize}
-                    \item Créez un mot de passe suffisamment long, complexe et inattendu~:
+                    \item Créer un mot de passe suffisamment long, complexe et inattendu~:
                     de 8 caractères minimum et contenant des minuscules, des majuscules,
                     des chiffres et des caractères spéciaux.
 
-                    \item Ne communiquez jamais votre mot de passe à un tiers~: aucune
+                    \item Ne communiquer jamais votre mot de passe à un tiers~: aucune
                     organisation ou personne de confiance ne vous demandera de lui
                     communiquer votre mot de passe.
 
@@ -3135,12 +3135,12 @@ $ lpr -P DCP-L2530DW requirements.txt
 
     \begin{frame}{Imprimer et e-mail}{Installation et Configuration de CUPS}
         \begin{itemize}
-            \item \textbf{Installation}~: Utilisez la commande \lstinline{sudo apt install cups} pour installer CUPS. Le service démarre automatiquement après l'installation.
+            \item \textbf{Installation}~: Utiliser la commande \lstinline{sudo apt install cups} pour installer CUPS. Le service démarre automatiquement après l'installation.
             C'est un protocole client - serveur et c'est le serveur que vous installé.
             \item \textbf{Configuration}~: Le fichier de configuration principal est \lstinline{/etc/cups/cupsd.conf}, similaire à la configuration d'Apache.
             \item \textbf{Interface Web}~: Accessible via \lstinline{http://localhost:631}, elle permet de gérer les imprimantes et de configurer CUPS.
             \item Pour administrer les imprimantes CUPS, il faut est dans le groupe \lstinline{lpadmin}.
-            Pour ajouter un utilisateur au groupe \lstinline{lpadmin}, utilisez la commande \lstinline{sudo usermod -aG lpadmin nomutilisateur}.
+            Pour ajouter un utilisateur au groupe \lstinline{lpadmin}, utiliser la commande \lstinline{sudo usermod -aG lpadmin nomutilisateur}.
         \end{itemize}
     \end{frame}
 
@@ -3387,22 +3387,53 @@ rsync -a utilisateur@serveur:/chemin/vers/mon-dossier/ /chemin/vers/mon-dossier/
         \end{dangercolorbox}
     \end{frame}
 
-    \begin{frame}[fragile]{Networking}{Lynx, le site Digicomp}
+    \begin{frame}{Networking}{Lynx, le site Digicomp}
         \begin{center}
             \includegraphics[width=11cm]{image/lynx-digicomp}
         \end{center}
     \end{frame}
 
-    \begin{frame}[fragile]{Networking}{Lynx, le site Google Maps}
+    \begin{frame}{Networking}{Lynx, le site Google Maps}
         \begin{center}
             \includegraphics[width=11cm]{image/lynx-gmaps}
         \end{center}
     \end{frame}
 
-    \begin{frame}[fragile]{Networking}{Lynx, le site Tripadvisor}
+    \begin{frame}{Networking}{Lynx, le site Tripadvisor}
         \begin{center}
             \includegraphics[width=11cm]{image/lynx-tripadvisor}
         \end{center}
+    \end{frame}
+
+    \begin{frame}[fragile]{Networking}{Lynx, le site Digicomp}
+        Par défault le package n'est plus installé sous Ubuntu\ldots
+        La commande pour l'installer est~:
+        \begin{lstlisting}[language=bash]
+sudo apt install lynx
+        \end{lstlisting}
+        Pour lancer le navigateur~:
+        \begin{lstlisting}[language=bash]
+lynx <URL de navigation>
+        \end{lstlisting}
+        Pour naviguer~:
+        \begin{itemize}
+            \item \textbf{Flèches}~: Se déplacer dans la page.
+            \item \textbf{Entrée}~: Suivre un lien.
+            \item \emoji{up-arrow} ou \textbf{Ctrl+TAB} pour remonter au précédent lien ou input.
+            \item \emoji{down-arrow} ou \textbf{TAB} pour aller au lien ou input suivant.
+            \item \emoji{left-arrow} ou \textbf{Carriage Return} pour revenir à l'URl précédent.
+            \item \emoji{right-arrow} ou \textbf{Return} pour revenir à l'URl précédent.
+            \item \textbf{g}~: pour aller à une URL.
+            \item \textbf{Q}~: Quitter.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Networking}{Lynx, le site Digicomp}
+        Exercice \execcounterdispinc~:
+        \begin{itemize}
+            \item Faire un recherche Google avec Lynx.
+            \item Naviguer sur un résultat de recherche.
+        \end{itemize}
     \end{frame}
 
     \begin{frame}[fragile]{Networking}{La commande \lstinline{rsync}\footnote{Rsync Command in Linux with Examples, \url{https://linuxize.com/post/how-to-use-rsync-for-local-and-remote-data-transfer-and-synchronization/}}}
@@ -3415,7 +3446,7 @@ rsync -a utilisateur@serveur:/chemin/vers/mon-dossier/ /chemin/vers/mon-dossier/
             Du fait de l'absence de support de Javascript il ne vas être possible de naviguer sur de nombreux sites.
             Ceux qui utilisent des frameworks web modernes, comme par exemple le site \lstinline{Digicomp.ch}.
             Lancer une recherche Google est possible mais le site a besoin de Javascript pour aller du résultat à la ressource elle même.
-            En son absence il bloque la navigation.
+            En son absence, il bloque la navigation.
         \end{dangercolorbox}
     \end{frame}
 
