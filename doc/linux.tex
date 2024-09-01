@@ -95,7 +95,7 @@
     \subsection{Operating System}\label{subsec:os}
 
     \begin{frame}{Operating System}{Définition de l'OS\footnote{\label{os}C’est quoi un OS (O.S)~?, \url{https://culture-informatique.net/cest-quoi-un-os/}}}
-        Un système d'exploitation (OS) est un ensemble de programmes qui gèrent les ressources matérielles et logicielles d'un ordinateur.
+        Un système d'exploitation (OS) est un ensemble de programmes qui gère les ressources matérielles et logicielles d'un ordinateur.
         Il permet également une interaction entre l'utilisateur et l'ordinateur.
         \begin{itemize}
             \item Gère le processeur, la mémoire, les périphériques.
@@ -148,7 +148,7 @@
     \subsection{L'interface utilisateur}\label{subsec:hmi}
 
     \begin{frame}{L'interface utilisateur}{les principales}
-        Les interfaces A.K.A.\ IHM ou \textit{HMI} en anglais ont évoluées avec les technologies et les besoins des utilisateurs.
+        Les interfaces A.K.A.\ IHM ou \textit{HMI} en anglais ont évolué avec les technologies et les besoins des utilisateurs.
         \begin{itemize}
             \item Les premières interfaces étaient textuelles, comme les terminaux des mainframes IBM et leur IBM System/360 Operating System apparu en 1964\footnote{The IBM System/360, \url{https://www.ibm.com/history/system-360}} et le TSO\footnote{IBM System/360 Operating System: Time Sharing Option Guide, \url{http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/360/os/R20.1_Mar71/GC28-6698-3_TSO_Option_Guide_Rel_20.1_Jun71.pdf}}.
             Cette interface existe toujours dans les dernières version de ces environnements de type mainframe, aujourd'hui appelé Z/OS~.
@@ -178,7 +178,7 @@ $ whoami
 chrichri
                 \end{lstlisting}
                 \item Des protocoles de communication comme RDP, VNC permettent de garder l'approche \textit{user friendly} des fenêtres tout en se connectant de manière sécurisée à une machine distante.
-                \item Les interfaces tactiles o la souris est remplacée par un écran tactile.
+                \item Les interfaces tactiles ou la souris est remplacée par un écran tactile.
                 Ces interfaces sont principalement portées par les OS destinés aux smartphones et tablettes comme Android, basé sur Linux et iOS, basé sur BSD Unix\footnote{Android adn iOS, \url{https://home.ubalt.edu/abento/315/android-ios/index.html}}.
             \end{itemize}
         \end{scriptsize}
@@ -256,7 +256,7 @@ chrichri
     \end{frame}
 
     \begin{frame}{Pourquoi Linux~?}{Performances\footnote{These Windows 10 Vs Pop OS Benchmarks Reveal A Surprising Truth About Linux Gaming Performance, \url{https://www.forbes.com/sites/jasonevangelho/2019/07/17/these-windows-10-vs-pop-os-benchmarks-reveal-a-surprising-truth-about-linux-gaming-performance/}}}
-        Performances proches de celles de Windows, parfois supérieurs~!
+        Performances proches de celles de Windows, parfois supérieur~!
         \begin{center}
             \includegraphics[width=8cm]{image/linux-vs-windows}
         \end{center}
@@ -495,7 +495,7 @@ chrichri
 
     \begin{frame}{Login et Logout}
         Lors de l'installation, on définit l'identifiant d'un utilisateur avec les droits administrateurs aussi appelé superutilisateur.
-        Souvent cette utilisateur est appelé \lstinline{root} et ne peut être changé.
+        Souvent cet utilisateur est appelé \lstinline{root} et ne peut être changé.
         \bigbreak
         Ce superutilisateur pourra par la suite créer d'autres utilisateurs et superutilisateurs.
         \bigbreak
@@ -714,7 +714,7 @@ $ cd /etc/systemd/system
 $ pwd
 /etc/systemd/system
         \end{lstlisting}
-        Quel est l'intérêt de la commande \lstinline{cd} puisqu'en comprenant et connaissant les chemins de la machine on peut lancer n'importe qu'elle commande de n'importe où~?
+        Quel est l'intérêt de la commande \lstinline{cd} puisqu'en comprenant et connaissant les chemins de la machine on peut lancer n'importe quelle commande de n'importe où~?
         \pause
         \begin{itemize}
             \item Pour éviter de taper des chemins absolus ou relatifs trop long.
@@ -730,7 +730,7 @@ $ pwd
         \begin{itemize}
             \item \lstinline{nano}: Un éditeur de texte simple sous licence GNU~.
             \item \lstinline{vi}: Un éditeur de texte plus complexe et plus puissant.
-            Mais il nécessite de mémoriser un grand nombre de commandes pour les diverses opérations.
+            Mais il est nécessaire de mémoriser un grand nombre de commandes pour les diverses opérations.
             \item \lstinline{ed}: Un éditeur minimaliste.
             Il nécessite aussi de connaître plusieurs commandes.
             Mais est utile pour éditer des configurations sur des distributions minimalistes ou en mode recovery.
@@ -741,7 +741,7 @@ $ pwd
     \begin{frame}{Editer des données sans \lstinline{vi}}{Présentation de \lstinline{nano}\footnote{\label{nano}GNU nano, \url{https://www.nano-editor.org/}}}
         \begin{itemize}
             \item \lstinline{nano} est un éditeur de texte simple et facile à utiliser.
-            Toute les commandes sont à l'écran.
+            Toutes les commandes sont à l'écran.
             \item Il est souvent installé par défaut sur les systèmes Linux.
             \item Il est idéal pour les débutants ou pour les utilisateurs qui n'ont pas besoin de fonctionnalités avancées.
             \item Coloration syntaxique par défaut, supportant de nombreux langages.
@@ -837,7 +837,7 @@ s/True/False/
             \item Sauvegarder le fichier.
             \item Quitter l'éditeur.
             \item Relire le fichier.
-            \item modifier la deuxième ligne.
+            \item mMdifier la deuxième ligne.
             \item Supprimer le fichier.
         \end{itemize}
     \end{frame}
@@ -1680,7 +1680,7 @@ Qui suis-je: chrichri
 
     \begin{frame}[fragile]{Shell}{Les alias}
         Les alias sont des raccourcis pour des commandes.
-        ils sont donc intéressant à paramétrer pour les commandes longues et récurrentes.
+        Ils sont donc intéressants à paramétrer pour les commandes longues et récurrentes.
         \bigbreak
         Par exemple, pour la commande \lstinline{ls -l}~:
         \begin{lstlisting}[language=bash]
@@ -1938,7 +1938,7 @@ In fibo.ksh line 14:
     \end{frame}
 
     \begin{frame}{Editeurs}{Exercice \execcounterdispinc}
-        Cette exercice à pour but d'illustrer que les éditeurs fournissent une aide pour tout type de langage.
+        Cette exercice a pour but d'illustrer que les éditeurs fournissent une aide pour tout type de langage.
         \begin{itemize}
             \item Installer VS Code.
             \item Installer le plugin ShellCheck.
@@ -2454,7 +2454,7 @@ static void sig_handler(int signum) {
     \end{frame}
 
     \begin{frame}{Gestion des processus}{Les signaux}
-        On peut donc controller un programme de l'extérieur, déclencher une action dans ce dernier à la suite de la réception du signal.
+        On peut donc contrôler un programme de l'extérieur, déclencher une action dans ce dernier à la suite de la réception du signal.
         Ou une interruption/mise en dormance du programme pour laisser les ressources à un autre processus.
         \bigbreak
         Exercice \execcounterdispinc{}~:
@@ -2535,7 +2535,7 @@ static void sig_handler(int signum) {
             \bigbreak
             Exercice \execcounterdispinc{}, terminer un processus découvert sous \lstinline{top} avec la commande \lstinline{pkill}.
             \bigbreak
-            Personnaliser \lstinline{top} pour que l'interface affiche les processus non pas en pourcentage totale de CPU consommé (par défaut) mais en pourcentage par cœur.
+            Personnaliser \lstinline{top} pour que l'interface affiche les processus non pas en pourcentage total de CPU consommé (par défaut) mais en pourcentage par cœur.
         \end{small}
         \begin{center}
             \includegraphics[width=3cm]{image/guy-in-front-of-desktop}
@@ -2555,7 +2555,7 @@ static void sig_handler(int signum) {
     \end{frame}
 
     \begin{frame}{Système de fichier}{Exercices sur les processus}
-        Exercices \execcounterdispinc{}, à partir de vos connaissances sur les process et des commandes précédentes comparer l'activité d'une machine Ubuntu, d'un WSL ubuntu et d'un WSL Debian, ou un FreeBSD~.
+        Exercices \execcounterdispinc{}, à partir de vos connaissances sur les process et des commandes précédentes comparez l'activité d'une machine Ubuntu, d'un WSL ubuntu et d'un WSL Debian, ou un FreeBSD~.
 
         Que remarquez-vous~?
         \pause
@@ -2574,7 +2574,7 @@ static void sig_handler(int signum) {
             \item Chaque processus a une priorité.
             \item Une priorité plus élevée signifie que le processus recevra plus de temps CPU~.
             \item Sur les systèmes Unix/Linux, la priorité est représentée par une valeur appelée \lstinline{nice}.
-            \item Une bonne gestion des priorités est cruciale lors montées en charge du système (scaling).
+            \item Une bonne gestion des priorités est cruciale lors des montées en charge du système (scaling).
         \end{itemize}
     \end{frame}
 
@@ -2625,7 +2625,7 @@ $ sudo renice -19 -p 906674
             \begin{itemize}
                 \item La qualité du code liée au maintient par la communauté open source.
                 \item La gestion des droits utilisateurs.
-                \item Le module SELinux (Security-Enhanced Linux), qui contrôles les accès pour les applications, processus et fichiers d'un système.
+                \item Le module SELinux (Security-Enhanced Linux), qui contrôle les accès pour les applications, processus et fichiers d'un système.
                 \item Le module AppArmor, pour gérer les droits des programmes.
                 \item UEFI (Unified Extensible Firmware Interface) Secure Boot.
                 \item La cryptographie as \textit{first class citizen} dans les communications et la donnée.
@@ -2768,7 +2768,7 @@ $ echo "Le code de l'entrée est 8564" > digicomp-little-secret/secret.txt
     \subsection{Utilisateurs}\label{subsec:utilisateurs}
     \begin{frame}{Sécurité}{Les utilisateurs}
         Les utilisateurs sont les personnes qui utilisent le système.
-        Les bonnes pratiques veulent qu'il y en a un par personne physique.
+        Les bonnes pratiques veulent qu'il y en ait un par personne physique.
         L'utilisateur a pour s'identifier un user et un mot de passe et/ou une clé privé.
         C'est l'administrateur du système qui lui génère son premier mot de passe et sa première clé.
         Un user peut faire partie de plusieurs groupes, comme ici \lstinline{daniel} qui est \lstinline{dba} et \lstinline{prod}.
@@ -3130,7 +3130,7 @@ $ lpr -P DCP-L2530DW requirements.txt
                 \item CUPS inclut également le support des fichiers PPD (PostScript Printer Description) et une interface Web pour la configuration et la gestion des imprimantes.
                 \item CUPS peut gérer des classes, qui sont des groupes d'imprimantes recevant une tâche d'impression.
                 Elle est transmise à une seule imprimante cible de la classe en fonction de la disponibilité.
-                \item La centralisation sur un serveur permet d'administration les politiques/restrictions liées à l'impression en un seul point.
+                \item La centralisation sur un serveur permet l'administration les politiques/restrictions liées à l'impression en un seul point.
                 Donc on imagine de manière plus efficiente.
             \end{itemize}
         \end{footnotesize}
@@ -3139,7 +3139,7 @@ $ lpr -P DCP-L2530DW requirements.txt
     \begin{frame}{Imprimer et e-mail}{Installation et Configuration de CUPS}
         \begin{itemize}
             \item \textbf{Installation}~: Utiliser la commande \lstinline{sudo apt install cups} pour installer CUPS. Le service démarre automatiquement après l'installation.
-            C'est un protocole client - serveur et c'est le serveur que vous installé.
+            C'est un protocole client - serveur et c'est le serveur que vous avez installé.
             \item \textbf{Configuration}~: Le fichier de configuration principal est \lstinline{/etc/cups/cupsd.conf}, similaire à la configuration d'Apache.
             \item \textbf{Interface Web}~: Accessible via \lstinline{http://localhost:631}, elle permet de gérer les imprimantes et de configurer CUPS.
             \item Pour administrer les imprimantes CUPS, il faut être dans le groupe \lstinline{lpadmin}.
@@ -3210,7 +3210,7 @@ $ lpr -P DCP-L2530DW requirements.txt
         Thunderbird est un client de messagerie open source, multiplateforme et gratuit.
         Il gère les protocoles IMAP et POP3 pour la réception de courrier électronique et SMTP pour l'envoi.
         \bigbreak
-        Ce logiciel ne support pas le protocole Exchange de Microsoft.
+        Ce logiciel ne supporte pas le protocole Exchange de Microsoft.
         Il nécessite un plugin appelé Chouette qui est payant.
         \bigbreak
         On le configure en renseignant son adresse mail, son mot de passe, le serveur IMAP/POP3 et SMTP de son prestataire/cloud provider.
@@ -3318,7 +3318,7 @@ $ echo "This is a test email body." | \
     \begin{frame}{Networking}{Définition possible}
         \begin{scriptsize}
             \begin{itemize}
-                \item Un réseau est un ensemble de couches matériels et protocolaires qui permettent à des machines de communiquer entre eux.
+                \item Un réseau est un ensemble de couches matérielles et protocolaires qui permettent à des machines de communiquer entre eux.
                 \item Les couches matérielles sont les câbles, les cartes réseaux, les switchs, les routeurs, les serveurs, les clients, \textit{etc}.
                 \item Les couches protocolaires sont les protocoles de communication, les adresses IP, les ports, les protocoles de routage, les protocoles de sécurité, protocoles applicatifs, \textit{etc}.
                 \item Le même protocole peut être supporté par des couches et des hardwares différents de la stack.
@@ -3336,7 +3336,7 @@ $ echo "This is a test email body." | \
         \begin{columns}
             \column{0.7\textwidth}
             Rsync est un outil de synchronisation de fichiers qui permet de copier des fichiers locaux ou distants.
-            Mais sont réel atout est bien pour les fichiers distants, en local on a \lstinline{cp}\ldots
+            Mais son réel atout est bien pour les fichiers distants, en local on a \lstinline{cp}\ldots
             \bigbreak
             Il est souvent utilisé pour synchroniser des fichiers entre un serveur et un client SSH~.
             \bigbreak
@@ -3378,12 +3378,12 @@ $ rsync -a utilisateur@serveur:/chemin/vers/mon-dossier/ /chemin/vers/mon-dossie
 
     \begin{frame}{Networking}{Lynx\footnote{Lynx, \url{https://doc.ubuntu-fr.org/lynx}}}
         Lynx est un navigateurs web en mode texte utilisable via une console ou un terminal.
-        Distribué sous licence GNU GPL, il supporte Gopher, HTTP, HTTPS, FTP, WAIS, NNTP et le SSL. Le Javascript n'est quand à lui pas supporté.
+        Distribué sous licence GNU GPL, il supporte Gopher, HTTP, HTTPS, FTP, WAIS, NNTP et le SSL. Le Javascript n'est quant à lui pas supporté.
         La navigation se fait entièrement au clavier et les différents éléments des pages Web (par exemple: les liens hypertexte) sont mis en évidence grâce à une coloration syntaxique.
         Il est très populaire en tant que navigateur adapté aux déficiences visuelles car son interface est facile à mettre en œuvre avec un synthétiseur vocal.
         Des versions de Lynx sont également disponibles pour Windows et MacOSX.
         \begin{dangercolorbox}
-            Du fait de l'absence de support de Javascript il ne vas être possible de naviguer sur de nombreux sites.
+            Du fait de l'absence de support de Javascript il ne va être possible de naviguer sur de nombreux sites.
             Ceux qui utilisent des frameworks web modernes, comme par exemple le site \lstinline{Digicomp.ch}.
             Google Maps, ne fonctionne pas et affiche un message d'erreur.
             TripAdvisor ne fonctionne pas.
@@ -3409,7 +3409,7 @@ $ rsync -a utilisateur@serveur:/chemin/vers/mon-dossier/ /chemin/vers/mon-dossie
     \end{frame}
 
     \begin{frame}[fragile]{Networking}{Lynx, le site Digicomp}
-        Par défault le package n'est plus installé sous Ubuntu\ldots
+        Par défaut le package n'est plus installé sous Ubuntu\ldots
 
         La commande pour l'installer est~:
         \begin{lstlisting}[language=bash]
@@ -3664,6 +3664,7 @@ $ vncviewer <IP address:display number>
     \end{frame}
 
     \begin{frame}{Accès à distance}
+        \begin{footnotesize}
         \begin{dangercolorbox}
             Il est compliqué d'accéder à distance à certaines configurations comme par exemple les Ubuntu qui utilisent Wayland.
             \bigbreak
@@ -3679,6 +3680,7 @@ $ vncviewer <IP address:display number>
             \item Configurer un user pour un camarade.
             \item Se connecter à la machine d'un camarade avec un client VNC.
         \end{itemize}
+        \end{footnotesize}
     \end{frame}
 
 
