@@ -14,6 +14,8 @@
     \bigbreak
     Digital competence. Made of People.
     \bigbreak
+    \url{https://github.com/DigicompClassesByPapIT/linux}
+    \bigbreak
 }
 
 \begin{document}
@@ -1210,10 +1212,11 @@ $ useradd -h | grep shell
         \bigbreak
         Un exemple de commande devient donc~:
         \begin{lstlisting}[language=bash]
-$ useradd -s /bin/bash -m -d $/home/digiformateur digicomp
+$ useradd -s /bin/bash -m -d /home/digiformateur digicomp
         \end{lstlisting}
         \bigbreak
         \lstinline{/bin/bash} passé à l'option \lstinline{-s} permet de spécifier le Shell.
+        Pour spécifier le mot de passe de l'utilisateur créé, utiliser la commande \lstinline{passwd}.
     \end{frame}
 
     \begin{frame}{Shell}{Naviguer dans les commandes}
@@ -1238,29 +1241,29 @@ $ useradd -s /bin/bash -m -d $/home/digiformateur digicomp
             \begin{table}[ht]
                 \begin{tabular}{|p{3.5cm}|p{8cm}|}
                     \hline
-                    \textbf{Commande}         & \textbf{Description}                                                            \\
+                    \textbf{Commande}                                     & \textbf{Description}                                                            \\
                     \hline
-                    Ctrl+b puis D             & Détacher de la session courante                                                 \\
+                    Ctrl+b puis D                                         & Détacher de la session courante                                                 \\
                     \hline
-                    Ctrl+b puis \%            & Diviser la fenêtre en deux volets horizontalement                               \\
+                    Ctrl+b puis \%                                        & Diviser la fenêtre en deux volets horizontalement                               \\
                     \hline
-                    Ctrl+b puis ``            & Diviser la fenêtre en deux volets verticalement                                 \\
+                    Ctrl+b puis ``                                        & Diviser la fenêtre en deux volets verticalement                                 \\
                     \hline
-                    Ctrl+b puis Flèche        & Se déplacer entre les volets                                                    \\
+                    Ctrl+b puis \emoji{left-arrow} ou \emoji{right-arrow} & Se déplacer entre les volets                                                    \\
                     \hline
-                    Ctrl+b puis X             & Fermer le volet                                                                 \\
+                    Ctrl+b puis X                                         & Fermer le volet                                                                 \\
                     \hline
-                    Ctrl+b puis C             & Créer une nouvelle fenêtre                                                      \\
+                    Ctrl+b puis C                                         & Créer une nouvelle fenêtre                                                      \\
                     \hline
-                    Ctrl+b puis N ou P        & Passer à la fenêtre suivante ou précédente                                      \\
+                    Ctrl+b puis N ou P                                    & Passer à la fenêtre suivante ou précédente                                      \\
                     \hline
-                    Ctrl+b puis 0 (1,2\ldots) & Aller à une fenêtre spécifique par numéro                                       \\
+                    Ctrl+b puis 0 (1,2\ldots)                             & Aller à une fenêtre spécifique par numéro                                       \\
                     \hline
-                    Ctrl+b puis~:             & Entrer dans la ligne de commande pour taper des commandes (avec autocomplétion) \\
+                    Ctrl+b puis~:                                         & Entrer dans la ligne de commande pour taper des commandes (avec autocomplétion) \\
                     \hline
-                    Ctrl+b puis~?             & Voir tous les raccourcis clavier (appuyer sur Q pour quitter)                   \\
+                    Ctrl+b puis~?                                         & Voir tous les raccourcis clavier (appuyer sur Q pour quitter)                   \\
                     \hline
-                    Ctrl+b puis W             & Ouvrir un panneau pour naviguer entre les fenêtres de plusieurs sessions        \\
+                    Ctrl+b puis W                                         & Ouvrir un panneau pour naviguer entre les fenêtres de plusieurs sessions        \\
                     \hline
                 \end{tabular}
             \end{table}
@@ -1501,6 +1504,21 @@ c148c36111463e962f490742af787c1f8e49776f09d89e19f71c6cdcf220240d  employee.csv
         \end{footnotesize}
     \end{frame}
 
+    \begin{frame}{Commandes de base}{Opérateurs logiques}
+        \begin{itemize}
+            \item \lstinline{||}~: Exécute la commande suivante si la précédente a échoué.
+            \item \lstinline{\&\&}~: Exécute la commande suivante si la précédente a réussi.
+        \end{itemize}
+        Ils peuvent définir le comportement d'un script et être utilisés dans des conditions.
+        \bigbreak
+        Lancer un \lstinline{sudo apt upgrade} uniquement si \lstinline{sudo apt update} \textbf{a fonctionné}.
+        \bigbreak
+        Logger un message d'erreur si \lstinline{ls klazkjhfzklefjh} \textbf{n'a pas fonctionné}.
+        \bigbreak
+        \centering
+        \includegraphics[width=3cm]{image/guy-in-front-of-desktop}
+    \end{frame}
+
     \begin{frame}{Commandes de base}{Les flux standards dans le Shell Linux\footnote{\label{standard-stream}The Standard Streams, \url{https://zedas.fr/posts/linux-explained-6-standard-streams/}}}
         \begin{itemize}
             \item \textbf{Les flux standards}~: Canaux de communication d'entrée et de sortie dans le shell.
@@ -1546,9 +1564,9 @@ c148c36111463e962f490742af787c1f8e49776f09d89e19f71c6cdcf220240d  employee.csv
     \begin{frame}{Commandes de base}{Exercice \execcounterdispinc{}~:}
         Le but est de créer un fichier source d'un script Shell en y ajoutant ligne par ligne les commandes~:
         \begin{itemize}
-            \item Initier la création d'un script Shell nommé \lstinline{discover.sh} dans votre \textquote{home} avec un commentaire descriptif.
+            \item Initier la création d'un script Shell nommé \lstinline{discover.sh} dans votre \textquote{home} avec un commentaire (chaîne de caractères préfixée par \lstinline{\#}) descriptif.
             \item Afficher un message indiquant que le \textquote{current working directory} va s'afficher.
-            \item Afficher le \textquote{current working directory}.
+            \item Afficher le current working directory.
             \item Afficher un message indiquant que les fichiers et répertoires du répertoire courant vont s'afficher.
             \item Afficher la liste des fichiers et répertoires du répertoire courant.
         \end{itemize}
@@ -1596,7 +1614,7 @@ c148c36111463e962f490742af787c1f8e49776f09d89e19f71c6cdcf220240d  employee.csv
         \bigbreak
         Exemple ici pour différencier Bash de Korn~:
         \begin{lstlisting}[language=bash]
-$ ls -lha | grep fibo_cached\..*sh
+$ ls -lha | grep fibo_cached.*sh
 -rw-rw-r-- 1 chrichri chrichri  449 août  27 23:48 fibo_cached.bash
 -rw-rw-r-- 1 chrichri chrichri  461 août  27 23:44 fibo_cached.ksh
 -rw-rw-r-- 1 chrichri chrichri  554 août  28 12:15 fibo.sh
@@ -1692,7 +1710,7 @@ total 3484
 ...
         \end{lstlisting}
         \bigbreak
-        Pour rendre l'alias permanent, il faut l'ajouter dans le fichier \lstinline{.bashrc} ou \lstinline{.bash\_profile}~:
+        Pour rendre l'alias permanent, il faut l'ajouter dans le fichier \lstinline{.bashrc} ou \lstinline{.bash_profile}~:
         \begin{lstlisting}[language=bash]
 $ echo "alias ll='ls -l'" >> ~/.bashrc
         \end{lstlisting}
@@ -1873,6 +1891,35 @@ riscv64-linux-gnu-gcc-ranlib-13 (1) - a wrapper around ranlib adding the --plugi
         \includegraphics[width=10cm]{image/aide}
     \end{frame}
 
+    \begin{frame}[fragile]{Où et quoi chercher~?}{Dans le terminal}
+        \lstinline{whatis} permet de découvrir une commande avec la syntaxe \lstinline{whatis <pattern chaine ou RegExp>}.
+        \bigbreak
+        Par exemple avec cette commande de compression du fichier \lstinline{checkmytex.sh}~:
+        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+$ whatis 7z a checkmytex.7z checkmytex.sh
+7z (1)               - 7-Zip file archiver with a high compression ratio
+a : rien d'adéquat
+checkmytex.7z : rien d'adéquat
+checkmytex.sh : rien d'adéquat
+$ 7z a checkmytex.7z checkmytex.sh
+
+7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20
+ 64-bit locale=fr_FR.UTF-8 Threads:8 OPEN_MAX:1048576
+
+Scanning the drive:
+1 file, 82 bytes (1 KiB)
+
+Creating archive: checkmytex.7z
+
+Add new data to archive: 1 file, 82 bytes (1 KiB)
+
+
+Files read from disk: 1
+Archive size: 210 bytes (1 KiB)
+Everything is Ok
+        \end{lstlisting}
+    \end{frame}
+
 
     \section{Éditeurs}\label{sec:editor}
 
@@ -2048,7 +2095,7 @@ lentgh of the struct: 35
                     \hline
                     \lstinline{/bin}    & binaires, utilitaires binaires       & Exécutables des commandes essentielles disponibles pour tous les utilisateurs (ex: cd, cat, ls…)                               \\
                     \hline
-                    \lstinline{boot}    & initialisation                       & Fichiers statiques du chargeur d’amorçage (noyaux, images ramdisk, fichiers de configuration du chargeur d'amorçage…)          \\
+                    \lstinline{/boot}   & initialisation                       & Fichiers statiques du chargeur d’amorçage (noyaux, images ramdisk, fichiers de configuration du chargeur d'amorçage…)          \\
                     \hline
                     \lstinline{/dev}    & périphérique                         & Fichiers spéciaux des périphériques                                                                                            \\
                     \hline
@@ -2135,7 +2182,7 @@ lentgh of the struct: 35
 
     \begin{frame}[fragile]{Gestion des processus}{Les commandes \lstinline{ps}}
         L'option \lstinline{-f} affiche plus d'informations sur les processus.
-        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+        \begin{lstlisting}[language=bash]
 $ ps
     PID TTY          TIME CMD
  276321 pts/5    00:00:00 bash
@@ -2146,14 +2193,16 @@ chrichri  276321  265707  0 13:17 pts/5    00:00:00 /usr/bin/bash --rcfile /home
 chrichri  338508  276321 99 14:12 pts/5    00:00:00 ps -f
         \end{lstlisting}
         Une commande par nom de processus et avec la ligne de commande complète~:
-        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+        \begin{lstlisting}[language=bash]
 $ ps -fC java
 UID          PID    PPID  C STIME TTY          TIME CMD
 chrichri  265707    8404 80 13:08 ?        00:42:46 /home/chrichri/pycharm...
         \end{lstlisting}
-        \bigbreak
+    \end{frame}
+
+    \begin{frame}[fragile]{Gestion des processus}{Les commandes \lstinline{ps}}
         Les processus de l'utilisateur courant~:
-        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
+        \begin{lstlisting}[language=bash]
 $ ps -u chrichri
     PID TTY          TIME CMD
    8059 ?        00:00:06 systemd
@@ -2163,11 +2212,11 @@ $ ps -u chrichri
         \end{lstlisting}
         \bigbreak
         Les processus de l'utilisateur courant et de tous les autres utilisateurs, \textit{i.e.}, tous les processus~:
-        \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
-$ ps -ef
+        \begin{lstlisting}[language=bash]
+$ ps -Af
 UID          PID    PPID  C STIME TTY          TIME CMD
-root           1       0  0 09:23 ?        00:00:05 /sbin/init splash
-root           2       0  0 09:23 ?        00:00:00 [kthreadd]
+root           1       0  0 sept.06 ?      00:00:02 /sbin/init splash
+root           2       0  0 sept.06 ?      00:00:00 [kthreadd]
 ...
         \end{lstlisting}
     \end{frame}
@@ -2392,7 +2441,7 @@ Abandon (core dumped)
         Expliquer ce qui se passe dans ces cas~?
         \pause
         \bigbreak
-        \lstinline{stack smashing detected} veut dire que GCC a détecté un buffer overflow et fait crasher le programme de manière préventive.
+        \lstinline{stack smashing detected} veut dire que l'OS a détecté un buffer overflow et fait crasher le programme de manière préventive.
         Il parle de la stack, car c'est dans cette mémoire que les variables locales sont stockées.
     \end{frame}
 
@@ -2740,6 +2789,7 @@ Out[45]: '777'
         \end{lstlisting}
         Ces droits s'appliquent avec la commande \lstinline{chmod} pour CHange MODe.
         Selon le format suivant \lstinline{chmod <mode> <file>}.
+
         \lstinline{<mode>} étant le chiffre calculé entre 000 et 777 calculé au dessus.
         Comme pour \lstinline{chown}, l'option \lstinline{-R} peut être ajoutée pour être récursif dans les sous-dossiers et fichiers.
         \bigbreak
@@ -2770,7 +2820,7 @@ $ echo "Le code de l'entrée est 8564" > digicomp-little-secret/secret.txt
         Les utilisateurs sont les personnes qui utilisent le système.
         Les bonnes pratiques veulent qu'il y en ait un par personne physique.
         L'utilisateur a pour s'identifier un user et un mot de passe et/ou une clé privé.
-        C'est l'administrateur du système qui lui génère son premier mot de passe et sa première clé.
+        C'est l'administrateur du système qui lui génère son premier mot de passe et/ou l'utilisateur ses clés.
         Un user peut faire partie de plusieurs groupes, comme ici \lstinline{daniel} qui est \lstinline{dba} et \lstinline{prod}.
         \begin{columns}
             \column{0.5\textwidth}
@@ -2787,13 +2837,41 @@ $ echo "Le code de l'entrée est 8564" > digicomp-little-secret/secret.txt
         \end{columns}
     \end{frame}
 
+    \begin{frame}[fragile]{Sécurité}{Les groupes}
+        L'utilitaire \lstinline{addgroup} permet de créer un groupe.
+%bash listing
+        \begin{lstlisting}[language=bash]
+$ whoami
+chrichri
+$ addgroup digicomp
+fatal: Seul le superutilisateur est autorisé à ajouter un utilisateur ou un groupe au système.
+        \end{lstlisting}
+        Pourquoi cela ne fonctionne pas~?
+        \pause
+        \begin{dangercolorbox}
+            Pour ajouter un groupe, il faut être superutilisateur.
+            C'est à dire, avoir les droits \textquote{root}.
+            Donc être \textquote{root}, ou utiliser \lstinline{sudo}, si on est \textquote{sudoer}, \textit{i.e.}, que l'on fait partie du groupe \textquote{sudo}.
+        \end{dangercolorbox}
+        \begin{lstlisting}[language=bash]
+$ sudo addgroup digicomp
+info: Choix d'un GID dans la plage 1000 à 59999 ...
+info: Ajout du groupe « digicomp » (GID 1002)...
+$ groups
+chrichri adm dialout cdrom sudo audio dip video plugdev lpadmin pulse lxd sambashare docker libvirt nordvpn
+$ members sudo
+chrichri
+$ members digicomp
+        \end{lstlisting}
+    \end{frame}
+
     \begin{frame}[fragile]{Sécurité}{Les utilisateurs}
         Exemple avec la création du user \lstinline{digiformateur}.
         \begin{lstlisting}[language=bash]
-$ useradd -s /bin/bash -m -d $/home/digiformateur digiformateur
+$ useradd -s /bin/bash -m -d /home/digiformateur digiformateur
 useradd: Permission denied.
 useradd~: impossible de vérouiller /etc/passwd ; réessayer plus tard.
-$ sudo useradd -s /bin/bash -m -d $/home/digiformateur digiformateur # sudo
+$ sudo useradd -s /bin/bash -m -d /home/digiformateur digiformateur # sudo
 $ passwd digiformateur
 passwd~: Vous ne devriez pas voir ou modifier l'information du mot de passe pour digiformateur.
 $ sudo passwd digiformateur # superutilisateur
@@ -2903,7 +2981,7 @@ $ sudo userdel digiformateur
         \end{itemize}
     \end{frame}
 
-    \subsection{SELinux VS AppApmor}\label{subsec:selinux-vs-apparmor}
+    \subsection{SELinux VS AppArmor}\label{subsec:selinux-vs-apparmor}
 
     \begin{frame}{Sécurité}{Comparaison~: AppArmor vs SELinux\footnote{Technologies for container isolation: A comparison of AppArmor and SELinux, \url{https://www.redhat.com/sysadmin/apparmor-selinux-isolation}}}
         \begin{footnotesize}
@@ -3256,6 +3334,7 @@ smtp_sasl_auth_enable = yes
 smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
 smtp_sasl_security_options = noanonymous
 smtp_use_tls = yes
+smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
             \end{lstlisting}
             Créer un fichier de mot de passe pour stocker le mot de passe de l'utilisateur~:
             \begin{lstlisting}[language=bash,basicstyle=\tiny\ttfamily]
@@ -3358,6 +3437,7 @@ $ rsync -a /chemin/vers/mon-dossier/ utilisateur@serveur:/chemin/vers/mon-dossie
         \begin{lstlisting}[language=bash]
 $ rsync -a utilisateur@serveur:/chemin/vers/mon-dossier/ /chemin/vers/mon-dossier/
         \end{lstlisting}
+        Pour spécifier le port SSH si différent de 22, il faut rajouter un morceau de commande SSH en argument \lstinline{-e "ssh -p <port>"}.
     \end{frame}
 
     \begin{frame}{Networking}{Exercice \execcounterdispinc}
@@ -3665,21 +3745,21 @@ $ vncviewer <IP address:display number>
 
     \begin{frame}{Accès à distance}
         \begin{footnotesize}
-        \begin{dangercolorbox}
-            Il est compliqué d'accéder à distance à certaines configurations comme par exemple les Ubuntu qui utilisent Wayland.
+            \begin{dangercolorbox}
+                Il est compliqué d'accéder à distance à certaines configurations comme par exemple les Ubuntu qui utilisent Wayland.
+                \bigbreak
+                Dans ce cas il existe \lstinline{waypipe} qui permet de lancer facilement une application si le SSH du serveur est activé.
+            \end{dangercolorbox}
+            Néanmoins des entreprises configurent des machines spécialement pour, par exemple en faisant tourner xfce4 sur un serveur central qui peut servir de nombreux/tous les desktops et les applications.
+            Cette stratégie peut être très efficace en terme d'administration système et mutualisation des ressources.
             \bigbreak
-            Dans ce cas il existe \lstinline{waypipe} qui permet de lancer facilement une application si le SSH du serveur est activé.
-        \end{dangercolorbox}
-        Néanmoins des entreprises configurent des machines spécialement pour, par exemple en faisant tourner xfce4 sur un serveur central qui peut servir de nombreux/tous les desktops et les applications.
-        Cette stratégie peut être très efficace en terme d'administration système et mutualisation des ressources.
-        \bigbreak
-        Exercice \execcounterdispinc~:
-        \begin{itemize}
-            \item Installer un serveur VNC sur une VM.
-            \item Configurer le serveur qu'il écoute sur toutes les interfaces, pas juste localhost.
-            \item Configurer un user pour un camarade.
-            \item Se connecter à la machine d'un camarade avec un client VNC.
-        \end{itemize}
+            Exercice \execcounterdispinc~:
+            \begin{itemize}
+                \item Installer un serveur VNC sur une VM.
+                \item Configurer le serveur qu'il écoute sur toutes les interfaces, pas juste localhost.
+                \item Configurer un user pour un camarade.
+                \item Se connecter à la machine d'un camarade avec un client VNC.
+            \end{itemize}
         \end{footnotesize}
     \end{frame}
 
