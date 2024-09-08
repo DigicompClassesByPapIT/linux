@@ -172,7 +172,7 @@
             \begin{itemize}
                 \item Les terminaux en ligne de commandes sont toujours utilisés aujourd'hui, notamment dans les environnements Unix et Linux.
                 Ils ont commencé sous Unix, avec K. Thompson et Dennis Ritchie chez Bell Labs (AT\&T) en 1977.
-                Cette technologie est portée sous Linux dès son origine et est toujours l'interface de choix pour la connection à une machine Unix/Linux distante comme un serveur\footnote{\label{ibmunix}UNIX shells since 1977, \url{https://developer.ibm.com/tutorials/l-linux-shells/}}.
+                Cette technologie est portée sous Linux dès son origine et est toujours l'interface de choix pour la connexion à une machine Unix/Linux distante comme un serveur\footnote{\label{ibmunix}UNIX shells since 1977, \url{https://developer.ibm.com/tutorials/l-linux-shells/}}.
                 \begin{lstlisting}[language=bash]
 $ uname -a
 Linux chrichri-HKD-WXX 6.8.0-41-generic #41-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug  2 20:41:06 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
@@ -1300,11 +1300,10 @@ ts-test
         La machine Linux à administrer sera le plus souvent dans un cloud, une salle serveur, un data center, elle sera distante.
         Dans une infrastructure sécurisée.
         \bigbreak
-        Mais avec un user, un Shell par défaut, et un protocole sécurisé comme le SSH~.
-        Nous allons pouvoir nous connecter et l'administrer à distance.
+        Mais avec un user, un Shell par défaut, et un protocole sécurisé comme le SSH, nous allons pouvoir nous connecter et l'administrer à distance.
         \bigbreak
         Les bonnes pratiques sont d'utiliser les clés SSH uniquement, pas de connexion SSH avec l'utilisateur root,
-        Tutoriel utile~:
+        tutoriel utile~:
         \begin{itemize}
             \item \href{https://phoenixnap.com/kb/generate-setup-ssh-key-ubuntu}{Configuration du login SSH sur Ubuntu}
         \end{itemize}
@@ -1343,9 +1342,9 @@ ts-test
         Restreindre l'accès à la VM au SSH avec une clé SSH, aucun mot de passe.
         \bigbreak
         Exercice \execcounterdispinc{}~:
-        Créer un user pour un de vos camarades.
+        Créez un user pour un de vos camarades.
         Lui donner un Shell \lstinline{sh} par défaut.
-        Configurer lui communiquer les clés SSH pour qu'il puisse se connecter.
+        Configurez lui les clés SSH pour qu'il puisse se connecter.
     \end{frame}
 
     \begin{frame}[fragile]{Shell}{Une des solutions (commande à exécuter sur la VM)}
@@ -1495,6 +1494,7 @@ c148c36111463e962f490742af787c1f8e49776f09d89e19f71c6cdcf220240d  employee.csv
                 \item \lstinline{>>}~: Redirige la sortie standard vers un fichier en ajoutant le contenu à la fin.
                 \item \lstinline{<}~: Redirige un fichier vers l'entrée standard.
                 \item \lstinline{2>}~: Redirige la sortie d'erreur vers un fichier.
+                \item \lstinline{&>}~: Redirige la sortie standard et d'erreur vers un fichier.
                 \item \lstinline{|}~: Piping, redirige la sortie standard d'une commande vers l'entrée standard d'une autre.
             \end{itemize}
             À quoi ces opérateurs peuvent-ils servir~?
@@ -1525,12 +1525,12 @@ c148c36111463e962f490742af787c1f8e49776f09d89e19f71c6cdcf220240d  employee.csv
             \item \textbf{entrée standard (Entrée standard)}~:
             \begin{itemize}
                 \item Flux pour les données d'entrée d'un programme.
-                \item Exemple~: Lancer la commande \lstinline{grep} en utilisant l'entrée standard comme source de donnée.
+                \item Exemple~: Taper la commande \lstinline{echo "Coucou" | at now}, elle utilise l'entrée standard de la commande \lstinline{at}.
             \end{itemize}
             \item \textbf{sortie standard (Sortie standard)~:}
             \begin{itemize}
                 \item Flux pour les données de sortie d'un programme.
-                \item Exemple~: La sortie de \lstinline{ls} est affichée via sortie standard.
+                \item Exemple~: La sortie de \lstinline{ls} est affichée via la sortie standard.
             \end{itemize}
         \end{itemize}
     \end{frame}
@@ -1579,10 +1579,10 @@ c148c36111463e962f490742af787c1f8e49776f09d89e19f71c6cdcf220240d  employee.csv
 
     \begin{frame}{Commandes de base}{Exercice \execcounterdispinc{}~:}
         \begin{itemize}
-            \item Rediriger la sortie standard standard de la commande \lstinline{ls} dans un fichier \lstinline{ls-output.txt}.
-            \item Rediriger la sortie d'erreur error de la commande \lstinline{ls} dans un fichier \lstinline{ls-error.txt}.
+            \item Rediriger la sortie standard de la commande \lstinline{ls} dans un fichier \lstinline{ls-output.txt}.
+            \item Rediriger la sortie d'erreur de la commande \lstinline{ls} dans un fichier \lstinline{ls-error.txt}.
             \item Rediriger les deux flux dans un fichier \lstinline{ls-output-error.txt}.
-            \item Rediriger le contenu du fichier \lstinline{ls-output.txt} dans la entrée standard de la commande \lstinline{grep} pour filter sur un type d'extension de fichier.
+            \item Rediriger le contenu du fichier \lstinline{ls-output.txt} dans l'entrée standard de la commande \lstinline{grep} pour filter sur un type d'extension de fichier.
         \end{itemize}
     \end{frame}
 
@@ -1991,7 +1991,7 @@ In fibo.ksh line 14:
             \item Installer le plugin ShellCheck.
             \item Ouvrir un fichier le fichier \lstinline{fibo.sh} dans VS Code.
             \item Essayer de le lancer avec \lstinline{sh}.
-            \item Corriger les erreurs et même les warning de mise en évidence par ShellCheck.
+            \item Corriger les erreurs et même les warnings mis en évidence par ShellCheck.
             \item Relancer le script pour vérifier qu'il fonctionne.
         \end{itemize}
         \bigbreak
@@ -2294,7 +2294,7 @@ root           2       0  0 sept.06 ?      00:00:00 [kthreadd]
         ou avec la commande \lstinline{ps}, on peut le tuer avec la commande \lstinline{kill}.
         \bigbreak
         Mais il existe une commande spécifique, c'est \lstinline{kill}, elle envoie un signal au processus ici SIGKILL avec l'option \lstinline{-9}.
-        Elle permet de terminer un processus dont aurait trouvé le PID avec \lstinline{ps} ou \lstinline{top}.
+        Elle permet de terminer un processus dont on aurait trouvé le PID avec \lstinline{ps} ou \lstinline{top}.
         \begin{lstlisting}[language=bash]
 $ kill -9 <PID>
         \end{lstlisting}
@@ -2604,7 +2604,7 @@ static void sig_handler(int signum) {
     \end{frame}
 
     \begin{frame}{Système de fichier}{Exercices sur les processus}
-        Exercices \execcounterdispinc{}, à partir de vos connaissances sur les process et des commandes précédentes comparez l'activité d'une machine Ubuntu, d'un WSL ubuntu et d'un WSL Debian, ou un FreeBSD~.
+        Exercices \execcounterdispinc{}, à partir de vos connaissances sur les process et des commandes précédentes comparez, l'activité d'une machine Ubuntu, d'un WSL ubuntu et d'un WSL Debian, ou un FreeBSD~.
 
         Que remarquez-vous~?
         \pause
@@ -2780,7 +2780,7 @@ Out[38]: 5
     \end{frame}
 
     \begin{frame}[fragile]{Sécurité}{Notation octale\cref{octal}}
-        Cela fait bien des droits qui vont de 0 pour la lecture seule au user, à 777 pour la lecture, l'écriture et l'exécution au user, groupe et autres.
+        Cela fait bien des droits qui vont de 0 pour aucun droit à personne, à 777 pour la lecture, l'écriture et l'exécution au user, groupe et autres.
         \begin{lstlisting}
 "".join(map(str, [int("100", 2), int("000", 2), int("000", 2)])) # r-- pour user
 Out[46]: '400'
@@ -2790,7 +2790,7 @@ Out[45]: '777'
         Ces droits s'appliquent avec la commande \lstinline{chmod} pour CHange MODe.
         Selon le format suivant \lstinline{chmod <mode> <file>}.
 
-        \lstinline{<mode>} étant le chiffre calculé entre 000 et 777 calculé au dessus.
+        \lstinline{<mode>} étant le chiffre entre 000 et 777 calculé au-dessus.
         Comme pour \lstinline{chown}, l'option \lstinline{-R} peut être ajoutée pour être récursif dans les sous-dossiers et fichiers.
         \bigbreak
         Des utilitaires de validation de cette notation, plus \textit{user friendly} que Python, sont en ligne comme \url{https://chmod-calculator.com/}.
@@ -2819,7 +2819,7 @@ $ echo "Le code de l'entrée est 8564" > digicomp-little-secret/secret.txt
     \begin{frame}{Sécurité}{Les utilisateurs}
         Les utilisateurs sont les personnes qui utilisent le système.
         Les bonnes pratiques veulent qu'il y en ait un par personne physique.
-        L'utilisateur a pour s'identifier un user et un mot de passe et/ou une clé privé.
+        L'utilisateur a pour s'identifier un user et un mot de passe et/ou une clé privée.
         C'est l'administrateur du système qui lui génère son premier mot de passe et/ou l'utilisateur ses clés.
         Un user peut faire partie de plusieurs groupes, comme ici \lstinline{daniel} qui est \lstinline{dba} et \lstinline{prod}.
         \begin{columns}
@@ -2911,7 +2911,7 @@ $ sudo userdel digiformateur
                 \centering
                 \includegraphics[width=6.5cm]{image/real-password-cracking} \\ Hashcat benchmark\footnotemark \\
             \end{columns}
-            Mais le mot de passe seul n'est pas suffisant, le plus sûr reste le SSH avec la paire de clés privé et publique.
+            Mais le mot de passe seul n'est pas suffisant, le plus sûr reste le SSH avec la paire de clés privée et publique.
             \footnotetext{Those Tables With Password Cracking Times That Scare You And Peddle Snake Oil — Are Mostly Wrong!, \url{https://billatnapier.medium.com/those-tables-password-cracking-times-that-scare-you-are-mostly-wrong-7d03bf4aec6}}
         \end{footnotesize}
     \end{frame}
@@ -2920,7 +2920,7 @@ $ sudo userdel digiformateur
         Cet exercice a pour objectif de montrer que les droits d'accès sont une question de sécurité, les configurations et les services sont très sensibles.
         En effet, les services sont le plus souvent exécutés par l'utilisateur root et ont donc le maximum de droits.
         \bigbreak
-        Il est courant de donner des droits en lecture seule à un fichier de configuration, mais de ne pas donner de droits en écriture.
+        Il est courant de donner des droits en lecture seule à un fichier de configuration, mais de ne pas donner de droit en écriture.
         \begin{itemize}
             \item Créer un user qui aura des droits en écriture sur la configuration d'un service dans \lstinline{/etc/systemd/system}.
             \item Créer un groupe qui aura des droits en écriture sur la configuration d'un autre service dans \lstinline{/etc/systemd/system}.
@@ -3402,7 +3402,7 @@ $ echo "This is a test email body." | \
                 \item Les couches protocolaires sont les protocoles de communication, les adresses IP, les ports, les protocoles de routage, les protocoles de sécurité, protocoles applicatifs, \textit{etc}.
                 \item Le même protocole peut être supporté par des couches et des hardwares différents de la stack.
                 Par exemple le WiFi peut être géré par un hardware dédié comme un SOC WiFi ESP32\footnote{ESP32, A feature-rich MCU with integrated Wi-Fi and Bluetooth connectivity for a wide-range of applications, \url{https://www.espressif.com/en/products/socs/esp32}} ou un SD-WLAN de Verizon\footnote{Apprenez à votre Wi-Fi à prendre ses propres décisions, \url{https://www.verizon.com/business/fr-fr/products/networks/managed-network-services/managed-sd-wireless-lan/}}.
-                \item Le même protocole peut avoir des couches inférieurs de la stack différentes.
+                \item Le même protocole peut avoir des couches inférieures de la stack différentes.
                 Par exemple IPv6 over Ethernet ou IPv6 over WiFi.
                 Matter, un protocole applicatif, unifie les protocoles de communication DSL, DOCSIS, Cellulaire, Wi-Fi, Thread, 802.15.4, Bluetooth, BLE, \textit{etc}\footnote{Comment fonctionne Matter ?, \url{https://nodon.fr/protocoles-sans-fil/matter/}}.
             \end{itemize}
